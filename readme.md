@@ -12,7 +12,8 @@
 
 1. Instalar dependencias composer, si composer está instalado globalmente `composer install`
     1. Si no se encuentra global copie el archivo composer.phar o [descarguelo](https://getcomposer.org/download/)
-`php composer.phar install` 
+`php composer.phar install`
+1. Instalar dependencias de npm `npm install`. Si no tiene npm instalado,[descargue e instale NodeJS](https://nodejs.org/es/download/)
 1. Copiar archivo `.env.example` y crear archivo `.env` ajustarlo al ambiente local de su maquina.
 1. Generar llave `php artisan key:generate`
 1. Instalar [Voyager](https://voyager-docs.devdojo.com) `php artisan voyager:install`
