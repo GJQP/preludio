@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateObrasTable extends Migration
+class CreateGaleriaPresentacionesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,15 @@ class CreateObrasTable extends Migration
      */
     public function up()
     {
-        Schema::create('obras', function (Blueprint $table) {
+        Schema::create('galeria_presentaciones', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nombre',255);
-            $table->text('sinopsis');
+            $table->unsignedBigInteger('presentacion_id');
+            $table->string('url_imagen');
 
             $table->dateTime('fecha_creacion'); //Sustituye created_at
             $table->dateTime('fecha_modificacion'); //Sustituye updated_at
+
+            $table->foreign('presentacion_id')->references('id')->on('presentaciones');
         });
     }
 
@@ -30,6 +32,6 @@ class CreateObrasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('obras');
+        Schema::dropIfExists('galeria_presentaciones');
     }
 }

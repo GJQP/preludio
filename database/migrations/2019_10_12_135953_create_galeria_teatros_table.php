@@ -15,7 +15,13 @@ class CreateGaleriaTeatrosTable extends Migration
     {
         Schema::create('galeria_teatros', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            $table->unsignedBigInteger('teatro_id');
+            $table->string('url_imagen');
+
+            $table->dateTime('fecha_creacion'); //Sustituye created_at
+            $table->dateTime('fecha_modificacion'); //Sustituye updated_at
+
+            $table->foreign('teatro_id')->references('id')->on('teatros');
         });
     }
 
