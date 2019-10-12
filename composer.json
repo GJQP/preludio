@@ -10,6 +10,7 @@
     "require": {
         "php": "^7.2",
         "fideloper/proxy": "^4.0",
+        "joeyrush/better-migrate-seed": "^0.3.0",
         "laravel/framework": "6.0",
         "laravel/tinker": "^1.0",
         "laravel/ui": "^1.1",
