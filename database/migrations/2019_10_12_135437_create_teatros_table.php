@@ -22,7 +22,9 @@ class CreateTeatrosTable extends Migration
             $table->string('facebook', 200);
             $table->string('twitter', 200);
             $table->string('instagram', 200);
-            $table->timestamps();
+
+            $table->dateTime('fecha_creacion'); //Sustituye created_at
+            $table->dateTime('fecha_modificacion'); //Sustituye updated_at
         });
     }
 

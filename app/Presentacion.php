@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class GaleriaPresentacion extends Model
+class Presentacion extends Model
 {
     /**
      * The table associated with the model.
