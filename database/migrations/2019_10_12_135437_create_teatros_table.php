@@ -18,7 +18,7 @@ class CreateTeatrosTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('nombre', 255);
             $table->string('rif', 10)->unique();
-            $table->text('direccion')->default("");
+            $table->text('direccion')->nullable();
             $table->string('telefono', 12)->default("0000-0000000");
             $table->string('facebook', 200)->nullable();
             $table->string('twitter', 200)->nullable();
