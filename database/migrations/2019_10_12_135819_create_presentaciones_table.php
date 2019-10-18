@@ -20,8 +20,10 @@ class CreatePresentacionesTable extends Migration
 
             $table->dateTime('fecha_inicio');
             $table->dateTime('fecha_fin');
-            $table->string('poster');
-            $table->longText('reparto');
+            $table->string('poster')->nullable();
+            $table->longText('imagenes')->nullable();
+            $table->longText('reparto')->nullable();
+
 
             $table->dateTime('fecha_creacion'); //Sustituye created_at
             $table->dateTime('fecha_modificacion'); //Sustituye updated_at
