@@ -15,13 +15,16 @@ class CreateTeatrosTable extends Migration
     {
         Schema::create('teatros', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('nombre', 255);
-            $table->string('rif', 11);
-            $table->text('direccion');
-            $table->string('telefono', 12);
-            $table->string('facebook', 200);
-            $table->string('twitter', 200);
-            $table->string('instagram', 200);
+            $table->string('rif', 10)->unique();
+            $table->text('direccion')->default("");
+            $table->string('telefono', 12)->default("0000-0000000");
+            $table->string('facebook', 200)->nullable();
+            $table->string('twitter', 200)->nullable();
+            $table->string('instagram', 200)->nullable();
+            $table->longText('imagenes')->nullable();
+            $table->boolean('activo')->default(false);
 
             $table->dateTime('fecha_creacion'); //Sustituye created_at
             $table->dateTime('fecha_modificacion'); //Sustituye updated_at
