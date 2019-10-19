@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 // Catalogo de Teatros
-Route::get('/teatros', 'HomeController@teatros');
+Route::get('/teatros', 'TeatrosController@teatros');
 //Registrar
 Route::get('/register', 'HomeController@register');
 
