@@ -44,9 +44,10 @@ class TeatrosController extends Controller
      * @param  \App\Teatros  $teatros
      * @return \Illuminate\Http\Response
      */
-    public function show(Teatros $teatros)
+    public function mostrar()
     {
-        //
+        //$teatro = teatros::findorfail($id);
+        return view('teatros.teatro')/*->with($teatro)*/;
     }
 
     /**

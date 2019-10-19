@@ -14,8 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+// Catalogo de Teatros
+Route::get('/teatros', 'HomeController@teatros');
+//Registrar
+Route::get('/register', 'HomeController@register');
 
 Auth::routes();
+//Mostrar un teatro
+Route::get('/teatro/1', 'TeatrosController@mostrar');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
