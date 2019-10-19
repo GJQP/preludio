@@ -50,6 +50,10 @@ class TeatrosController extends Controller
         return view('teatros.teatro')/*->with($teatro)*/;
     }
 
+    public function teatros(){
+        return view('catalogoTeatros');
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
