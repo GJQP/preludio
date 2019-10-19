@@ -15,7 +15,7 @@ class CreateTeatrosTable extends Migration
     {
         Schema::create('teatros', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('user_id')->unique();
             $table->string('nombre', 255);
             $table->string('rif', 10)->unique();
             $table->text('direccion')->nullable();
@@ -28,6 +28,8 @@ class CreateTeatrosTable extends Migration
 
             $table->dateTime('fecha_creacion'); //Sustituye created_at
             $table->dateTime('fecha_modificacion'); //Sustituye updated_at
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

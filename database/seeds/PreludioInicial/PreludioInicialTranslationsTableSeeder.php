@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class DB_1570917737TranslationsTableSeeder extends Seeder
+class PreludioInicialTranslationsTableSeeder extends Seeder
 {
 
     /**
