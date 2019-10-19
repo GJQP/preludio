@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('titulo')</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -44,14 +44,14 @@
             {{-- <div class="phone-number">+675 334 567 223</div> --}}
             <nav class="nav-menu">
                 <ul>
-                    <li class="active"><a href="home.html">Home</a></li>
-                    <li><a href="about.html">About us</a></li>
-                    <li><a href="service.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li class="active"><a href="/">Inicio</a></li>
+                    <li><a href="/teatros">Teatros</a></li>
+                    <li><a href="service.html">Presentaciones</a></li>
+                    <li><a href="/register">Contact</a></li>
                 </ul>
             </nav>
         </header>
+        
         <!-- Header section end -->   
         {{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -103,9 +103,9 @@
                 </div>
             </div>
         </nav> --}}
-
+        
         <div class="containter">
-            @yield('content')
+            @yield('contenido')
         </div>
 
         <!-- Footer section start -->
