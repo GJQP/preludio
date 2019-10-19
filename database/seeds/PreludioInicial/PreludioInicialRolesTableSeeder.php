@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class DB_1570917737RolesTableSeeder extends Seeder
+class PreludioInicialRolesTableSeeder extends Seeder
 {
 
     /**
@@ -32,6 +32,14 @@ class DB_1570917737RolesTableSeeder extends Seeder
                 'display_name' => 'Normal User',
                 'created_at' => '2019-10-12 19:01:45',
                 'updated_at' => '2019-10-12 19:01:45',
+            ),
+            2 => 
+            array (
+                'id' => 3,
+                'name' => 'teatro',
+                'display_name' => 'Teatro',
+                'created_at' => '2019-10-19 15:22:00',
+                'updated_at' => '2019-10-19 15:22:00',
             ),
         ));
         

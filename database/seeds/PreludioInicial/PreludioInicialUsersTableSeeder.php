@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class DB_1570917737UsersTableSeeder extends Seeder
+class PreludioInicialUsersTableSeeder extends Seeder
 {
 
     /**
@@ -30,6 +30,20 @@ class DB_1570917737UsersTableSeeder extends Seeder
                 'settings' => '{"locale":"es"}',
                 'created_at' => '2019-10-12 19:02:51',
                 'updated_at' => '2019-10-12 19:05:24',
+            ),
+            1 => 
+            array (
+                'id' => 2,
+                'role_id' => 3,
+                'name' => 'Teatro Trasnocho',
+                'email' => 'trasnocho@cultural.com',
+                'avatar' => 'users/default.png',
+                'email_verified_at' => NULL,
+                'password' => '$2y$10$j7UIkGYE/TbNYLb1O9r7v.RkhGLVrdlaPbRI8EpBDfYkflEqXdY22',
+                'remember_token' => NULL,
+                'settings' => '{"locale":"es"}',
+                'created_at' => '2019-10-19 15:22:59',
+                'updated_at' => '2019-10-19 15:22:59',
             ),
         ));
         

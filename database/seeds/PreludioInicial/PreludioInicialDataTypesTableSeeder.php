@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class DB_1570917737DataTypesTableSeeder extends Seeder
+class PreludioInicialDataTypesTableSeeder extends Seeder
 {
 
     /**

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class DB_1570917737MenuItemsTableSeeder extends Seeder
+class PreludioInicialMenuItemsTableSeeder extends Seeder
 {
 
     /**
