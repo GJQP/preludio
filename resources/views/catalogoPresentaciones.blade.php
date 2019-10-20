@@ -20,7 +20,7 @@
                                 <a href="/presentacion/1"><img src="img/Los-Miserables.png" class="card-img-top" alt="Imagen del teatro"></a>
                                 <div class="card-body">
                                     <h6 class="card-title">Nombre de presentacion {{ $i }}</h6>
-                                    <h6 class="card-subtitle mb-2 text-muted">##/##/#### - 00:00</h6>
+                                    <h6 class="card-subtitle mb-2 text-muted">Hasta ##/##/####</h6>
                                     <h6 class="card-subtitle mb-2 text-muted">TEATRO</h6>
                                     <div class="text-center">
                                         <a href="/presentacion/1" class="card-link stretched-link">Ver</a> 
