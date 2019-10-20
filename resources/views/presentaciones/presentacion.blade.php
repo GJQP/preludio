@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('titulo')
-    Teatro 1
+    Presentacion
 @endsection
 
 @section('recursos')

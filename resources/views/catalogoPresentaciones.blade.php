@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('titulo')
-    Teatros
+    Presentaciones
 @endsection
 
 @section('contenido')
@@ -9,7 +9,7 @@
         <div class="container">
                 <div class="row">
                     <div class="col-lg-7 intro-text"> 
-                        <h2 class="sp-title">Teatros</h2> 
+                        <h2 class="sp-title">Presentaciones</h2> 
                     </div>
                     <div class="flex-cont">
                         @for ($i = 0; $i < 10; $i++)
