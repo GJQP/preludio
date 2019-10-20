@@ -11,7 +11,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/all.js') }}" defer></script>
+    <script src="{{ asset('js/jquery-3.4.1.min.js') }}" defer></script>
+    <script src="{{ asset('js/main.js') }}" defer></script>
 
 
     <!-- Fonts -->
@@ -21,9 +22,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/all.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/mystylesheet.css') }}" rel="stylesheet">
-
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/all.min.css') }}" rel="stylesheet">
+    
+    @yield('recursos')
     
 </head>
 <body>
@@ -37,7 +40,7 @@
         <!-- Header section start -->   
 	    <header class="header-area">
             <a href="home.html" class="logo-area">
-                <img src="img/logo.png" alt="">
+                <img src="/img/logo.png" alt="">
             </a>
             <div class="nav-switch">
                 <i class="fa fa-bars"></i>

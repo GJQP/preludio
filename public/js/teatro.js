@@ -1,0 +1,24 @@
+$(document).ready(function(){
+	$('.owl-carousel').owlCarousel({
+        loop:true,
+        autoplay:true,
+        autoplayTimeout:2500,
+        navText: ['<i class="fa fa-long-arrow-left"></i> PREV', 'NEXT<i class="fa fa-long-arrow-right"></i>'],
+        autoplayHoverPause:true,
+        margin:10,
+		responsive:{
+			0:{
+				items:1,
+				nav:true
+			},
+			600:{
+				items:3,
+				nav:false
+			},
+			1000:{
+				items:5,
+				nav:true
+			}
+		}
+	})
+  });

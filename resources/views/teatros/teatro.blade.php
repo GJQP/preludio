@@ -3,6 +3,15 @@
 @section('titulo')
     Teatro 1
 @endsection
+
+@section('recursos')
+<link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet">
+<link href="{{ asset('css/owl.theme.default.min.css') }}" rel="stylesheet">
+
+<script src="{{ asset('js/owl.carousel.min.js') }}" defer></script>
+<script src="{{ asset('js/teatro.js') }}" defer></script>
+@endsection
+
 @section('contenido')
 <section class="intro-section pt100 pb-4">
 		<div class="container">
@@ -26,60 +35,66 @@
 			</div>
 		</div>
 </section>
-<hr>
+<br>
 <section class="pt-3 pb-4">
 		<div class="container">
             <div>
-                <h2>Galería</h2>
+                <h2 class="sub-line">Galería</h2>
             </div>
             <div class="row">
-                <div class="col-lg-2">
-                    <img src="/img/intro.png" alt="" class="img-thumbnail">
+                <div class="owl-carousel owl-theme">
+                        <div >
+                                <img src="/img/intro.png" alt="" class="img-thumbnail">
+                        </div>
+                            <div >
+                                <img src="/img/referencia.png" alt="" class="img-thumbnail">
+                            </div>
+                            <div >
+                                <img src="/img/intro.png" alt="" class="img-thumbnail">
+                            </div>
+                            <div >
+                                <img src="/img/trasnocho.png" alt="" class="img-thumbnail">
+                            </div>
+                            <div >
+                                <img src="/img/intro.png" alt="" class="img-thumbnail">
+                            </div>
+                            <div >
+                                <img src="/img/trasnocho2.png" alt="" class="img-thumbnail">
+                            </div>
                 </div>
-                <div class="col-lg-2">
-                    <img src="/img/referencia.png" alt="" class="img-thumbnail">
-                </div>
-                <div class="col-lg-2">
-                    <img src="/img/intro.png" alt="" class="img-thumbnail">
-                </div>
-                <div class="col-lg-2">
-                    <img src="/img/trasnocho.png" alt="" class="img-thumbnail">
-                </div>
-                <div class="col-lg-2">
-                    <img src="/img/intro.png" alt="" class="img-thumbnail">
-                </div>
-                <div class="col-lg-2">
-                    <img src="/img/trasnocho2.png" alt="" class="img-thumbnail">
-                </div>
+                
             </div>    
         </div>
 </section>
-<hr>
+<br>
 <section class="pt-4 pb-4">
         <div class="container">
                 <div>
-                        <h2>Presentaciones</h2>
+                        <h2 class="sub-line">Presentaciones</h2>
                 </div>
                 <div class="row ">
-                        <div class="col-lg-2">
-                            <img src="/img/Desesperados.png" alt="">
-                        </div>
-                        <div class="col-lg-2">
-                            <img src="/img/encuentro.png" alt="">
-                        </div>
-                        <div class="col-lg-2">
-                            <img src="/img/Los-Miserables.png" alt="">
-                        </div>
-                        <div class="col-lg-2">
-                            <img src="/img/Teatro.png" alt="">
-                        </div>
-                        <div class="col-lg-2">
-                            <img src="/img/poison.png" alt="">
-                        </div>
-                        <div class="col-lg-2">
-                            <img src="/img/Conyuges.png" alt="">
-                        </div>
-                    </div>     
+                    <div class="owl-carousel owl-theme">
+                            <div >
+                                    <img src="/img/Desesperados.png" alt="">
+                                </div>
+                                <div >
+                                    <img src="/img/encuentro.png" alt="">
+                                </div>
+                                <div >
+                                    <img src="/img/Los-Miserables.png" alt="">
+                                </div>
+                                <div >
+                                    <img src="/img/Teatro.png" alt="">
+                                </div>
+                                <div >
+                                    <img src="/img/poison.png" alt="">
+                                </div>
+                                <div >
+                                    <img src="/img/Conyuges.png" alt="">
+                                </div>
+                    </div>
+                       
+                </div>     
         </div>
 </section>
 @endsection
