@@ -31,10 +31,10 @@ $(window).on('load', function() {
 // 	/*------------------
 // 		Navigation
 // 	--------------------*/
-// 	$('.nav-switch').on('click', function(event) {
-// 		$('.nav-menu').slideToggle(400);
-// 		event.preventDefault();
-// 	});
+$('.nav-switch').on('click', function(event) {
+ 		$('.nav-menu').slideToggle(400);
+ 		event.preventDefault();
+	});
 
 
 
