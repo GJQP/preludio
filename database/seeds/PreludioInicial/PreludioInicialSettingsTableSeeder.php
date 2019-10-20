@@ -22,7 +22,7 @@ class PreludioInicialSettingsTableSeeder extends Seeder
                 'id' => 1,
                 'key' => 'site.title',
                 'display_name' => 'Site Title',
-                'value' => 'Site Title',
+                'value' => 'Preludio',
                 'details' => '',
                 'type' => 'text',
                 'order' => 1,
@@ -33,7 +33,7 @@ class PreludioInicialSettingsTableSeeder extends Seeder
                 'id' => 2,
                 'key' => 'site.description',
                 'display_name' => 'Site Description',
-                'value' => 'Site Description',
+                'value' => 'La cultura en tus manos',
                 'details' => '',
                 'type' => 'text',
                 'order' => 2,
@@ -55,7 +55,7 @@ class PreludioInicialSettingsTableSeeder extends Seeder
                 'id' => 4,
                 'key' => 'site.google_analytics_tracking_id',
                 'display_name' => 'Google Analytics Tracking ID',
-                'value' => '',
+                'value' => NULL,
                 'details' => '',
                 'type' => 'text',
                 'order' => 4,
@@ -77,24 +77,13 @@ class PreludioInicialSettingsTableSeeder extends Seeder
                 'id' => 6,
                 'key' => 'admin.title',
                 'display_name' => 'Admin Title',
-                'value' => 'Voyager',
+                'value' => 'Preludio',
                 'details' => '',
                 'type' => 'text',
                 'order' => 1,
                 'group' => 'Admin',
             ),
             6 => 
-            array (
-                'id' => 7,
-                'key' => 'admin.description',
-                'display_name' => 'Admin Description',
-                'value' => 'Welcome to Voyager. The Missing Admin for Laravel',
-                'details' => '',
-                'type' => 'text',
-                'order' => 2,
-                'group' => 'Admin',
-            ),
-            7 => 
             array (
                 'id' => 8,
                 'key' => 'admin.loader',
@@ -105,7 +94,7 @@ class PreludioInicialSettingsTableSeeder extends Seeder
                 'order' => 3,
                 'group' => 'Admin',
             ),
-            8 => 
+            7 => 
             array (
                 'id' => 9,
                 'key' => 'admin.icon_image',
@@ -116,12 +105,12 @@ class PreludioInicialSettingsTableSeeder extends Seeder
                 'order' => 4,
                 'group' => 'Admin',
             ),
-            9 => 
+            8 => 
             array (
                 'id' => 10,
                 'key' => 'admin.google_analytics_client_id',
             'display_name' => 'Google Analytics Client ID (used for admin dashboard)',
-                'value' => '',
+                'value' => NULL,
                 'details' => '',
                 'type' => 'text',
                 'order' => 1,

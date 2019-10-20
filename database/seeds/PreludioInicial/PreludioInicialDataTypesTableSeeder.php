@@ -28,12 +28,12 @@ class PreludioInicialDataTypesTableSeeder extends Seeder
                 'model_name' => 'TCG\\Voyager\\Models\\User',
                 'policy_name' => 'TCG\\Voyager\\Policies\\UserPolicy',
                 'controller' => 'TCG\\Voyager\\Http\\Controllers\\VoyagerUserController',
-                'description' => '',
+                'description' => NULL,
                 'generate_permissions' => 1,
                 'server_side' => 0,
-                'details' => NULL,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"desc","default_search_key":null,"scope":null}',
                 'created_at' => '2019-10-12 19:01:42',
-                'updated_at' => '2019-10-12 19:01:42',
+                'updated_at' => '2019-10-20 02:48:27',
             ),
             1 => 
             array (
@@ -63,13 +63,13 @@ class PreludioInicialDataTypesTableSeeder extends Seeder
                 'icon' => 'voyager-lock',
                 'model_name' => 'TCG\\Voyager\\Models\\Role',
                 'policy_name' => NULL,
-                'controller' => '',
-                'description' => '',
+                'controller' => NULL,
+                'description' => NULL,
                 'generate_permissions' => 1,
                 'server_side' => 0,
-                'details' => NULL,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"desc","default_search_key":null,"scope":null}',
                 'created_at' => '2019-10-12 19:01:43',
-                'updated_at' => '2019-10-12 19:01:43',
+                'updated_at' => '2019-10-20 02:49:15',
             ),
             3 => 
             array (
@@ -87,7 +87,7 @@ class PreludioInicialDataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2019-10-12 19:22:21',
-                'updated_at' => '2019-10-12 20:19:31',
+                'updated_at' => '2019-10-20 02:24:05',
             ),
             4 => 
             array (
@@ -105,7 +105,7 @@ class PreludioInicialDataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2019-10-12 19:25:46',
-                'updated_at' => '2019-10-12 20:07:55',
+                'updated_at' => '2019-10-20 02:46:02',
             ),
             5 => 
             array (
@@ -123,7 +123,7 @@ class PreludioInicialDataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2019-10-12 19:27:28',
-                'updated_at' => '2019-10-12 20:11:42',
+                'updated_at' => '2019-10-20 02:17:51',
             ),
         ));
         

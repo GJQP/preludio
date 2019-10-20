@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Presentacion extends Model
 {
     /**
-     * The table associated with the model.
+     * Tabla asociada al modelo
      *
      * @var string
      */

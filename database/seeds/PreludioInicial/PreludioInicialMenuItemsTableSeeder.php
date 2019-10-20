@@ -37,17 +37,17 @@ class PreludioInicialMenuItemsTableSeeder extends Seeder
             array (
                 'id' => 2,
                 'menu_id' => 1,
-                'title' => 'Media',
+                'title' => 'Archivos',
                 'url' => '',
                 'target' => '_self',
                 'icon_class' => 'voyager-images',
-                'color' => NULL,
+                'color' => '#000000',
                 'parent_id' => NULL,
                 'order' => 6,
                 'created_at' => '2019-10-12 19:01:44',
-                'updated_at' => '2019-10-12 19:37:06',
+                'updated_at' => '2019-10-20 02:20:14',
                 'route' => 'voyager.media.index',
-                'parameters' => NULL,
+                'parameters' => 'null',
             ),
             2 => 
             array (
