@@ -14,10 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-// Catalogo de Teatros
-Route::get('/teatros', 'TeatrosController@index');
-// Catalogo de Presentaciones
-Route::get('/presentaciones', 'PresentacionesController@index');
+
 //Registrar
 Route::get('/register', 'HomeController@register');
 
@@ -25,8 +22,13 @@ Auth::routes();
 
 //Mostrar un teatro
 Route::get('/teatro/1', 'TeatrosController@mostrar');
+// Catalogo de Teatros
+Route::get('/teatros', 'TeatrosController@index');
+
 //Mostrar una presentacion
 Route::get('/presentacion/1', 'PresentacionesController@show');
+// Catalogo de Presentaciones
+Route::get('/presentaciones', 'PresentacionesController@index');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
