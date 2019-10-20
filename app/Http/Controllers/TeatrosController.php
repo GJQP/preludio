@@ -15,6 +15,7 @@ class TeatrosController extends Controller
     public function index()
     {
         //
+        return view('catalogoTeatros');
     }
 
     /**
@@ -48,10 +49,6 @@ class TeatrosController extends Controller
     {
         //$teatro = teatros::findorfail($id);
         return view('teatros.teatro')/*->with($teatro)*/;
-    }
-
-    public function teatros(){
-        return view('catalogoTeatros');
     }
 
     /**

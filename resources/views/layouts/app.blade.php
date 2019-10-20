@@ -50,7 +50,7 @@
                 <ul>
                     <li class="active"><a href="/">Inicio</a></li>
                     <li><a href="/teatros">Teatros</a></li>
-                    <li><a href="service.html">Presentaciones</a></li>
+                    <li><a href="/presentaciones">Presentaciones</a></li>
                     <li><a href="/register">Contact</a></li>
                 </ul>
             </nav>
