@@ -21,14 +21,14 @@ Route::get('/register', 'HomeController@register');
 Auth::routes();
 
 //Mostrar un teatro
-Route::get('/teatro/1', 'TeatrosController@mostrar');
+Route::get('/teatro/{id}', 'TeatrosController@mostrar')->name('teatro');
 // Catalogo de Teatros
-Route::get('/teatros', 'TeatrosController@index');
+Route::get('/teatros', 'TeatrosController@index')->name('teatros');
 
 //Mostrar una presentacion
-Route::get('/presentacion/1', 'PresentacionesController@show');
+Route::get('/presentacion/{id}', 'PresentacionesController@show')->name('presentacion');
 // Catalogo de Presentaciones
-Route::get('/presentaciones', 'PresentacionesController@index');
+Route::get('/presentaciones', 'PresentacionesController@index')->name('presentaciones');
 
 Route::get('/home', 'HomeController@index')->name('home');
 

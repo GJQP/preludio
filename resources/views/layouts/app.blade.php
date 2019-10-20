@@ -48,9 +48,9 @@
             {{-- <div class="phone-number">+675 334 567 223</div> --}}
             <nav class="nav-menu">
                 <ul>
-                    <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="/">Inicio</a></li>
-                    <li class="{{ Request::is('teatros') ? 'active' : '' }}"><a href="/teatros">Teatros</a></li>
-                    <li class="{{ Request::is('presentaciones') ? 'active' : '' }}"><a href="/presentaciones">Presentaciones</a></li>
+                    <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{ url('/') }}">Inicio</a></li>
+                    <li class="{{ Request::is('teatros') ? 'active' : '' }}"><a href="{{ url('teatros') }}">Teatros</a></li>
+                    <li class="{{ Request::is('presentaciones') ? 'active' : '' }}"><a href="{{ url('presentaciones') }}">Presentaciones</a></li>
                     <li><a href="/register">Contact</a></li>
                 </ul>
             </nav>
