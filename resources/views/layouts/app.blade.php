@@ -13,6 +13,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/jquery-3.4.1.min.js') }}" defer></script>
     <script src="{{ asset('js/main.js') }}" defer></script>
+    <script src="{{ asset('js/all.min.js') }}" defer></script>
 
 
     <!-- Fonts -->
@@ -24,7 +25,6 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/all.min.css') }}" rel="stylesheet">
     
     @yield('recursos')
     
@@ -43,7 +43,7 @@
                 <img src="/img/logo.png" alt="">
             </a>
             <div class="nav-switch">
-                <i class="fa fa-bars"></i>
+                <i class="fas fa-bars"></i>
             </div>
             {{-- <div class="phone-number">+675 334 567 223</div> --}}
             <nav class="nav-menu">
@@ -116,11 +116,11 @@
 	<footer class="footer-section">
             <div class="footer-social">
                 <div class="social-links">
-                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
             <div class="container">
