@@ -44,4 +44,20 @@ class Teatro extends Model
     private function getEmptyFieldReadAttribute($field){
         return $field?? "Vacío";
     }
+
+    /**
+     * Devuelve el Usuario Teatro de este establecimiento
+     */
+    public function user()
+    {
+        return $this->hasOne('App\User');
+    }
+
+    /**
+     * Devuelve las presentaciones de este establecimiento
+     */
+    public function presentaciones()
+    {
+        return $this->hasMany('App\Presentacion');
+    }
 }

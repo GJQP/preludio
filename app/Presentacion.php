@@ -15,4 +15,20 @@ class Presentacion extends Model
 
     const CREATED_AT = 'fecha_creacion';
     const UPDATED_AT = 'fecha_modificacion';
+
+    /**
+     * Devuelve la obra relacionada
+     */
+    public function obra()
+    {
+        return $this->belongsTo('App\Obra');
+    }
+
+    /**
+     * Devuelve el teatro relacionado
+     */
+    public function teatro()
+    {
+        return $this->belongsTo('App\Teatro');
+    }
 }
