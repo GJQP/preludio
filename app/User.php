@@ -10,6 +10,9 @@ class User extends \TCG\Voyager\Models\User
 {
     use Notifiable;
 
+    // Por el seed estamos forzando este ID al rol.
+    const ROL_TEATRO = 3;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -36,4 +39,25 @@ class User extends \TCG\Voyager\Models\User
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Devuelve el establecimiento relacionado con este usuario
+     */
+    public function teatro()
+    {
+        // Unicamente devolvemos a quien sea teatro realmente
+        if (!$this->esTeatro()) {
+            return null;
+        }
+
+        return $this->belongsTo('App\Teatro');
+    }
+
+    /**
+     * Determina si este usuario es teatrero
+     */
+    public function esTeatro()
+    {
+        return $this->role === self::ROL_TEATRO;
+    }
 }
