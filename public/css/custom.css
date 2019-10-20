@@ -1,0 +1,26 @@
+/* =================================
+------------------------------------
+  Estilos custom Preludio
+  Version: 1.0
+ ------------------------------------ 
+ ====================================*/
+
+.flex-cont{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.w33{
+    width: 30%;
+    margin: 0.5em;
+}
+
+@media screen and (max-width: 576px) {
+    .flex-cont {
+        display: block;
+    }
+    .w33 {
+        width: 96%;
+    }
+}

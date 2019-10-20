@@ -1,3 +1,29 @@
+/* =================================
+------------------------------------
+  Estilos custom Preludio
+  Version: 1.0
+ ------------------------------------ 
+ ====================================*/
+
+.flex-cont{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.w33{
+    width: 30%;
+    margin: 0.5em;
+}
+
+@media screen and (max-width: 576px) {
+    .flex-cont {
+        display: block;
+    }
+    .w33 {
+        width: 96%;
+    }
+}
 /*!
  * Bootstrap v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors

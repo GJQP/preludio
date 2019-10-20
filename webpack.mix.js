@@ -23,6 +23,7 @@ mix.js('resources/js/app.js', 'public/js')
       ],'public/js/all.js')
 
    .styles([//'public/css/animate.css',
+            'public/css/custom.css',
             'public/css/bootstrap.min.css',
             'public/css/font-awesome.min.css',
             //'public/css/magnific-popup.css',
