@@ -41,10 +41,10 @@ $('.nav-switch').on('click', function(event) {
 // 	/*------------------
 // 		Background set
 // 	--------------------*/
-// 	$('.set-bg').each(function() {
-// 		var bg = $(this).data('setbg');
-// 		$(this).css('background-image', 'url(' + bg + ')');
-// 	});
+$('.set-bg').each(function() {
+	 	var bg = $(this).data('setbg');
+ 		$(this).css('background-image', 'url(' + bg + ')');
+	});
 
 
 // 	/*------------------
