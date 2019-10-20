@@ -15,6 +15,7 @@ class PresentacionesController extends Controller
     public function index()
     {
         //
+        return view('catalogoPresentaciones');
     }
 
     /**
@@ -47,6 +48,7 @@ class PresentacionesController extends Controller
     public function show(Presentaciones $presentaciones)
     {
         //
+        return view('presentaciones.presentacion');
     }
 
     /**
@@ -82,4 +84,5 @@ class PresentacionesController extends Controller
     {
         //
     }
+
 }
