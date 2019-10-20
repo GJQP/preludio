@@ -144,7 +144,9 @@ return [
         ],
 
         'widgets' => [
-
+            'App\\Voyager\\Widgets\\TeatroDimmer',
+            'App\\Voyager\\Widgets\\ObraDimmer',
+            'App\\Voyager\\Widgets\\PresentacionDimmer',
         ],
 
     ],
@@ -181,9 +183,9 @@ return [
     |
     */
 
-    'primary_color' => '#22A7F0',
+    'primary_color' => '#9DD800',
 
-    'show_dev_tips' => true, // Show development tip "How To Use:" in Menu and Settings
+    'show_dev_tips' => env("APP_DEBUG",false), // Show development tip "How To Use:" in Menu and Settings
 
     // Here you can specify additional assets you would like to be included in the master.blade
     'additional_css' => [
