@@ -3,7 +3,7 @@ $(document).ready(function(){
         loop:true,
         autoplay:true,
         autoplayTimeout:2500,
-        navText: ['<i class="fa fa-long-arrow-left"></i> PREV', 'NEXT<i class="fa fa-long-arrow-right"></i>'],
+        navText: ['<i class="fas fa-long-arrow-alt-left"></i> PREV', 'NEXT<i class="fas fa-long-arrow-alt-right"></i>'],
         autoplayHoverPause:true,
         margin:10,
 		responsive:{

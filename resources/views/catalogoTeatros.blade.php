@@ -5,12 +5,15 @@
 @endsection
 
 @section('contenido')
+<section class="page-header-section set-bg" data-setbg="img/header-bg-2.jpg">
+    <div class="container">
+        <h1 class="header-title">Teatros<span>.</span></h1>
+    </div>
+</section>
+
 <section class="intro-section pt100 pb50">
         <div class="container">
                 <div class="row">
-                    <div class="col-lg-7 intro-text"> 
-                        <h2 class="sp-title">Teatros</h2> 
-                    </div>
                     <div class="flex-cont">
                         @for ($i = 0; $i < 10; $i++)
                             <div class="card text-center w33">

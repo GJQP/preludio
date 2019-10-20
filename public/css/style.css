@@ -2066,6 +2066,12 @@ ol {
 
 /* small mobile :320px. */
 @media only screen and (max-width: 479px) {
+	.page-header-section {
+		height: 312px;
+	}
+	.page-header-section .header-title {
+		font-size: 38px;
+	}
 	.logo-area {
 		padding: 20px 30px 30px;
 	}
