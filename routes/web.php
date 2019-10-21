@@ -21,7 +21,7 @@ Route::get('/register', 'HomeController@register');
 Auth::routes();
 
 //Mostrar un teatro
-Route::get('/teatro/{id}', 'TeatrosController@mostrar')->name('teatro');
+Route::get('/teatro/{id}', 'TeatrosController@show')->name('teatro');
 // Catalogo de Teatros
 Route::get('/teatros', 'TeatrosController@index')->name('teatros');
 
