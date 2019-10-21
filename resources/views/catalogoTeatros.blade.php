@@ -15,18 +15,19 @@
         <div class="container">
                 <div class="row">
                     <div class="flex-cont">
-                        @for ($i = 0; $i < 10; $i++)
+                        @foreach($teatros as $teatro)
                             <div class="card text-center w33">
-                                <a href="/teatro/1"><img src="img/cta-img.jpg" class="card-img-top" alt="Imagen del teatro"></a>
+                                <a href="/teatro/{{$teatro->id}}"><img src="img/cta-img.jpg" class="card-img-top"
+                                                                       alt="Imagen del teatro"></a>
                                 <div class="card-body">
-                                    <h6 class="card-title">NOMBRE DE TEATRO {{ $i }}</h6>
-                                    <a href="#" class="card-link stretched-link font-weight-light">Presentaciones</a> 
+                                    <h6 class="card-title">{{ $teatro->nombre }}</h6>
+                                    <a href="#" class="card-link stretched-link font-weight-light">Presentaciones</a>
                                 </div>
                             </div>
-                        @endfor
-                        
+                        @endforeach
+
                     </div>
-                    
+
                 </div>
             </div>
         </section>

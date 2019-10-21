@@ -18,13 +18,13 @@
 			<div class="row">
 				<div class="col-lg-4 pt-4">
                     <img src="/img/paseo-nueva.png" alt="">
-                </div>   
+                </div>
                 <div class="col-lg-7 mr-3 ml-3">
-                    <div class="sp-title mb-2"> 
-                         <h2> <span>Paseo las Mercedes</span> </h2> 
+                    <div class="sp-title mb-2">
+                        <h2><span>{{$teatro->nombre}}</span></h2>
                     </div>
-                    <div> 
-                        <p><strong>Teléfono:</strong> 0424-1844392</p>
+                    <div>
+                        <p><strong>Teléfono: </strong>{{$teatro->telefono}}</p>
                     </div>
                     <div>
                         <blockquote>
@@ -62,8 +62,8 @@
                                 <img src="/img/trasnocho2.png" alt="" class="img-thumbnail">
                             </div>
                 </div>
-                
-            </div>    
+
+            </div>
         </div>
 </section>
 <br>
@@ -93,8 +93,8 @@
                                     <img src="/img/Conyuges.png" alt="">
                                 </div>
                     </div>
-                       
-                </div>     
+
+                </div>
         </div>
 </section>
 @endsection

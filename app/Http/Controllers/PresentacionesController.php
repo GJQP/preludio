@@ -14,8 +14,8 @@ class PresentacionesController extends Controller
      */
     public function index()
     {
-        //
-        return view('catalogoPresentaciones');
+        $presentaciones = Presentacion::all();
+        return view('catalogoPresentaciones', compact('presentaciones'));
     }
 
     /**
@@ -42,22 +42,21 @@ class PresentacionesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Presentacion  $presentaciones
+     * @param \App\Presentacion $presentacion
      * @return \Illuminate\Http\Response
      */
-    public function show(Presentacion $presentaciones)
+    public function show(Presentacion $presentacion)
     {
-        //
-        return view('presentaciones.presentacion');
+        return view('presentaciones.presentacion', compact('presentacion'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Presentacion  $presentaciones
+     * @param \App\Presentacion $presentacion
      * @return \Illuminate\Http\Response
      */
-    public function edit(Presentacion $presentaciones)
+    public function edit(Presentacion $presentacion)
     {
         //
     }
@@ -66,10 +65,10 @@ class PresentacionesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Presentacion  $presentaciones
+     * @param \App\Presentacion $presentacion
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Presentacion $presentaciones)
+    public function update(Request $request, Presentacion $presentacion)
     {
         //
     }
@@ -77,10 +76,10 @@ class PresentacionesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Presentacion  $presentaciones
+     * @param \App\Presentacion $presentacion
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Presentacion $presentaciones)
+    public function destroy(Presentacion $presentacion)
     {
         //
     }
