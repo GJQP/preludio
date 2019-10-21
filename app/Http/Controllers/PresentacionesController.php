@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Presentaciones;
+use App\Presentacion;
 use Illuminate\Http\Request;
 
 class PresentacionesController extends Controller
@@ -42,10 +42,10 @@ class PresentacionesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Presentaciones  $presentaciones
+     * @param  \App\Presentacion  $presentaciones
      * @return \Illuminate\Http\Response
      */
-    public function show(Presentaciones $presentaciones)
+    public function show(Presentacion $presentaciones)
     {
         //
         return view('presentaciones.presentacion');
@@ -54,10 +54,10 @@ class PresentacionesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Presentaciones  $presentaciones
+     * @param  \App\Presentacion  $presentaciones
      * @return \Illuminate\Http\Response
      */
-    public function edit(Presentaciones $presentaciones)
+    public function edit(Presentacion $presentaciones)
     {
         //
     }
@@ -66,10 +66,10 @@ class PresentacionesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Presentaciones  $presentaciones
+     * @param  \App\Presentacion  $presentaciones
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Presentaciones $presentaciones)
+    public function update(Request $request, Presentacion $presentaciones)
     {
         //
     }
@@ -77,10 +77,10 @@ class PresentacionesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Presentaciones  $presentaciones
+     * @param  \App\Presentacion  $presentaciones
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Presentaciones $presentaciones)
+    public function destroy(Presentacion $presentaciones)
     {
         //
     }

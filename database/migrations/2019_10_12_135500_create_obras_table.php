@@ -15,7 +15,12 @@ class CreateObrasTable extends Migration
     {
         Schema::create('obras', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            $table->string('nombre',255);
+            $table->text('sinopsis')->nullable();
+
+
+            $table->dateTime('fecha_creacion'); //Sustituye created_at
+            $table->dateTime('fecha_modificacion'); //Sustituye updated_at
         });
     }
 
