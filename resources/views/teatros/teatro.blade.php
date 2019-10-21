@@ -31,6 +31,11 @@
                             <p>ipsum dolor, sit amet consectetur adipisicing elit. Tempore aliquam minima eius porro magnam, numquam impedit cumque consectetur! Consectetur amet tenetur aperiam earum eius dicta ea dolorem quo incidunt itaque! </p>
                         </blockquote>
                     </div>
+                    <div class="derecha mt-5 ">
+                        <a href="https://www.instagram.com/?hl=es-la" class=""><i class="fab fa-instagram rs" ></i></a>
+                        <a href="#"><i class="fab fa-facebook rs" style="font-size:30px"></i></a>
+                        <a href="#"><i class="fab fa-twitter rs" style="font-size:30px"></i></a>
+                    </div>
                 </div>
 			</div>
 		</div>
@@ -43,23 +48,23 @@
             </div>
             <div class="row">
                 <div class="owl-carousel owl-theme">
-                        <div >
-                                <img src="/img/intro.png" alt="" class="img-thumbnail">
+                         <div >
+                                <img src="/img/intro.png" alt="" class="galeria">
                         </div>
                             <div >
-                                <img src="/img/referencia.png" alt="" class="img-thumbnail">
+                                <img src="/img/referencia.png" alt="" class="galeria">
                             </div>
                             <div >
-                                <img src="/img/intro.png" alt="" class="img-thumbnail">
+                                <img src="/img/intro.png" alt="" class="galeria">
                             </div>
                             <div >
-                                <img src="/img/trasnocho.png" alt="" class="img-thumbnail">
+                                <img src="/img/trasnocho.png" alt="" class="galeria">
                             </div>
                             <div >
-                                <img src="/img/intro.png" alt="" class="img-thumbnail">
+                                <img src="/img/intro.png" alt="" class="galeria">
                             </div>
                             <div >
-                                <img src="/img/trasnocho2.png" alt="" class="img-thumbnail">
+                                <img src="/img/trasnocho2.png" alt="" class="galeria">
                             </div>
                 </div>
 
@@ -74,24 +79,24 @@
                 </div>
                 <div class="row ">
                     <div class="owl-carousel owl-theme">
-                            <div >
-                                    <img src="/img/Desesperados.png" alt="">
-                                </div>
-                                <div >
-                                    <img src="/img/encuentro.png" alt="">
-                                </div>
-                                <div >
-                                    <img src="/img/Los-Miserables.png" alt="">
-                                </div>
-                                <div >
-                                    <img src="/img/Teatro.png" alt="">
-                                </div>
-                                <div >
-                                    <img src="/img/poison.png" alt="">
-                                </div>
-                                <div >
-                                    <img src="/img/Conyuges.png" alt="">
-                                </div>
+                            <div>
+                                <a href="/presentacion/1"> <img src="/img/Desesperados.png" alt="" class="galeria"></a>
+                            </div>
+                            <div>
+                                <a href="/presentacion/1"> <img src="/img/encuentro.png" alt="" class="galeria"> </a>
+                            </div>
+                            <div>
+                                <a href="/presentacion/1"> <img src="/img/Los-Miserables.png" alt="" class="galeria"> </a>
+                            </div>
+                            <div>
+                                <a href="/presentacion/1">  <img src="/img/Teatro.png" alt="" class="galeria"></a>
+                            </div>
+                            <div>
+                                <a href="/presentacion/1"> <img src="/img/poison.png" alt="" class="galeria"> </a>
+                            </div>
+                            <div>
+                                <a href="/presentacion/1"> <img src="/img/Conyuges.png" alt="" class="galeria"> </a>
+                            </div>
                     </div>
 
                 </div>
