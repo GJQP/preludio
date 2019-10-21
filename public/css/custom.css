@@ -28,3 +28,20 @@
 .sub-line{
     border-bottom: 2px solid black;
 }
+
+.enlace{
+    color: #4d6607;
+}
+
+.derecha{
+    text-align: right;
+}
+.rs{
+    color:#79a304;
+    font-size: 30px;;
+}
+
+.galeria{
+        width: auto;
+       height: 290px;
+}
