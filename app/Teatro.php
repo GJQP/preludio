@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Teatro extends Model
 {
@@ -50,7 +51,7 @@ class Teatro extends Model
      */
     public function user()
     {
-        return $this->hasOne('App\User');
+        return $this->belongsTo('App\User');
     }
 
     /**
@@ -59,5 +60,34 @@ class Teatro extends Model
     public function presentaciones()
     {
         return $this->hasMany('App\Presentacion');
+    }
+
+    /**
+     * Elimina el establecimiento y su usuario relacionado
+     * de este teatro
+     * @return bool|null
+     * @throws \Exception
+     */
+    public function delete()
+    {
+        DB::beginTransaction();
+
+        // Se tiene que eliminar primero el registro hijo (este),
+        // antes de poder eliminar el usuario (Hay un constraint, por tanto
+        // debemos evitar un Intergity Error
+        $usuarioRelacionado = $this->user;
+
+        // Eliminamos las presentaciones asociadas
+        $this->presentaciones()->delete();
+
+        // Ya no somos dependencias, podemos eliminar como siempre
+        $resultado = parent::delete();
+
+        // Ya el usuario no tiene relacion, lo podemos eliminar
+        $usuarioRelacionado->delete();
+
+        DB::commit();
+
+        return $resultado;
     }
 }
