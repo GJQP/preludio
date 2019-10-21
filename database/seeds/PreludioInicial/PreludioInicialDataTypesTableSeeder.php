@@ -33,7 +33,7 @@ class PreludioInicialDataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"desc","default_search_key":null,"scope":null}',
                 'created_at' => '2019-10-12 19:01:42',
-                'updated_at' => '2019-10-20 02:48:27',
+                'updated_at' => '2019-10-21 00:21:49',
             ),
             1 => 
             array (
@@ -87,7 +87,7 @@ class PreludioInicialDataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2019-10-12 19:22:21',
-                'updated_at' => '2019-10-20 02:24:05',
+                'updated_at' => '2019-10-21 00:46:40',
             ),
             4 => 
             array (
@@ -105,7 +105,7 @@ class PreludioInicialDataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2019-10-12 19:25:46',
-                'updated_at' => '2019-10-20 02:46:02',
+                'updated_at' => '2019-10-21 00:29:45',
             ),
             5 => 
             array (
@@ -121,9 +121,9 @@ class PreludioInicialDataTypesTableSeeder extends Seeder
                 'description' => NULL,
                 'generate_permissions' => 1,
                 'server_side' => 0,
-                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":"presentacionesAsociadas"}',
                 'created_at' => '2019-10-12 19:27:28',
-                'updated_at' => '2019-10-20 02:17:51',
+                'updated_at' => '2019-10-21 00:52:33',
             ),
         ));
         

@@ -743,6 +743,17 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 02:49:15',
                 'updated_at' => '2019-10-20 02:49:15',
             ),
+            66 => 
+            array (
+                'id' => 72,
+                'table_name' => 'data_rows',
+                'column_name' => 'display_name',
+                'foreign_key' => 59,
+                'locale' => 'en',
+                'value' => 'obras',
+                'created_at' => '2019-10-21 00:43:49',
+                'updated_at' => '2019-10-21 00:43:49',
+            ),
         ));
         
         

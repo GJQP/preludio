@@ -46,7 +46,7 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{}',
+            'details' => '{"validation":{"rule":"required|regex:\\/^[a-zA-Z\\u00f1]+(([\',. -][a-zA-Z \\u00f1])?[a-zA-Z\\u00f1]*)*$\\/","messages":{"required":"El nombre es un campo obligatorio","regex":"Debe ingresar un nombre v\\u00e1lido"}}}',
                 'order' => 2,
             ),
             2 => 
@@ -62,7 +62,7 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{}',
+                'details' => '{"validation":{"rule":"required|email:rfc,dns","messages":{"required":"El correo es un campo obligatorio","email":"Debe ingresar un correo electr\\u00f3nico v\\u00e1lido"}}}',
                 'order' => 3,
             ),
             3 => 
@@ -78,7 +78,7 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 0,
-                'details' => '{}',
+                'details' => '{"validation":{"edit":{"rule":"sometimes|min:8"},"add":{"rule":"min:8|required"},"messages":{"required":"La contrase\\u00f1a es un campo obligatorio","min":"La contrase\\u00f1a debe contener m\\u00e1s de 8 caracteres"}}}',
                 'order' => 4,
             ),
             4 => 
@@ -142,7 +142,7 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{}',
+                'details' => '{"resize":{"width":"250","height":"250"},"quality":"70%","upsize":true}',
                 'order' => 8,
             ),
             8 => 
@@ -350,7 +350,7 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{}',
+                'details' => '{"validation":{"rule":"required","messages":{"required":"Se debe asignar un rol al usuario"}}}',
                 'order' => 9,
             ),
             21 => 
@@ -398,7 +398,7 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{"display":{"width":"3"}}',
+                'details' => '{"validation":{"rule":"unique:teatros,rif","messages":{"unique":"El RIF ingresado ya existe"}},"display":{"width":"3"}}',
                 'order' => 4,
             ),
             24 => 
@@ -430,7 +430,7 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{"display":{"width":"3"}}',
+            'details' => '{"validation":{"rule":["required","numeric","regex:\\/^0?(424|414|412|416|212)[0-9]{7}\\/"],"messages":{"regex":"Debe introducir un n\\u00famero v\\u00e1lido","numeric":"Solo puede ser num\\u00e9rico","required":"Campo requerido"}},"display":{"width":"3"}}',
                 'order' => 7,
             ),
             26 => 
@@ -542,7 +542,7 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{}',
+                'details' => '{"validation":{"rule":"required|min:3","messages":{"required":"El nombre es un campo obligatorio","min":"El nombre debe tener m\\u00e1s de 3 caracteres"}}}',
                 'order' => 2,
             ),
             33 => 
@@ -558,7 +558,7 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{}',
+                'details' => '{"validation":{"rule":"required|min:8","messages":{"required":"La sinopsis es un campo obligatorio","min":"La sinopsis debe tener m\\u00e1s de 8 caracteres"}}}',
                 'order' => 3,
             ),
             34 => 
@@ -622,7 +622,7 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 0,
-                'details' => '{}',
+                'details' => '{"validation":{"rule":"required"}}',
                 'order' => 2,
             ),
             38 => 
@@ -630,15 +630,15 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'id' => 39,
                 'data_type_id' => 8,
                 'field' => 'teatro_id',
-                'type' => 'text',
-                'display_name' => 'Teatro Id',
+                'type' => 'select_dropdown',
+                'display_name' => 'Teatro',
                 'required' => 1,
                 'browse' => 0,
                 'read' => 0,
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 0,
-                'details' => '{}',
+                'details' => '{"validation":{"rule":"required"},"relationship":{"key":"id","label":"nombre"}}',
                 'order' => 3,
             ),
             39 => 
@@ -654,8 +654,8 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{"description":"Ingresa la fecha en la que comienza la funci\\u00f3n a presentarse en el teatro seleccionado","display":{"width":"3"}}',
-                'order' => 7,
+                'details' => '{"description":"Ingresa la fecha en la que comienza la funci\\u00f3n a presentarse en el teatro seleccionado","validation":{"rule":"required|date","messages":{"required":"Debe indicarse la fecha en que inicia la presentaci\\u00f3n"}},"display":{"width":"3"}}',
+                'order' => 8,
             ),
             40 => 
             array (
@@ -670,8 +670,8 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{"description":"Ingresa la fecha en la que finaliza la funci\\u00f3n a presentarse en el teatro seleccionado","display":{"width":"3"}}',
-                'order' => 8,
+                'details' => '{"description":"Ingresa la fecha en la que finaliza la funci\\u00f3n a presentarse en el teatro seleccionado","validation":{"rule":"required|date|after:fecha_inicio","messages":{"required":"Debe indicarse la fecha en que finaliza la presentaci\\u00f3n","after":"La fecha en que finaliza debe ser un d\\u00eda despu\\u00e9s en que inicia"}},"display":{"width":"3"}}',
+                'order' => 9,
             ),
             41 => 
             array (
@@ -687,7 +687,7 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
             'details' => '{"description":"Imagen a mostrarse esta debe estar en una escala de 3:2 (669px x 431px)","resize":{"width":"669","height":"431"},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"300","height":"250"}}],"display":{"width":"3"}}',
-                'order' => 5,
+                'order' => 6,
             ),
             42 => 
             array (
@@ -703,7 +703,7 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{}',
-                'order' => 6,
+                'order' => 7,
             ),
             43 => 
             array (
@@ -719,7 +719,7 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'add' => 0,
                 'delete' => 0,
                 'details' => '{}',
-                'order' => 10,
+                'order' => 11,
             ),
             44 => 
             array (
@@ -735,25 +735,9 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'add' => 0,
                 'delete' => 0,
                 'details' => '{}',
-                'order' => 11,
+                'order' => 12,
             ),
             45 => 
-            array (
-                'id' => 46,
-                'data_type_id' => 8,
-                'field' => 'presentacione_hasmany_obra_relationship',
-                'type' => 'relationship',
-                'display_name' => 'Obra',
-                'required' => 0,
-                'browse' => 1,
-                'read' => 1,
-                'edit' => 1,
-                'add' => 1,
-                'delete' => 1,
-                'details' => '{"model":"App\\\\Obra","table":"obras","type":"belongsTo","column":"obra_id","key":"id","label":"nombre","pivot_table":"data_rows","pivot":"0","taggable":"0"}',
-                'order' => 4,
-            ),
-            46 => 
             array (
                 'id' => 48,
                 'data_type_id' => 6,
@@ -763,29 +747,13 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'required' => 0,
                 'browse' => 0,
                 'read' => 0,
-                'edit' => 1,
+                'edit' => 0,
                 'add' => 0,
                 'delete' => 1,
                 'details' => '{"model":"App\\\\Presentacion","table":"presentaciones","type":"hasMany","column":"teatro_id","key":"id","label":"poster","pivot_table":"data_rows","pivot":"0","taggable":"0"}',
                 'order' => 15,
             ),
-            47 => 
-            array (
-                'id' => 49,
-                'data_type_id' => 8,
-                'field' => 'presentacione_belongsto_teatro_relationship',
-                'type' => 'relationship',
-                'display_name' => 'teatros',
-                'required' => 0,
-                'browse' => 1,
-                'read' => 1,
-                'edit' => 1,
-                'add' => 1,
-                'delete' => 1,
-                'details' => '{"model":"App\\\\Teatro","table":"teatros","type":"belongsTo","column":"teatro_id","key":"id","label":"nombre","pivot_table":"data_rows","pivot":"0","taggable":"0"}',
-                'order' => 12,
-            ),
-            48 => 
+            46 => 
             array (
                 'id' => 50,
                 'data_type_id' => 7,
@@ -801,12 +769,12 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'details' => '{"model":"App\\\\Presentacion","table":"presentaciones","type":"hasOne","column":"obra_id","key":"id","label":"reparto","pivot_table":"data_rows","pivot":"0","taggable":"0"}',
                 'order' => 6,
             ),
-            49 => 
+            47 => 
             array (
                 'id' => 52,
                 'data_type_id' => 6,
                 'field' => 'user_id',
-                'type' => 'text',
+                'type' => 'select_dropdown',
                 'display_name' => 'Usuario Asociado',
                 'required' => 1,
                 'browse' => 0,
@@ -814,10 +782,10 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 0,
-                'details' => '{}',
+                'details' => '{"validation":{"rule":"required","messages":{"required":"Debe haber un usuario asociado"}},"relationship":{"key":"id","label":"email"}}',
                 'order' => 2,
             ),
-            50 => 
+            48 => 
             array (
                 'id' => 53,
                 'data_type_id' => 6,
@@ -830,10 +798,10 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{"base_path":"\\/teatros\\/{pk}\\/","max":10,"min":0,"allow_upload":true,"allow_move":false,"allow_delete":true,"allow_create_folder":true,"allow_rename":false,"allow_crop":true,"delete_files":true,"allowed":["image"],"quality":80,"thumbnails":[{"type":"fit","name":"thumb","width":250}],"null":""}',
+                'details' => '{"base_path":"\\/teatros\\/{pk}\\/","max":10,"min":0,"allow_upload":true,"allow_move":false,"allow_delete":true,"allow_create_folder":true,"allow_rename":false,"allow_crop":true,"delete_files":true,"allowed":["image"],"quality":80,"thumbnails":[{"type":"fit","name":"thumb","width":250}]}',
                 'order' => 14,
             ),
-            51 => 
+            49 => 
             array (
                 'id' => 54,
                 'data_type_id' => 6,
@@ -849,7 +817,7 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'details' => '{"display":{"width":"3"}}',
                 'order' => 5,
             ),
-            52 => 
+            50 => 
             array (
                 'id' => 55,
                 'data_type_id' => 8,
@@ -863,25 +831,9 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{"base_path":"\\/presentaciones\\/{pk}\\/","max":10,"min":0,"allow_upload":true,"allow_move":false,"allow_delete":true,"allow_create_folder":true,"allow_rename":true,"allow_crop":true,"allowed":["image"],"quality":80,"thumbnails":[{"type":"fit","name":"thumb","width":250}]}',
-                'order' => 9,
+                'order' => 10,
             ),
-            53 => 
-            array (
-                'id' => 56,
-                'data_type_id' => 6,
-                'field' => 'teatro_belongsto_user_relationship',
-                'type' => 'relationship',
-                'display_name' => 'Usuario Con Acceso',
-                'required' => 0,
-                'browse' => 1,
-                'read' => 1,
-                'edit' => 1,
-                'add' => 1,
-                'delete' => 1,
-                'details' => '{"model":"App\\\\User","table":"users","type":"belongsTo","column":"user_id","key":"id","label":"email","pivot_table":"data_rows","pivot":"0","taggable":"0"}',
-                'order' => 13,
-            ),
-            54 => 
+            51 => 
             array (
                 'id' => 57,
                 'data_type_id' => 1,
@@ -896,6 +848,22 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'delete' => 1,
                 'details' => '{}',
                 'order' => 6,
+            ),
+            52 => 
+            array (
+                'id' => 59,
+                'data_type_id' => 8,
+                'field' => 'presentacione_belongsto_obra_relationship',
+                'type' => 'relationship',
+                'display_name' => 'obras',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"model":"App\\\\Obra","table":"obras","type":"belongsTo","column":"obra_id","key":"id","label":"nombre","pivot_table":"data_rows","pivot":"0","taggable":"0"}',
+                'order' => 13,
             ),
         ));
         

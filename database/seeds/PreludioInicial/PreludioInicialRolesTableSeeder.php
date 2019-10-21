@@ -29,9 +29,9 @@ class PreludioInicialRolesTableSeeder extends Seeder
             array (
                 'id' => 2,
                 'name' => 'user',
-                'display_name' => 'Usuario Normal',
+                'display_name' => 'Espectador',
                 'created_at' => '2019-10-12 19:01:45',
-                'updated_at' => '2019-10-20 02:49:38',
+                'updated_at' => '2019-10-21 00:25:04',
             ),
             2 => 
             array (
