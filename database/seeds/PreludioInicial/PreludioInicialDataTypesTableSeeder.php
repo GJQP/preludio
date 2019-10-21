@@ -87,7 +87,7 @@ class PreludioInicialDataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2019-10-12 19:22:21',
-                'updated_at' => '2019-10-21 00:46:40',
+                'updated_at' => '2019-10-21 13:41:31',
             ),
             4 => 
             array (

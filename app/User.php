@@ -50,7 +50,7 @@ class User extends \TCG\Voyager\Models\User
             return null;
         }
 
-        return $this->belongsTo('App\Teatro');
+        return $this->hasOne('App\Teatro');
     }
 
     /**

@@ -779,7 +779,7 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'required' => 1,
                 'browse' => 0,
                 'read' => 1,
-                'edit' => 1,
+                'edit' => 0,
                 'add' => 1,
                 'delete' => 0,
                 'details' => '{"validation":{"rule":"required","messages":{"required":"Debe haber un usuario asociado"}},"relationship":{"key":"id","label":"email"}}',

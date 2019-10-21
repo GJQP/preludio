@@ -754,6 +754,61 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-21 00:43:49',
                 'updated_at' => '2019-10-21 00:43:49',
             ),
+            67 => 
+            array (
+                'id' => 73,
+                'table_name' => 'menu_items',
+                'column_name' => 'title',
+                'foreign_key' => 15,
+                'locale' => 'en',
+                'value' => 'test',
+                'created_at' => '2019-10-21 04:08:43',
+                'updated_at' => '2019-10-21 04:08:43',
+            ),
+            68 => 
+            array (
+                'id' => 74,
+                'table_name' => 'menu_items',
+                'column_name' => 'title',
+                'foreign_key' => 16,
+                'locale' => 'en',
+                'value' => 'test2',
+                'created_at' => '2019-10-21 13:15:27',
+                'updated_at' => '2019-10-21 13:15:27',
+            ),
+            69 => 
+            array (
+                'id' => 75,
+                'table_name' => 'menu_items',
+                'column_name' => 'title',
+                'foreign_key' => 17,
+                'locale' => 'en',
+                'value' => 'Presentaciones',
+                'created_at' => '2019-10-21 13:25:40',
+                'updated_at' => '2019-10-21 13:25:40',
+            ),
+            70 => 
+            array (
+                'id' => 76,
+                'table_name' => 'menu_items',
+                'column_name' => 'title',
+                'foreign_key' => 19,
+                'locale' => 'en',
+                'value' => 'Teatro',
+                'created_at' => '2019-10-21 13:27:15',
+                'updated_at' => '2019-10-21 13:27:15',
+            ),
+            71 => 
+            array (
+                'id' => 77,
+                'table_name' => 'menu_items',
+                'column_name' => 'title',
+                'foreign_key' => 18,
+                'locale' => 'en',
+                'value' => 'Perfil',
+                'created_at' => '2019-10-21 13:38:05',
+                'updated_at' => '2019-10-21 13:38:05',
+            ),
         ));
         
         
