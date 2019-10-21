@@ -3,13 +3,59 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Teatro extends Model
 {
     const CREATED_AT = 'fecha_creacion';
     const UPDATED_AT = 'fecha_modificacion';
 
+    /**
+     * Devuelve el Usuario Teatro de este establecimiento
+     */
+    public function user()
+    {
+        return $this->hasOne('App\User');
+    }
+
+    /**
+     * Devuelve las presentaciones de este establecimiento
+     */
+    public function presentaciones()
+    {
+        return $this->hasMany('App\Presentacion');
+    }
+
     /*Accesos BREAD*/
+    /**
+     * Relaciona campo user_id con Usuario explicitamente
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function userId(){
+        return $this->belongsTo("App\User");
+    }
+
+    /**
+     * Lista de usuarios a mostrar al relacionarlo a un teatro
+     * @return mixed
+     */
+    public function userIdList(){
+        $usuariosAsignados = DB::table('teatros')
+            ->select('user_id')
+            ->whereNotNull('user_id')
+            ->pluck('user_id');
+
+        return DB::table('users')->where('role_id',3)->whereNotIn('id',$usuariosAsignados)->get(['id','email']);
+    }
+
+    /**
+     * Valor por defecto al relacionar un teatro
+     * @return mixed
+     */
+    public static function userIdDefault(){
+        return auth()->user()->id;
+    }
+
     public function getActivoBrowseAttribute()
     {
         return $this->activo? "Activo":"Inactivo";
@@ -43,21 +89,5 @@ class Teatro extends Model
      */
     private function getEmptyFieldReadAttribute($field){
         return $field?? "Vacío";
-    }
-
-    /**
-     * Devuelve el Usuario Teatro de este establecimiento
-     */
-    public function user()
-    {
-        return $this->hasOne('App\User');
-    }
-
-    /**
-     * Devuelve las presentaciones de este establecimiento
-     */
-    public function presentaciones()
-    {
-        return $this->hasMany('App\Presentacion');
     }
 }

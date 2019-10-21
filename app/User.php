@@ -58,6 +58,6 @@ class User extends \TCG\Voyager\Models\User
      */
     public function esTeatro()
     {
-        return $this->role === self::ROL_TEATRO;
+        return $this->role_id === self::ROL_TEATRO;
     }
 }
