@@ -69,11 +69,7 @@ class User extends \TCG\Voyager\Models\User
      */
     public function esTeatro()
     {
-        if (is_null($this->esTeatro))
-        {
-            $this->esTeatro = $this->role->id === self::ROL_TEATRO;
-        }
-        return $this->esTeatro;
+        return $this->role_id === self::ROL_TEATRO;
     }
 
     public function delete()

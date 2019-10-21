@@ -11,6 +11,35 @@ class Teatro extends Model
     const UPDATED_AT = 'fecha_modificacion';
 
     /*Accesos BREAD*/
+    /**
+     * Relaciona campo user_id con Usuario explicitamente
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function userId(){
+        return $this->belongsTo("App\User");
+    }
+
+    /**
+     * Lista de usuarios a mostrar al relacionarlo a un teatro
+     * @return mixed
+     */
+    public function userIdList(){
+        $usuariosAsignados = DB::table('teatros')
+            ->select('user_id')
+            ->whereNotNull('user_id')
+            ->pluck('user_id');
+
+        return DB::table('users')->where('role_id',3)->whereNotIn('id',$usuariosAsignados)->get(['id','email']);
+    }
+
+    /**
+     * Valor por defecto al relacionar un teatro
+     * @return mixed
+     */
+    public static function userIdDefault(){
+        return auth()->user()->id;
+    }
+
     public function getActivoBrowseAttribute()
     {
         return $this->activo? "Activo":"Inactivo";

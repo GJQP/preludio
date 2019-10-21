@@ -15,7 +15,21 @@ class CreatePresentacionesTable extends Migration
     {
         Schema::create('presentaciones', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            $table->unsignedBigInteger('obra_id');
+            $table->unsignedBigInteger('teatro_id');
+
+            $table->dateTime('fecha_inicio');
+            $table->dateTime('fecha_fin');
+            $table->string('poster')->nullable();
+            $table->longText('imagenes')->nullable();
+            $table->longText('reparto')->nullable();
+
+
+            $table->dateTime('fecha_creacion'); //Sustituye created_at
+            $table->dateTime('fecha_modificacion'); //Sustituye updated_at
+
+            $table->foreign('obra_id')->references('id')->on('obras');
+            $table->foreign('teatro_id')->references('id')->on('teatros');
         });
     }
 
