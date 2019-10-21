@@ -25,9 +25,9 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    
+
     @yield('recursos')
-    
+
 </head>
 <body>
     <!-- Page Preloder -->
@@ -37,7 +37,7 @@
 
 
     <div id="app">
-        <!-- Header section start -->   
+        <!-- Header section start -->
 	    <header class="header-area">
             <a href="home.html" class="logo-area">
                 <img src="/img/logo.png" alt="">
@@ -49,14 +49,16 @@
             <nav class="nav-menu">
                 <ul>
                     <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{ url('/') }}">Inicio</a></li>
-                    <li class="{{ Request::is('teatros') ? 'active' : '' }}"><a href="{{ url('teatros') }}">Teatros</a></li>
-                    <li class="{{ Request::is('presentaciones') ? 'active' : '' }}"><a href="{{ url('presentaciones') }}">Presentaciones</a></li>
+                    <li class="{{ Request::is('teatros') ? 'active' : '' }}"><a
+                            href="{{ action('TeatrosController@index') }}">Teatros</a></li>
+                    <li class="{{ Request::is('presentaciones') ? 'active' : '' }}"><a
+                            href="{{ action('PresentacionesController@index') }}">Presentaciones</a></li>
                     <li><a href="/register">Contact</a></li>
                 </ul>
             </nav>
         </header>
-        
-        <!-- Header section end -->   
+
+        <!-- Header section end -->
         {{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -107,7 +109,7 @@
                 </div>
             </div>
         </nav> --}}
-        
+
         <div class="containter">
             @yield('contenido')
         </div>
@@ -164,11 +166,11 @@
                     </div>
                 </div>
             </div>
-    
-         
+
+
     </footer>
     <!-- Footer section end -->
-    
+
     </div>
 </body>
 </html>
