@@ -21,6 +21,9 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
+//Logout
+Route::get('/logout', 'Auth\LoginController@logout');
+
 //Registrar
 Route::get('/register', 'HomeController@register');
 
