@@ -15,28 +15,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Registrar
-Route::get('/register', 'HomeController@register');
-
 Auth::routes();
-
-//Mostrar un teatro
-Route::get('/teatro/{id}', 'TeatrosController@show')->name('teatro');
-// Catalogo de Teatros
-Route::get('/teatros', 'TeatrosController@index')->name('teatros');
-
-//Mostrar una presentacion
-Route::get('/presentacion/{id}', 'PresentacionesController@show')->name('presentacion');
-// Catalogo de Presentaciones
-Route::get('/presentaciones', 'PresentacionesController@index')->name('presentaciones');
-
-Route::get('/home', 'HomeController@index')->name('home');
-
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Auth::routes();
+//Registrar
+Route::get('/register', 'HomeController@register');
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Mostrar un teatro
+Route::get('/teatro/{teatro}', 'TeatrosController@show');
+// Catalogo de Teatros
+Route::get('/teatros', 'TeatrosController@index')->name('teatros');
+
+//Mostrar una presentacion
+Route::get('/presentacion/{presentacion}', 'PresentacionesController@show')->name('presentacion');
+// Catalogo de Presentaciones
+Route::get('/presentaciones', 'PresentacionesController@index')->name('presentaciones');
+
