@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('titulo')
-    Presentacion 
+    {{$presentacion->obra->nombre}} 
 @endsection
 
 @section('recursos')
@@ -24,7 +24,7 @@
                         <h1> <span>{{$presentacion->obra->nombre}}</span></h1>
                     </div>
                     <div>
-                            <a class="enlace" href="/teatro/{{$presentacion->teatro->id}}" target="_blank"> <h6>{{$presentacion->teatro->nombre}}</h6></a>
+                            <a class="enlace" href="/teatro/{{$presentacion->teatro->id}}"> <h6>{{$presentacion->teatro->nombre}}</h6></a>
                     </div>
                     <div>
                         <h6>Desde {{date('d-M-y', strtotime($presentacion->fecha_inicio))}} hasta {{date('d-M-y', strtotime($presentacion->fecha_fin))}}</h6>
