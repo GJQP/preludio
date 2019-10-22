@@ -55,7 +55,7 @@
                             href="{{ action('PresentacionesController@index') }}">Presentaciones</a></li>
                     @guest
                         <li><a href="/admin">Iniciar Sesión</a></li>
-                        <li><a href="/admin">Registrarse</a></li>
+                        <li><a href="/register">Registrarse</a></li>
                     @else
                         <li><a href="/admin">DashBoard</a></li>
                         <li><a href="{{ route('logout') }}">Cerrar Sesión</a></li>
