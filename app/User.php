@@ -19,7 +19,7 @@ class User extends \TCG\Voyager\Models\User
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'role_id'
     ];
 
     /**
@@ -54,12 +54,6 @@ class User extends \TCG\Voyager\Models\User
      */
     public function teatro()
     {
-        // Unicamente devolvemos a quien sea teatro realmente
-        if (!$this->esTeatro())
-        {
-            return null;
-        }
-
         return $this->hasOne('App\Teatro');
     }
 

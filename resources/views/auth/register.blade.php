@@ -1,83 +1,240 @@
-@extends('layouts.app')
+@extends('layouts.vendor.auth')
 
-@section('contenido')
-<section class="page-header-section set-bg" data-setbg="img/header-bg-2.jpg">
-    <div class="container">
-        <h1 class="header-title">Registro<span>.</span></h1>
-    </div>
-</section>
-<br>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-10">
-            <div class="">
+@section('content')
 
-                <div class="card-body">
-                    <form method="POST" action="{{action("Auth\RegisterController@register")}}">
-                        @csrf
+    <style>
+        .invalid-feedback{
+            color: red;
+        }
+        .is-invalid{
+           border-color:red !important;
+        }
+    </style>
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">Nombre</label>
+    <div class="login-container" style="top: 22vh">
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+        <p>Registrarse</p>
 
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
+        <form method="POST" action="{{action("Auth\RegisterController@register")}}">
+            @csrf
+            <p>Datos de Usuario</p>
+            <div class="form-group form-group-default @error('name') is-invalid @enderror" id="nameGroup">
+                <label for="name">Nombre</label>
+
+                <div class="controls">
+                    <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Nombre" required autocomplete="name" autofocus>
+
+                    @error('name')
+                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Correo') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirmar contraseña') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary btn-block">
-                                    {{ __('Registrarse') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                    @enderror
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-<br>
+
+            <div class="form-group form-group-default  @error('email') is-invalid @enderror" id="emailGroup">
+                <label for="email" >{{ __('Correo') }}</label>
+
+                <div class="controls">
+                    <input id="email" type="email" class="form-control"
+                           name="email" value="{{ old('email') }}"  placeholder="Correo" required autocomplete="email">
+
+                    @error('email')
+                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                    @enderror
+                </div>
+            </div>
+
+            <div class="form-group form-group-default @error('password') is-invalid @enderror" id="passwordGroup">
+                <label for="password" >{{ __('Contraseña') }}</label>
+
+                <div class="controls">
+                    <input id="password" type="password" class="form-control" name="password" required autocomplete="new-password">
+
+                    @error('password')
+                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                    @enderror
+                </div>
+            </div>
+
+            <div class="form-group form-group-default" id="passwordConfirmGroup">
+                <label for="password-confirm" >{{ __('Confirmar contraseña') }}</label>
+
+                <div class="controls">
+                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                </div>
+            </div>
+
+            <p>Datos de Teatro</p>
+
+            <div class="form-group form-group-default @error('nombre') is-invalid @enderror" id="nombreGroup">
+                <label for="nombre">Nombre</label>
+
+                <div class="controls">
+                    <input id="nombre" type="text" class="form-control" name="nombre" value="{{ old('nombre') }}" placeholder="Nombre" required autocomplete="nombre" autofocus>
+
+                    @error('nombre')
+                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                    @enderror
+                </div>
+            </div>
+
+            <div class="form-group form-group-default @error('telefono') is-invalid @enderror" id="telefonoGroup">
+                <label for="telefono" >Teléfono</label>
+
+                <div class="controls">
+                    <input id="telefono" type="tel" class="form-control"
+                           name="telefono" value="{{ old('telefono') }}"  placeholder="04XXXXXXXXX" required
+                           autocomplete="telefono">
+
+                    @error('telefono')
+                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                    @enderror
+                </div>
+            </div>
+
+            <div class="form-group form-group-default  @error('rif') is-invalid @enderror" id="rifGroup">
+                <label for="rif" >RIF</label>
+
+                <div class="controls">
+                    <input id="rif" type="text" class="form-control"
+                           name="rif" value="{{ old('rif') }}"  placeholder="J0XXXXXXX" required autocomplete="rif">
+
+                    @error('rif')
+                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                    @enderror
+                </div>
+            </div>
+
+            <div class="form-group form-group-default  @error('direccion') is-invalid @enderror" id="direccionGroup">
+                <label for="direccion" >Dirección</label>
+
+                <div class="controls">
+                    <textarea id="direccion"  class="form-control"
+                              name="direccion" value="{{ old('direccion') }}" required
+                              autocomplete="direccion"></textarea>
+
+                    @error('direccion')
+                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                    @enderror
+                </div>
+            </div>
+
+            <div class="form-group row mb-0">
+                <div class="col-md-6 offset-md-4">
+                    <button type="submit" class="btn btn-primary btn-block">
+                        {{ __('Registrarse') }}
+                    </button>
+                </div>
+
+                <a class="btn btn-link" href="{{ route('login') }}">
+                    {{ __('¿Ya está registrado?') }}
+                </a>
+            </div>
+        </form>
+
+        <div style="clear:both"></div>
+
+        @if(!$errors->isEmpty())
+            <div class="alert alert-red">
+                <ul class="list-unstyled">
+                    @foreach($errors->all() as $err)
+                        <li>{{ $err }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
+    </div> <!-- .login-container -->
 @endsection
+
+@push('scripts')
+    <script>
+        var btn = document.querySelector('button[type="submit"]');
+        var form = document.forms[0];
+        var email = document.querySelector('[name="email"]');
+        var password = document.querySelector('[name="password"]');
+        var password_confirm = document.querySelector('[name="password_confirmation"]');
+        var name = document.querySelector('[name="name"]');
+        var nombre = document.querySelector('[name="nombre"]');
+        var telefono = document.querySelector('[name="telefono"]');
+        var direccion = document.querySelector('[name="direccion"]');
+        var rif = document.querySelector('[name="rif"]');
+
+
+        btn.addEventListener('click', function(ev){
+            if (form.checkValidity()) {
+                btn.querySelector('.signingin').className = 'signingin';
+                btn.querySelector('.signin').className = 'signin hidden';
+            } else {
+                ev.preventDefault();
+            }
+        });
+        email.focus();
+        document.getElementById('emailGroup').classList.add("focused");
+
+        // Focus events for email and password fields
+        email.addEventListener('focusin', function(e){
+            document.getElementById('emailGroup').classList.add("focused");
+        });
+        email.addEventListener('focusout', function(e){
+            document.getElementById('emailGroup').classList.remove("focused");
+        });
+
+        password.addEventListener('focusin', function(e){
+            document.getElementById('passwordGroup').classList.add("focused");
+        });
+        password.addEventListener('focusout', function(e){
+            document.getElementById('passwordGroup').classList.remove("focused");
+        });
+        password_confirm.addEventListener('focusin', function(e){
+            document.getElementById('passwordConfirmGroup').classList.add("focused");
+        });
+        password_confirm.addEventListener('focusout', function(e){
+            document.getElementById('passwordConfirmGroup').classList.remove("focused");
+        });
+        nombre.addEventListener('focusin', function(e){
+            document.getElementById('nombreGroup').classList.add("focused");
+        });
+        nombre.addEventListener('focusout', function(e){
+            document.getElementById('nombreGroup').classList.remove("focused");
+        });
+        // name.addEventListener('focusin', function(e){
+        //     document.getElementById('nameGroup').classList.add("focused");
+        // });
+        // name.addEventListener('focusout', function(e){
+        //     document.getElementById('nameGroup').classList.remove("focused");
+        // });
+        direccion.addEventListener('focusin', function(e){
+            document.getElementById('direccionGroup').classList.add("focused");
+        });
+        direccion.addEventListener('focusout', function(e){
+            document.getElementById('direccionGroup').classList.remove("focused");
+        });
+        telefono.addEventListener('focusin', function(e){
+            document.getElementById('telefonoGroup').classList.add("focused");
+        });
+        telefono.addEventListener('focusout', function(e){
+            document.getElementById('telefonoGroup').classList.remove("focused");
+        });
+        rif.addEventListener('focusin', function(e){
+            document.getElementById('rifGroup').classList.add("focused");
+        });
+        rif.addEventListener('focusout', function(e){
+            document.getElementById('rifGroup').classList.remove("focused");
+        });
+
+    </script>
+@endpush

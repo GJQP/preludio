@@ -1,73 +1,107 @@
-@extends('layouts.app')
+@extends('layouts.vendor.auth')
 
-@section('contenido')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+@section('content')
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+    <div class="login-container">
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+        <p>Inicia sesión</p>
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
+        <form action="{{ route('login') }}" method="POST">
+            {{ csrf_field() }}
+            <div class="form-group form-group-default" id="emailGroup">
+                <label>Correo</label>
+                <div class="controls">
+                    <input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="Correo" class="form-control" required>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+
+            <div class="form-group form-group-default" id="passwordGroup">
+                <label>Contraseña</label>
+                <div class="controls">
+                    <input type="password" name="password" placeholder="Contraseña" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="form-group" id="rememberMeGroup">
+                <div class="controls">
+                    <input type="checkbox" name="remember" id="remember" value="1"><label for="remember" class="remember-me-text">Recuérdame</label>
+                </div>
+            </div>
+
+            <div class="form-group row mb-0">
+                <div class="col-md-8 offset-md-4">
+                    <button type="submit" class="btn btn-block login-button">
+                        <span class="signingin hidden"><span class="voyager-refresh"></span> {{ __('voyager::login.loggingin') }}...</span>
+                        <span class="signin">{{ __('voyager::generic.login') }}</span>
+                    </button>
+
+                    <div class="col-md-4">
+                        <a href="{{action("Auth\RegisterController@register")}}" class="btn btn-primary btn-block login-button">
+                            {{ __('Registrarse') }}
+                        </a>
+                    </div>
+
+
+                        <a class="btn btn-link" href="{{ action('HomeController@restaurarClave') }}">
+                            {{ __('¿Olvidó su contraseña?') }}
+                        </a>
+
+
+                </div>
+            </div>
+
+        </form>
+
+        <div style="clear:both"></div>
+
+        @if(!$errors->isEmpty())
+            <div class="alert alert-red">
+                <ul class="list-unstyled">
+                    @foreach($errors->all() as $err)
+                        <li>{{ $err }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
+    </div> <!-- .login-container -->
+
 @endsection
+
+@push('scripts')
+    <script>
+        var btn = document.querySelector('button[type="submit"]');
+        var form = document.forms[0];
+        var email = document.querySelector('[name="email"]');
+        var password = document.querySelector('[name="password"]');
+        btn.addEventListener('click', function(ev){
+            if (form.checkValidity()) {
+                btn.querySelector('.signingin').className = 'signingin';
+                btn.querySelector('.signin').className = 'signin hidden';
+            } else {
+                ev.preventDefault();
+            }
+        });
+        email.focus();
+        document.getElementById('emailGroup').classList.add("focused");
+
+        // Focus events for email and password fields
+        email.addEventListener('focusin', function(e){
+            document.getElementById('emailGroup').classList.add("focused");
+        });
+        email.addEventListener('focusout', function(e){
+            document.getElementById('emailGroup').classList.remove("focused");
+        });
+
+        password.addEventListener('focusin', function(e){
+            document.getElementById('passwordGroup').classList.add("focused");
+        });
+        password.addEventListener('focusout', function(e){
+            document.getElementById('passwordGroup').classList.remove("focused");
+        });
+
+    </script>
+@endpush
+
+

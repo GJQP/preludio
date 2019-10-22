@@ -26,7 +26,7 @@ class PreludioInicialUsersTableSeeder extends Seeder
                 'avatar' => 'users/default.png',
                 'email_verified_at' => NULL,
                 'password' => '$2y$10$qNaI4jfkBCZgaT6LqpqeRuU/Seb91YHste0IDbd7KKIzoIf11/t3S',
-                'remember_token' => 'YjkpEYdBR7crX4UgqC4MinktGCgmuiWS6JeGih9sJ0gRkYRU4QXs59B4VSma',
+                'remember_token' => '4hEYUWYEizmb2iQ76CSZiJnGWKKp5uHRldCFl7WsJrJp5gDCZaUH0qXJjkHe',
                 'settings' => '{"locale":"es"}',
                 'created_at' => '2019-10-12 19:02:51',
                 'updated_at' => '2019-10-12 19:05:24',

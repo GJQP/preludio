@@ -16,7 +16,7 @@ class HomeController extends Controller
     public function index()
     {
         $teatros = Teatro::take(5)->where('activo',true)->get();
-        
+
         $presentaciones = Presentacion::take(5)->get();
         $presentaciones = $presentaciones->filter(function($presentacion)
             {
@@ -29,5 +29,9 @@ class HomeController extends Controller
     public function register(){
         return view('auth.register');
     }
-   
+
+    public function restaurarClave(){
+        return view('auth.passwords.email');
+    }
+
 }

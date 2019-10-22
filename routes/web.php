@@ -15,6 +15,11 @@
 Route::get('/', 'HomeController@index');
 
 
+Route::get('/home', function (){
+    return redirect(  (Auth::user()->role_id !== 2? '/admin' : '/') );
+});
+
+
 Auth::routes();
 
 Route::group(['prefix' => 'admin'], function () {
@@ -24,8 +29,17 @@ Route::group(['prefix' => 'admin'], function () {
 //Logout
 Route::get('/logout', 'Auth\LoginController@logout');
 
+//ver teatro asociado
+Route::get('/miTeatro', function (){
+   abort_unless(Auth::user()->teatro,404);
+
+   return redirect('/admin/teatros/'.Auth::user()->teatro->id . "/edit");
+
+});
+
 //Registrar
-Route::get('/register', 'HomeController@register');
+Route::get('/register', 'HomeController@register')->middleware('guest');
+Route::get('/password/reset', 'HomeController@restaurarClave')->middleware('guest');
 
 //Mostrar un teatro
 Route::get('/teatro/{teatro}', 'TeatrosController@show');
