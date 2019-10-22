@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use TCG\Voyager\Voyager;
 
 class Presentacion extends Model
 {
@@ -38,6 +39,18 @@ class Presentacion extends Model
     public function teatro()
     {
         return $this->belongsTo('App\Teatro');
+    }
+
+    /**
+     * Devuelve un vector con las url de las imagenes del Teatro
+     * @param $value
+     * @return array
+     */
+    public function getImagenesAttribute($value)
+    {
+        return array_map(function ($url) {
+            return asset("storage/$url");
+        }, json_decode($value));
     }
 
     /*Accesos BREAD*/

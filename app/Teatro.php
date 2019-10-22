@@ -119,4 +119,16 @@ class Teatro extends Model
 
         return $resultado;
     }
+
+    /**
+     * Devuelve un array con la ruta de las imagenes a cargar
+     * @param $value
+     * @return array
+     */
+    public function getImagenesAtribute($value)
+    {
+        return array_map(function ($url) {
+            return asset("storage/$url");
+        }, json_decode($value));
+    }
 }
