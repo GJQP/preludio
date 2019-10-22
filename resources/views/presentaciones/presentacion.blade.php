@@ -47,21 +47,24 @@
                 </div>
             </div>
         </div>
-@if(count($presentacion->imagenes) > 0)
-    <hr>
-        <div class="mt-3 container">
-                <div> 
-                    <h3 class="sub-line">Galería</h3>
-                </div>
+        
+@if ($presentacion->imagenes)
+<hr>
+<div class="mt-3 container">
+        <div> 
+            <h3 class="sub-line">Galería</h3>
+        </div>
+        <div>
+            <div class=" row col-12 owl-carousel owl-theme">
+                @foreach($presentacion->imagenes as $url_imagen)
                 <div>
-                    <div class=" row col-12 owl-carousel owl-theme">
-                        @foreach($presentacion->imagenes as $url_imagen)
-                        <div>
-                            <img src="{{$url_imagen}}" alt="" class="galeria" >
-                        </div>
-                        @endforeach
-                    </div>   
+                    <img src="{{$url_imagen}}" alt="" class="galeria" >
                 </div>
-            </div>
-</section>
+                @endforeach
+            </div>   
+        </div>
+    </div>  
 @endif
+   
+</section>
+

@@ -54,3 +54,7 @@
 	height: 285px;
 	padding-top: 100px;
 }
+
+a.linkHeader{
+    text-decoration: none !important;
+}

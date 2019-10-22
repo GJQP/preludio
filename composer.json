@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "ext-json": "*",
         "facade/ignition": "^1.11",
         "fideloper/proxy": "^4.0",
         "joeyrush/better-migrate-seed": "^0.3.0",
