@@ -36,6 +36,7 @@ Route::get('/miTeatro', function (){
 
 //Registrar
 Route::get('/register', 'HomeController@register')->middleware('guest');
+Route::get('/password/reset', 'HomeController@restaurarClave')->middleware('guest');
 
 //Mostrar un teatro
 Route::get('/teatro/{teatro}', 'TeatrosController@show');

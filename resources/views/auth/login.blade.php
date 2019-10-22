@@ -42,11 +42,10 @@
                         </a>
                     </div>
 
-                    @if (Route::has('password.request'))
-                        <a class="btn btn-link" href="{{ route('password.request') }}">
+
+                        <a class="btn btn-link" href="{{ action('HomeController@restaurarClave') }}">
                             {{ __('¿Olvidó su contraseña?') }}
                         </a>
-                    @endif
 
 
                 </div>
