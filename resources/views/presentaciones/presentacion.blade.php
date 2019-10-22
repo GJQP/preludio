@@ -45,21 +45,24 @@
                 </div>
             </div>
         </div>
-@if(strlen($presentacion->imagenes) > 2)
-    <hr>
-        <div class="mt-3 container">
-                <div> 
-                    <h3 class="sub-line">Galería</h3>
-                </div>
+        
+@if ($presentacion->imagenes)
+<hr>
+<div class="mt-3 container">
+        <div> 
+            <h3 class="sub-line">Galería</h3>
+        </div>
+        <div>
+            <div class=" row col-12 owl-carousel owl-theme">
+                @foreach($presentacion->imagenes as $url_imagen)
                 <div>
-                    <div class=" row col-12 owl-carousel owl-theme">
-                        @foreach(json_decode($presentacion->imagenes) as $url_imagen)
-                        <div>
-                            <img src="{{Voyager::image($url_imagen)}}" alt="" class="galeria" >
-                        </div>
-                        @endforeach
-                    </div>   
+                    <img src="{{Voyager::image($url_imagen)}}" alt="" class="galeria" >
                 </div>
-            </div>
-</section>
+                @endforeach
+            </div>   
+        </div>
+    </div>  
 @endif
+   
+</section>
+

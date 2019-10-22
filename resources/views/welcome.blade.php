@@ -35,7 +35,7 @@
     <!-- SECCION TEATROS -->
     <section class="page-header-section reduce set-bg" data-setbg="img/header-bg-2.jpg">
         <div class="container">
-            <h1 class="header-title">Teatros<span>.</span></h1>
+           <a href="{{ action('TeatrosController@index') }}" class="linkHeader"><h1 class="header-title">Teatros<span>.</span></h1></a> 
         </div>
     </section> 
     <section class="intro-section pt100 pb50">
@@ -73,7 +73,7 @@
     <!-- SECCION PRESENTACIONES -->
     <section class="page-header-section reduce set-bg" data-setbg="img/header-bg.jpg">
         <div class="container">
-            <h1 class="header-title">Presentaciones<span>.</span></h1>
+                <a href="{{ action('PresentacionesController@index') }}" class="linkHeader"><h1 class="header-title">Presentaciones<span>.</span></h1></a>
         </div>
     </section> 
     <section class="intro-section pt100 pb50">
