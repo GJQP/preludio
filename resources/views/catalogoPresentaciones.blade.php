@@ -7,11 +7,10 @@
 @section('contenido')
 <section class="page-header-section set-bg" data-setbg="img/header-bg.jpg">
     <div class="container">
-        <h1 class="header-title">Presentaciones<span>.</span>
-            @if (!empty($nombreTeatro))
+        <h1 class="header-title">Presentaciones<span>.</span></h1>
+        <h1 class="header-title"> @if (!empty($nombreTeatro))
                 <small>{{$nombreTeatro}}</small>
-            @endif
-        </h1>
+            @endif</h1>
     </div>
 </section>
 

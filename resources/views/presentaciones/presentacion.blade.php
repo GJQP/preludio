@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('titulo')
-    Presentacion 
+    {{$presentacion->obra->nombre}} 
 @endsection
 
 @section('recursos')
