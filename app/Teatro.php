@@ -127,8 +127,8 @@ class Teatro extends Model
      */
     public function getImagenesAtribute($value)
     {
-        return array_map(function ($url) {
+        return $value ? array_map(function ($url) {
             return asset("storage/$url");
-        }, json_decode($value));
+        }, json_decode($value)) : $value;
     }
 }

@@ -19,12 +19,6 @@ class Presentacion extends Model
     const CREATED_AT = 'fecha_creacion';
     const UPDATED_AT = 'fecha_modificacion';
 
-    protected $dates = [
-        'fecha_inicio', 'fecha_fin'
-    ];
-
-    protected $dateFormat = 'd-m-Y';
-
     /**
      * Devuelve la obra relacionada
      */
@@ -48,9 +42,9 @@ class Presentacion extends Model
      */
     public function getImagenesAttribute($value)
     {
-        return array_map(function ($url) {
+        return $value ? array_map(function ($url) {
             return asset("storage/$url");
-        }, json_decode($value));
+        }, json_decode($value)) : $value;
     }
 
     /*Accesos BREAD*/
