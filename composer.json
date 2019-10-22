@@ -19,6 +19,7 @@
         "ext-json": "*"
     },
     "require-dev": {
+        "barryvdh/laravel-ide-helper": "v2.6.5",
         "filp/whoops": "^2.0",
         "fzaninotto/faker": "^1.4",
         "mockery/mockery": "^1.0",
