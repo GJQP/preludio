@@ -54,7 +54,7 @@
                     <li class="{{ Request::is('presentaciones') ? 'active' : '' }}"><a
                             href="{{ action('PresentacionesController@index') }}">Presentaciones</a></li>
                     @guest
-                        <li><a href="/admin">Iniciar Sesión</a></li>
+                        <li><a href="/login">Iniciar Sesión</a></li>
                         <li><a href="/register">Registrarse</a></li>
                     @else
                         <li><a href="/admin">DashBoard</a></li>
