@@ -15,11 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Auth::routes();
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+//Logout
+Route::get('/logout', 'Auth\LoginController@logout');
 
 //Registrar
 Route::get('/register', 'HomeController@register');
@@ -33,4 +37,7 @@ Route::get('/teatros', 'TeatrosController@index')->name('teatros');
 Route::get('/presentacion/{presentacion}', 'PresentacionesController@show')->name('presentacion');
 // Catalogo de Presentaciones
 Route::get('/presentaciones', 'PresentacionesController@index')->name('presentaciones');
+
+// Presentaciones de un teatro
+Route::get('/teatro/{teatro}/presentaciones', 'TeatrosController@verPresentaciones')->name('presentacionesTeatro');
 

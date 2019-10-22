@@ -17,7 +17,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4 pt-4">
-                    <img src="/img/paseo-nueva.png" alt="">
+                    <img src="{{asset('storage/'.json_decode($teatro->imagenes)[0])}}" alt="">
                 </div>
                 <div class="col-lg-7 mr-3 ml-3">
                     <div class="sp-title mb-2">
@@ -28,13 +28,27 @@
                     </div>
                     <div>
                         <blockquote>
-                            <p>ipsum dolor, sit amet consectetur adipisicing elit. Tempore aliquam minima eius porro magnam, numquam impedit cumque consectetur! Consectetur amet tenetur aperiam earum eius dicta ea dolorem quo incidunt itaque! </p>
+                            <p>{{$teatro->direccion}}</p>
                         </blockquote>
                     </div>
+                    @if(($teatro->facebook)||($teatro->twitter)||($teatro->instagram))
+                        <div class="derecha mt-5 ">
+                            @if($teatro->facebook)
+                                <a href="{{$teatro->facebook}}" class=""><i class="fab fa-facebook rs" ></i></a>
+                            @endif
+                            @if($teatro->twitter)
+                               <a href="{{$teatro->twitter}}"><i class="fab fa-twitter rs" style="font-size:30px"></i></a>
+                            @endif
+                            @if($teatro->instagram)
+                              <a href="{{$teatro->instagram}}"><i class="fab fa-instagram rs" style="font-size:30px"></i></a>
+                            @endif
+                        </div>
+                    @endif
                 </div>
 			</div>
 		</div>
 </section>
+@if($teatro->imagenes)
 <br>
 <section class="pt-3 pb-4">
 		<div class="container">
@@ -43,58 +57,48 @@
             </div>
             <div class="row">
                 <div class="owl-carousel owl-theme">
-                        <div >
-                                <img src="/img/intro.png" alt="" class="img-thumbnail">
-                        </div>
+                    @foreach(json_decode($teatro->imagenes) as $url_imagen)
                             <div >
-                                <img src="/img/referencia.png" alt="" class="img-thumbnail">
+                                    <img src="{{Voyager::image($url_imagen)}}" alt="Foto teatro {{$teatro->nombre}}" class="galeria">
                             </div>
-                            <div >
-                                <img src="/img/intro.png" alt="" class="img-thumbnail">
-                            </div>
-                            <div >
-                                <img src="/img/trasnocho.png" alt="" class="img-thumbnail">
-                            </div>
-                            <div >
-                                <img src="/img/intro.png" alt="" class="img-thumbnail">
-                            </div>
-                            <div >
-                                <img src="/img/trasnocho2.png" alt="" class="img-thumbnail">
-                            </div>
+                        @endforeach
                 </div>
 
             </div>
         </div>
 </section>
-<br>
-<section class="pt-4 pb-4">
-        <div class="container">
-                <div>
+@endif
+
+@if(count($teatro->presentaciones) <> 0)
+
+    <br>
+    <section class="pt-4 pb-4">
+            <div class="container">
+                    <div>
+                            <h2 class="sub-line">Presentaciones</h2>
+                    </div>
+                    <div class="row ">
+                        <div class="owl-carousel owl-theme">
+                            @foreach($teatro->presentaciones as $presentacion)
+                                <div>
+                                    <a href="/presentacion/{{$presentacion->id}}"> <img src="{{asset('storage/'.$presentacion->poster)}}" alt="Poster de {{$presentacion->obra->nombre}}" class="galeria"></a>
+                                </div>
+                            @endforeach
+                        </div>
+
+                    </div>
+            </div>
+    </section>
+
+@else
+    <hr>
+    <section class="pt-4 pb-4">
+            <div class="container"> 
+                 <div>
                         <h2 class="sub-line">Presentaciones</h2>
                 </div>
-                <div class="row ">
-                    <div class="owl-carousel owl-theme">
-                            <div >
-                                    <img src="/img/Desesperados.png" alt="">
-                                </div>
-                                <div >
-                                    <img src="/img/encuentro.png" alt="">
-                                </div>
-                                <div >
-                                    <img src="/img/Los-Miserables.png" alt="">
-                                </div>
-                                <div >
-                                    <img src="/img/Teatro.png" alt="">
-                                </div>
-                                <div >
-                                    <img src="/img/poison.png" alt="">
-                                </div>
-                                <div >
-                                    <img src="/img/Conyuges.png" alt="">
-                                </div>
-                    </div>
-
-                </div>
-        </div>
-</section>
+                <p class="mt-1">El Teatro no posee presentaciones actualmente</p>
+            </div>
+    </section>
+@endif
 @endsection

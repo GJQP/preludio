@@ -39,7 +39,7 @@
     <div id="app">
         <!-- Header section start -->
 	    <header class="header-area">
-            <a href="home.html" class="logo-area">
+            <a href="/" class="logo-area">
                 <img src="/img/logo.png" alt="">
             </a>
             <div class="nav-switch">
@@ -53,7 +53,13 @@
                             href="{{ action('TeatrosController@index') }}">Teatros</a></li>
                     <li class="{{ Request::is('presentaciones') ? 'active' : '' }}"><a
                             href="{{ action('PresentacionesController@index') }}">Presentaciones</a></li>
-                    <li><a href="/register">Contact</a></li>
+                    @guest
+                        <li><a href="/admin">Iniciar Sesión</a></li>
+                        <li><a href="/register">Registrarse</a></li>
+                    @else
+                        <li><a href="/admin">DashBoard</a></li>
+                        <li><a href="{{ route('logout') }}">Cerrar Sesión</a></li>
+                    @endguest
                 </ul>
             </nav>
         </header>
@@ -118,8 +124,8 @@
 	<footer class="footer-section">
             <div class="footer-social">
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-pinterest"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    {{-- <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a> --}}
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -132,22 +138,24 @@
                             <div class="col-md-4">
                                 <div class="footer-item">
                                     <ul>
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">About us</a></li>
-                                        <li><a href="#">Services</a></li>
-                                        <li><a href="#">Portfolio</a></li>
-                                        <li><a href="#">Blog</a></li>
+                                        <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{ url('/') }}">Inicio</a></li>
+                                        <li class="{{ Request::is('teatros') ? 'active' : '' }}"><a
+                                                href="{{ action('TeatrosController@index') }}">Teatros</a></li>
+                                        <li class="{{ Request::is('presentaciones') ? 'active' : '' }}"><a
+                                                href="{{ action('PresentacionesController@index') }}">Presentaciones</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="footer-item">
                                     <ul>
-                                        <li><a href="#">Terms & Conditions</a></li>
-                                        <li><a href="#">FAQ</a></li>
-                                        <li><a href="#">Help Desk</a></li>
-                                        <li><a href="#">Job Aplications</a></li>
-                                        <li><a href="#">Site Map</a></li>
+                                        @guest
+                                            <li><a href="/admin">Iniciar Sesión</a></li>
+                                            <li><a href="/register">Registrarse</a></li>
+                                        @else
+                                            <li><a href="/admin">DashBoard</a></li>
+                                            <li><a href="{{ route('logout') }}">Cerrar Sesión</a></li>
+                                        @endguest
                                     </ul>
                                 </div>
                             </div>
@@ -156,8 +164,6 @@
                                     <ul>
                                         <li><a href="#">Privacy</a></li>
                                         <li><a href="#">Contact us</a></li>
-                                        <li><a href="#">Newsletter</a></li>
-                                        <li><a href="#">Clients Testimonials</a></li>
                                         <li><a href="#">FAQ</a></li>
                                     </ul>
                                 </div>
