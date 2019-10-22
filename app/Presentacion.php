@@ -18,6 +18,12 @@ class Presentacion extends Model
     const CREATED_AT = 'fecha_creacion';
     const UPDATED_AT = 'fecha_modificacion';
 
+    protected $dates = [
+        'fecha_inicio', 'fecha_fin'
+    ];
+
+    protected $dateFormat = 'd-m-Y';
+
     /**
      * Devuelve la obra relacionada
      */
