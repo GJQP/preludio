@@ -53,7 +53,13 @@
                             href="{{ action('TeatrosController@index') }}">Teatros</a></li>
                     <li class="{{ Request::is('presentaciones') ? 'active' : '' }}"><a
                             href="{{ action('PresentacionesController@index') }}">Presentaciones</a></li>
-                    <li><a href="/register">Contact</a></li>
+                    @guest
+                        <li><a href="/admin">Iniciar Sesión</a></li>
+                        <li><a href="/admin">Registrarse</a></li>
+                    @else
+                        <li><a href="/admin">DashBoard</a></li>
+                        <li><a href="{{ route('logout') }}">Cerrar Sesión</a></li>
+                    @endguest
                 </ul>
             </nav>
         </header>

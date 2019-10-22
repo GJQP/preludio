@@ -17,8 +17,9 @@
                     <div class="flex-cont">
                         @foreach($teatros as $teatro)
                             <div class="card text-center w33">
-                                <a href="/teatro/{{$teatro->id}}"><img src="img/cta-img.jpg" class="card-img-top"
-                                                                       alt="Imagen del teatro"></a>
+                                <a href="/teatro/{{$teatro->id}}">
+                                    <img src="{{json_decode($teatro->imagenes)[0]}}" class="card-img-top" alt="Imagen del teatro">
+                                </a>
                                 <div class="card-body">
                                     <h6 class="card-title">{{ $teatro->nombre }}</h6>
                                     <a href="{{route('presentacionesTeatro', $teatro)}}"
