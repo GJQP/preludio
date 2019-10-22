@@ -83,4 +83,11 @@ class TeatrosController extends Controller
     {
         //
     }
+
+    public function verPresentaciones(Teatro $teatro)
+    {
+        $presentaciones = $teatro->presentaciones;
+        $nombreTeatro = $teatro->nombre;
+        return view('catalogoPresentaciones', compact('presentaciones', 'nombreTeatro'));
+    }
 }

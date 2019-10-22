@@ -22,7 +22,8 @@
                                 </a>
                                 <div class="card-body">
                                     <h6 class="card-title">{{ $teatro->nombre }}</h6>
-                                    <a href="#" class="card-link stretched-link font-weight-light">Presentaciones</a>
+                                    <a href="{{route('presentacionesTeatro', $teatro)}}"
+                                       class="card-link stretched-link font-weight-light">Presentaciones</a>
                                 </div>
                             </div>
                         @endforeach
