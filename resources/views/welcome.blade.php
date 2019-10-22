@@ -33,7 +33,7 @@
 
 
     <!-- SECCION TEATROS -->
-    <section class="page-header-section set-bg" data-setbg="img/header-bg-2.jpg">
+    <section class="page-header-section reduce set-bg" data-setbg="img/header-bg-2.jpg">
         <div class="container">
             <h1 class="header-title">Teatros<span>.</span></h1>
         </div>
@@ -71,7 +71,7 @@
 
 
     <!-- SECCION PRESENTACIONES -->
-    <section class="page-header-section set-bg" data-setbg="img/header-bg.jpg">
+    <section class="page-header-section reduce set-bg" data-setbg="img/header-bg.jpg">
         <div class="container">
             <h1 class="header-title">Presentaciones<span>.</span></h1>
         </div>

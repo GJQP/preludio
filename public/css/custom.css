@@ -45,3 +45,12 @@
        object-fit: cover;
        height: 290px;
 }
+
+.card{
+    height: min-content !important;
+}
+
+.page-header-section.reduce{
+	height: 285px;
+	padding-top: 100px;
+}
