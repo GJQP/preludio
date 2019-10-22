@@ -42,6 +42,6 @@
 }
 
 .galeria{
-        width: auto;
+       object-fit: cover;
        height: 290px;
 }
