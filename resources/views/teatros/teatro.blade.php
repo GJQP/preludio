@@ -75,7 +75,7 @@
     <section class="pt-4 pb-4">
             <div class="container">
                     <div>
-                            <h2 class="sub-line">Presentaciones</h2>
+                            <h2 class="enlace">Presentaciones</h2>
                     </div>
                     <div class="row ">
                         <div class="owl-carousel owl-theme">
