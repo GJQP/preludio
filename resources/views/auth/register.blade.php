@@ -1,13 +1,19 @@
 @extends('layouts.app')
 
 @section('contenido')
-<div class="container pt100 pb50">
+<section class="page-header-section set-bg" data-setbg="img/header-bg-2.jpg">
+    <div class="container">
+        <h1 class="header-title">Registro<span>.</span></h1>
+    </div>
+</section>
+<br>
+<div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card">
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{action("Auth\RegisterController@register")}}">
                         @csrf
 
                         <div class="form-group row">
@@ -73,4 +79,5 @@
         </div>
     </div>
 </div>
+<br>
 @endsection
