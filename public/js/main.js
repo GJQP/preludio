@@ -43,7 +43,7 @@ $('.nav-switch').on('click', function(event) {
 // 	--------------------*/
 $('.set-bg').each(function() {
 	 	var bg = $(this).data('setbg');
- 		$(this).css('background-image', 'url(' + bg + ')');
+ 		$(this).css('background-image', 'url(/' + bg + ')');
 	});
 
 
