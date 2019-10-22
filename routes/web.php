@@ -34,3 +34,6 @@ Route::get('/presentacion/{presentacion}', 'PresentacionesController@show')->nam
 // Catalogo de Presentaciones
 Route::get('/presentaciones', 'PresentacionesController@index')->name('presentaciones');
 
+// Presentaciones de un teatro
+Route::get('/teatro/{teatro}/presentaciones', 'TeatrosController@verPresentaciones')->name('presentacionesTeatro');
+
