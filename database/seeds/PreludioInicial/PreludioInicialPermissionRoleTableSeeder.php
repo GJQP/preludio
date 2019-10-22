@@ -169,105 +169,115 @@ class PreludioInicialPermissionRoleTableSeeder extends Seeder
             ),
             30 => 
             array (
-                'permission_id' => 29,
-                'role_id' => 1,
+                'permission_id' => 28,
+                'role_id' => 3,
             ),
             31 => 
             array (
-                'permission_id' => 30,
+                'permission_id' => 29,
                 'role_id' => 1,
             ),
             32 => 
             array (
-                'permission_id' => 31,
-                'role_id' => 1,
+                'permission_id' => 29,
+                'role_id' => 3,
             ),
             33 => 
             array (
-                'permission_id' => 32,
+                'permission_id' => 30,
                 'role_id' => 1,
             ),
             34 => 
             array (
-                'permission_id' => 32,
-                'role_id' => 3,
+                'permission_id' => 31,
+                'role_id' => 1,
             ),
             35 => 
             array (
-                'permission_id' => 33,
+                'permission_id' => 32,
                 'role_id' => 1,
             ),
             36 => 
             array (
-                'permission_id' => 33,
+                'permission_id' => 32,
                 'role_id' => 3,
             ),
             37 => 
             array (
-                'permission_id' => 34,
+                'permission_id' => 33,
                 'role_id' => 1,
             ),
             38 => 
             array (
-                'permission_id' => 35,
-                'role_id' => 1,
+                'permission_id' => 33,
+                'role_id' => 3,
             ),
             39 => 
             array (
-                'permission_id' => 35,
-                'role_id' => 3,
+                'permission_id' => 34,
+                'role_id' => 1,
             ),
             40 => 
             array (
-                'permission_id' => 36,
+                'permission_id' => 35,
                 'role_id' => 1,
             ),
             41 => 
             array (
-                'permission_id' => 37,
-                'role_id' => 1,
+                'permission_id' => 35,
+                'role_id' => 3,
             ),
             42 => 
             array (
-                'permission_id' => 37,
-                'role_id' => 3,
+                'permission_id' => 36,
+                'role_id' => 1,
             ),
             43 => 
             array (
-                'permission_id' => 38,
+                'permission_id' => 37,
                 'role_id' => 1,
             ),
             44 => 
             array (
-                'permission_id' => 38,
+                'permission_id' => 37,
                 'role_id' => 3,
             ),
             45 => 
             array (
-                'permission_id' => 39,
+                'permission_id' => 38,
                 'role_id' => 1,
             ),
             46 => 
             array (
-                'permission_id' => 39,
+                'permission_id' => 38,
                 'role_id' => 3,
             ),
             47 => 
             array (
-                'permission_id' => 40,
+                'permission_id' => 39,
                 'role_id' => 1,
             ),
             48 => 
             array (
-                'permission_id' => 40,
+                'permission_id' => 39,
                 'role_id' => 3,
             ),
             49 => 
             array (
-                'permission_id' => 41,
+                'permission_id' => 40,
                 'role_id' => 1,
             ),
             50 => 
+            array (
+                'permission_id' => 40,
+                'role_id' => 3,
+            ),
+            51 => 
+            array (
+                'permission_id' => 41,
+                'role_id' => 1,
+            ),
+            52 => 
             array (
                 'permission_id' => 41,
                 'role_id' => 3,

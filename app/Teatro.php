@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class Teatro extends Model
@@ -11,6 +12,18 @@ class Teatro extends Model
     const UPDATED_AT = 'fecha_modificacion';
 
     /*Accesos BREAD*/
+    /**
+     * @param $query
+     * @return mixed
+     */
+    public function scopeTeatrosAsociados($query){
+        if (Auth::user()->esTeatro()){
+            return $query->where('id', Auth::user()->teatro? Auth::user()->teatro->id : 0);
+        }
+        else
+            return $query;
+    }
+
     /**
      * Relaciona campo user_id con Usuario explicitamente
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -38,6 +51,10 @@ class Teatro extends Model
      */
     public static function userIdDefault(){
         return auth()->user()->id;
+    }
+
+    public function getUserIdReadAttribute(){
+        return $this->user? $this->user->email : 'Vacío';
     }
 
     public function getActivoBrowseAttribute()

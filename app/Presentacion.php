@@ -37,7 +37,7 @@ class Presentacion extends Model
     /*Accesos BREAD*/
     public function scopePresentacionesAsociadas($query){
         if (Auth::user()->esTeatro()){
-            return $query->where('teatro_id', Auth::user()->teatro->id);
+                return $query->where('teatro_id', Auth::user()->teatro? Auth::user()->teatro->id : 0);
         }
         else
             return $query;

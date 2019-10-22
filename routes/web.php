@@ -21,6 +21,14 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
+//ver teatro asociado
+Route::get('/miTeatro', function (){
+   abort_unless(Auth::user()->teatro,404);
+
+   return redirect('/admin/teatros/'.Auth::user()->teatro->id . "/edit");
+
+});
+
 //Registrar
 Route::get('/register', 'HomeController@register');
 

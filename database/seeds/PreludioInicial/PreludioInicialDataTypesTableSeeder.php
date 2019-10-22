@@ -85,9 +85,9 @@ class PreludioInicialDataTypesTableSeeder extends Seeder
                 'description' => NULL,
                 'generate_permissions' => 1,
                 'server_side' => 0,
-                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":"teatrosAsociados"}',
                 'created_at' => '2019-10-12 19:22:21',
-                'updated_at' => '2019-10-21 13:41:31',
+                'updated_at' => '2019-10-22 00:33:32',
             ),
             4 => 
             array (

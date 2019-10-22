@@ -798,7 +798,7 @@ class PreludioInicialDataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{"base_path":"\\/teatros\\/{pk}\\/","max":10,"min":0,"allow_upload":true,"allow_move":false,"allow_delete":true,"allow_create_folder":true,"allow_rename":false,"allow_crop":true,"delete_files":true,"allowed":["image"],"quality":80,"thumbnails":[{"type":"fit","name":"thumb","width":250}]}',
+                'details' => '{"base_path":"\\/teatros\\/{pk}\\/","max":10,"min":1,"allow_upload":true,"allow_move":false,"allow_delete":true,"allow_create_folder":true,"allow_rename":false,"allow_crop":true,"delete_files":true,"allowed":["image"],"quality":80,"thumbnails":[{"type":"fit","name":"thumb","width":250}],"validation":{"rule":"required|min:1"}}',
                 'order' => 14,
             ),
             49 => 
