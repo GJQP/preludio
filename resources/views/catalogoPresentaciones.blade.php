@@ -7,11 +7,10 @@
 @section('contenido')
 <section class="page-header-section set-bg" data-setbg="img/header-bg.jpg">
     <div class="container">
-        <h1 class="header-title">Presentaciones<span>.</span>
-            @if (!empty($nombreTeatro))
+        <h1 class="header-title">Presentaciones<span>.</span></h1>
+        <h1 class="header-title"> @if (!empty($nombreTeatro))
                 <small>{{$nombreTeatro}}</small>
-            @endif
-        </h1>
+            @endif</h1>
     </div>
 </section>
 
@@ -19,6 +18,7 @@
         <div class="container">
                 <div class="row">
                     <div class="flex-cont">
+                    @if ($presentaciones->contains(1))
                         @foreach ($presentaciones as $presentacion)
                             <div class="card w33">
                             <a href="/presentacion/{{$presentacion->id}}"><img src="{{asset('storage/'.$presentacion->poster)}}" class="card-img-top" alt="Imagen del teatro"></a>
@@ -33,6 +33,9 @@
                                 </div>
                             </div>
                         @endforeach
+                    @else
+                        <h3>No hay presentaciones programadas!</h3>
+                    @endif
                     </div>
 
                 </div>

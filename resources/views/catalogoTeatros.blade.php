@@ -15,6 +15,8 @@
         <div class="container">
                 <div class="row">
                     <div class="flex-cont">
+                        
+                    @if ($teatros->contains(1))
                         @foreach($teatros as $teatro)
                             <div class="card text-center w33">
                                 <a href="/teatro/{{$teatro->id}}">
@@ -27,7 +29,9 @@
                                 </div>
                             </div>
                         @endforeach
-
+                    @else
+                        <h3>No hay teatros registrados!</h3>
+                    @endif
                     </div>
 
                 </div>

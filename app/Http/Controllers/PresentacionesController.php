@@ -14,7 +14,11 @@ class PresentacionesController extends Controller
      */
     public function index()
     {
-        $presentaciones = Presentacion::all();
+        $presentaciones = Presentacion::get();
+        $presentaciones = $presentaciones->filter(function($presentacion)
+            {
+                return $presentacion->teatro->activo == 1;
+            });
         return view('catalogoPresentaciones', compact('presentaciones'));
     }
 
@@ -47,6 +51,7 @@ class PresentacionesController extends Controller
      */
     public function show(Presentacion $presentacion)
     {
+        abort_unless($presentacion->teatro->activo,404);
         return view('presentaciones.presentacion', compact('presentacion'));
     }
 

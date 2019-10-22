@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('titulo')
-    Presentacion 
+    {{$presentacion->obra->nombre}} 
 @endsection
 
 @section('recursos')
@@ -15,16 +15,16 @@
 @section('contenido')
 <section class=" pt100 pb50">
         <div class="container">
-            <div class="row mb-3">
+            <div class="row mb-3 ml-2">
                 <div class="col-3">
                     <img src="{{asset('storage/'.$presentacion->poster)}}" alt="" class="img-thumbnail">
                 </div>
-                <div class=" col-lg-8 ml-2">
+                <div class=" col-lg-8 ">
                     <div class="mb-2 sp-title"> 
                         <h1> <span>{{$presentacion->obra->nombre}}</span></h1>
                     </div>
                     <div>
-                            <a class="enlace" href="/teatro/{{$presentacion->teatro->id}}" target="_blank"> <h6>{{$presentacion->teatro->nombre}}</h6></a>
+                            <a href="/teatro/{{$presentacion->teatro->id}}"> <h6>{{$presentacion->teatro->nombre}}</h6></a>
                     </div>
                     <div>
                         <h6>Desde {{date('d-M-y', strtotime($presentacion->fecha_inicio))}} hasta {{date('d-M-y', strtotime($presentacion->fecha_fin))}}</h6>
@@ -32,34 +32,39 @@
                     @if($presentacion->obra->sinopsis)
                         <div>
                             <blockquote>
-                                <p><strong> Sinopsis: </strong> {{$presentacion->obra->sinopsis}}</p>
+                                <div class="row ml-1">
+                                <p><strong> Sinopsis: </strong> {{$presentacion->obra->sinopsis}}</p> 
+                                </div>
                             </blockquote>
                             
                         </div>
                     @endif
                     @if($presentacion->reparto)
-                        <div>
-                            <p><strong>Reparto: </strong>{{$presentacion->reparto}}<p> 
+                        <div class=" ml-1">
+                            <strong>Reparto:</strong> &nbsp; {!! $presentacion->reparto !!}
                         </div>
                     @endif
                 </div>
             </div>
         </div>
-@if(strlen($presentacion->imagenes) > 2)
-    <hr>
-        <div class="mt-3 container">
-                <div> 
-                    <h3 class="sub-line">Galería</h3>
-                </div>
+        
+@if ($presentacion->imagenes)
+<hr>
+<div class="mt-3 container">
+        <div> 
+            <h3 class="sub-line">Galería</h3>
+        </div>
+        <div>
+            <div class=" row col-12 owl-carousel owl-theme">
+                @foreach($presentacion->imagenes as $url_imagen)
                 <div>
-                    <div class=" row col-12 owl-carousel owl-theme">
-                        @foreach(json_decode($presentacion->imagenes) as $url_imagen)
-                        <div>
-                            <img src="{{Voyager::image($url_imagen)}}" alt="" class="galeria" >
-                        </div>
-                        @endforeach
-                    </div>   
+                    <img src="{{$url_imagen}}" alt="" class="galeria" >
                 </div>
-            </div>
-</section>
+                @endforeach
+            </div>   
+        </div>
+    </div>  
 @endif
+   
+</section>
+

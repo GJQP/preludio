@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('titulo')
-    Teatro 1
+    {{$teatro->nombre}}
 @endsection
 
 @section('recursos')
@@ -15,7 +15,7 @@
 @section('contenido')
 <section class="intro-section pt100 pb-4">
 		<div class="container">
-			<div class="row">
+			<div class="row mb-3">
 				<div class="col-lg-4 pt-4">
                     <img src="{{asset('storage/'.json_decode($teatro->imagenes)[0])}}" alt="">
                 </div>
@@ -59,7 +59,7 @@
                 <div class="owl-carousel owl-theme">
                     @foreach(json_decode($teatro->imagenes) as $url_imagen)
                             <div >
-                                    <img src="{{Voyager::image($url_imagen)}}" alt="Foto teatro {{$teatro->nombre}}" class="galeria">
+                                    <img src="{{asset('storage/'.$url_imagen)}}" alt="Foto teatro {{$teatro->nombre}}" class="galeria">
                             </div>
                         @endforeach
                 </div>
@@ -81,7 +81,7 @@
                         <div class="owl-carousel owl-theme">
                             @foreach($teatro->presentaciones as $presentacion)
                                 <div>
-                                    <a href="/presentacion/{{$presentacion->id}}"> <img src="{{asset('storage/'.$presentacion->poster)}}" alt="Poster de {{$presentacion->obra->nombre}}" class="galeria"></a>
+                                    <a href="{{route('presentacionesTeatro', $teatro)}}"> <img src="{{asset('storage/'.$presentacion->poster)}}" alt="Poster de {{$presentacion->obra->nombre}}" class="galeria"></a>
                                 </div>
                             @endforeach
                         </div>
