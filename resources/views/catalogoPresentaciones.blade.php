@@ -17,7 +17,7 @@
                     <div class="flex-cont">
                         @foreach($presentaciones as $presentacion)
                             <div class="card w33">
-                            <a href="/presentacion/{{$presentacion->id}}"><img src="{{$presentacion->poster}}" class="card-img-top" alt="Imagen del teatro"></a>
+                            <a href="/presentacion/{{$presentacion->id}}"><img src="{{asset('storage/'.$presentacion->poster)}}" class="card-img-top" alt="Imagen del teatro"></a>
                                 <div class="card-body">
                                     <h6 class="card-title"> {{$presentacion->obra->nombre}} </h6>
                                     <h6 class="card-subtitle mb-2 text-muted">Hasta {{ date('d-M-y', strtotime($presentacion->fecha_fin))}}</h6>
