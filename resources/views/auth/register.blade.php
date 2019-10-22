@@ -2,19 +2,27 @@
 
 @section('content')
 
+    <style>
+        .invalid-feedback{
+            color: red;
+        }
+        .is-invalid{
+           border-color:red !important;
+        }
+    </style>
 
-    <div class="login-container" style="top: 25vh">
+    <div class="login-container" style="top: 22vh">
 
         <p>Registrarse</p>
 
         <form method="POST" action="{{action("Auth\RegisterController@register")}}">
             @csrf
             <p>Datos de Usuario</p>
-            <div class="form-group form-group-default" id="nameGroup">
+            <div class="form-group form-group-default @error('name') is-invalid @enderror" id="nameGroup">
                 <label for="name">Nombre</label>
 
                 <div class="controls">
-                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="Nombre" required autocomplete="name" autofocus>
+                    <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Nombre" required autocomplete="name" autofocus>
 
                     @error('name')
                     <span class="invalid-feedback" role="alert">
@@ -24,11 +32,11 @@
                 </div>
             </div>
 
-            <div class="form-group form-group-default" id="emailGroup">
-                <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Correo') }}</label>
+            <div class="form-group form-group-default  @error('email') is-invalid @enderror" id="emailGroup">
+                <label for="email" >{{ __('Correo') }}</label>
 
                 <div class="controls">
-                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
+                    <input id="email" type="email" class="form-control"
                            name="email" value="{{ old('email') }}"  placeholder="Correo" required autocomplete="email">
 
                     @error('email')
@@ -39,11 +47,11 @@
                 </div>
             </div>
 
-            <div class="form-group form-group-default" id="passwordGroup">
-                <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña') }}</label>
+            <div class="form-group form-group-default @error('password') is-invalid @enderror" id="passwordGroup">
+                <label for="password" >{{ __('Contraseña') }}</label>
 
                 <div class="controls">
-                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                    <input id="password" type="password" class="form-control" name="password" required autocomplete="new-password">
 
                     @error('password')
                     <span class="invalid-feedback" role="alert">
@@ -54,7 +62,7 @@
             </div>
 
             <div class="form-group form-group-default" id="passwordConfirmGroup">
-                <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirmar contraseña') }}</label>
+                <label for="password-confirm" >{{ __('Confirmar contraseña') }}</label>
 
                 <div class="controls">
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
@@ -63,11 +71,11 @@
 
             <p>Datos de Teatro</p>
 
-            <div class="form-group form-group-default" id="nombreGroup">
+            <div class="form-group form-group-default @error('nombre') is-invalid @enderror" id="nombreGroup">
                 <label for="nombre">Nombre</label>
 
                 <div class="controls">
-                    <input id="nombre" type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" value="{{ old('nombre') }}" placeholder="Nombre" required autocomplete="nombre" autofocus>
+                    <input id="nombre" type="text" class="form-control" name="nombre" value="{{ old('nombre') }}" placeholder="Nombre" required autocomplete="nombre" autofocus>
 
                     @error('nombre')
                     <span class="invalid-feedback" role="alert">
@@ -77,11 +85,11 @@
                 </div>
             </div>
 
-            <div class="form-group form-group-default" id="telefonoGroup">
-                <label for="telefono" class="col-md-4 col-form-label text-md-right">Teléfono</label>
+            <div class="form-group form-group-default @error('telefono') is-invalid @enderror" id="telefonoGroup">
+                <label for="telefono" >Teléfono</label>
 
                 <div class="controls">
-                    <input id="telefono" type="tel" class="form-control @error('telefono') is-invalid @enderror"
+                    <input id="telefono" type="tel" class="form-control"
                            name="telefono" value="{{ old('telefono') }}"  placeholder="04XXXXXXXXX" required
                            autocomplete="telefono">
 
@@ -93,11 +101,11 @@
                 </div>
             </div>
 
-            <div class="form-group form-group-default" id="rifGroup">
-                <label for="rif" class="col-md-4 col-form-label text-md-right">RIF</label>
+            <div class="form-group form-group-default  @error('rif') is-invalid @enderror" id="rifGroup">
+                <label for="rif" >RIF</label>
 
                 <div class="controls">
-                    <input id="rif" type="text" class="form-control @error('rif') is-invalid @enderror"
+                    <input id="rif" type="text" class="form-control"
                            name="rif" value="{{ old('rif') }}"  placeholder="J0XXXXXXX" required autocomplete="rif">
 
                     @error('rif')
@@ -108,11 +116,11 @@
                 </div>
             </div>
 
-            <div class="form-group form-group-default" id="direccionGroup">
-                <label for="direccion" class="col-md-4 col-form-label text-md-right">Dirección</label>
+            <div class="form-group form-group-default  @error('direccion') is-invalid @enderror" id="direccionGroup">
+                <label for="direccion" >Dirección</label>
 
                 <div class="controls">
-                    <textarea id="direccion"  class="form-control @error('direccion') is-invalid @enderror"
+                    <textarea id="direccion"  class="form-control"
                               name="direccion" value="{{ old('direccion') }}" required
                               autocomplete="direccion"></textarea>
 

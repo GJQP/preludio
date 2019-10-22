@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Teatro;
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -28,7 +31,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -49,10 +52,38 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string', 'max:255','regex:/^[a-zA-Zñ]+(([\',. -][a-zA-Z\ ñ])?[a-zA-Zñ]*)*$/'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+            'nombre' => ['required', 'string', 'max:255','regex:/^[a-zA-Zñ]+(([\',. -][a-zA-Z\ ñ])?[a-zA-Zñ]*)*$/'],
+            'telefono' => ['required','regex:/^0?(424|414|412|416|212)[0-9]{7}/'],
+            'rif' => ['required','unique:teatros'],
+            'direccion' => ['required','min:10']
+        ],
+            $this->messages()
+        )
+        ;
+    }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'El nombre del usuario es requerido',
+            'name.regex' => 'El nombre no puede tener caracteres numéricos o especiales',
+            'email.required'  => 'El correo del usuario es requerido',
+            'email.email' => 'Debe ingresar un correo válido',
+            'password.required' => 'La contraseña es requerida',
+            'password.min' => 'La contraseña debe tener más de 8 caracteres',
+            'password.confirmed' => 'Las contraseñas no coinciden',
+            'nombre.required' => 'El nombre del teatro es requerido',
+            'nombre.regex' => 'El nombre no puede tener caracteres numéricos o especiales',
+            'telefono.required' => 'El número de teléfono es requerido',
+            'telefono.regex' => 'Debe ingresar un número de teléfono válido',
+            'rif.required' => 'El RIF es obligatorio',
+            'rif.unique' => 'El RIF ingresado ya tiene un teatro asociado',
+            'direccion.required' => 'La dirección es un campo requerido',
+            'direccion.min' => 'La dirección debe contener más de 10 caracteres'
+        ];
     }
 
     /**
@@ -63,10 +94,25 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'role_id' => User::ROL_TEATRO
         ]);
+
+        $teatro = new Teatro([
+            'nombre' => $data['nombre'],
+            'telefono' => $data['telefono'],
+            'rif' => $data['rif'],
+            'direccion'=> $data['direccion']
+        ]);
+
+
+        $user->teatro()->save($teatro);
+
+
+        return $user;
     }
 }

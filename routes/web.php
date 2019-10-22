@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function (){
+    return redirect(  (Auth::user()->role_id !== 2? '/admin' : '/') );
+});
+
 
 Auth::routes();
 
@@ -31,7 +35,7 @@ Route::get('/miTeatro', function (){
 });
 
 //Registrar
-Route::get('/register', 'HomeController@register');
+Route::get('/register', 'HomeController@register')->middleware('guest');
 
 //Mostrar un teatro
 Route::get('/teatro/{teatro}', 'TeatrosController@show');

@@ -11,6 +11,8 @@ class Teatro extends Model
     const CREATED_AT = 'fecha_creacion';
     const UPDATED_AT = 'fecha_modificacion';
 
+    protected $guarded = [];
+
     /*Accesos BREAD*/
     /**
      * @param $query
