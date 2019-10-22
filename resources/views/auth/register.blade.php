@@ -10,7 +10,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
-            <div class="card">
+            <div class="">
 
                 <div class="card-body">
                     <form method="POST" action="{{action("Auth\RegisterController@register")}}">
