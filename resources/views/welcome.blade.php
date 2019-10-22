@@ -41,8 +41,10 @@
     <section class="intro-section pt100 pb50">
             <div class="container">
                     <div class="row">
+                      
+                    @if ($teatros->contains(1))
                         <div class="owl-carousel owl-theme">
-                        @foreach($teatros as $teatro)
+                            @foreach($teatros as $teatro)
                             <div class="card text-center">
                                 <a href="/teatro/{{$teatro->id}}">
                                     <img src="{{asset('storage/'. json_decode($teatro->imagenes)[0])}}" class="card-img-top" alt="Imagen del teatro">
@@ -50,12 +52,15 @@
                                 <div class="card-body">
                                     <h6 class="card-title">{{ $teatro->nombre }}</h6>
                                     <a href="{{route('presentacionesTeatro', $teatro)}}"
-                                       class="card-link stretched-link font-weight-light">Presentaciones</a>
+                                    class="card-link stretched-link font-weight-light">Presentaciones</a>
                                 </div>
                             </div>
-                        @endforeach
-                            
+                            @endforeach
                         </div>
+                    @else
+                        <h3>No hay teatros registrados!</h3>
+                    @endif
+                    
                         
                     </div>
                 </div>
@@ -74,13 +79,14 @@
     <section class="intro-section pt100 pb50">
             <div class="container">
                     <div class="row">
+                    @if ($presentaciones->contains(1))
                         <div class="owl-carousel owl-theme">
-                            @foreach ($presentaciones as $presentacion)
+                        @foreach ($presentaciones as $presentacion)
                             <div class="card">
                             <a href="/presentacion/{{$presentacion->id}}"><img src="{{asset('storage/'.$presentacion->poster)}}" class="card-img-top" alt="Imagen del teatro"></a>
                                 <div class="card-body">
                                     <h6 class="card-title"> {{$presentacion->obra->nombre}} </h6>
-                                    {{-- <h6 class="card-subtitle mb-2 text-muted">Hasta {{ date('d-M-y', strtotime($presentacion->fecha_fin))}}</h6> --}}
+                                    <h6 class="card-subtitle mb-2 text-muted">Hasta {{ date('d-M-y', strtotime($presentacion->fecha_fin))}}</h6> 
                                     <h6 class="card-subtitle mb-2 text-muted">{{$presentacion->teatro->nombre}}</h6>
                                     <div class="text-center">
                                     <a href="/presentacion/{{$presentacion->id}}" class="card-link stretched-link">Ver</a>
@@ -88,9 +94,11 @@
 
                                 </div>
                             </div>
-                        @endforeach
-                            
+                        @endforeach    
                         </div>
+                    @else
+                        <h3>No hay presentaciones programadas!</h3>
+                    @endif
                         
                     </div>
                 </div>

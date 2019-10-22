@@ -14,7 +14,7 @@ class TeatrosController extends Controller
      */
     public function index()
     {
-        $teatros = Teatro::all();
+        $teatros = Teatro::get()->where('activo',true);
         return view('catalogoTeatros', compact('teatros'));
     }
 
@@ -47,6 +47,7 @@ class TeatrosController extends Controller
      */
     public function show(Teatro $teatro)
     {
+        abort_unless($teatro->activo,404);
         return view('teatros.teatro', compact('teatro'));
     }
 
@@ -88,6 +89,7 @@ class TeatrosController extends Controller
     {
         $presentaciones = $teatro->presentaciones;
         $nombreTeatro = $teatro->nombre;
+        abort_unless($teatro->activo,404);
         return view('catalogoPresentaciones', compact('presentaciones', 'nombreTeatro'));
     }
 }

@@ -19,6 +19,7 @@
         <div class="container">
                 <div class="row">
                     <div class="flex-cont">
+                    @if ($presentaciones->contains(1))
                         @foreach ($presentaciones as $presentacion)
                             <div class="card w33">
                             <a href="/presentacion/{{$presentacion->id}}"><img src="{{asset('storage/'.$presentacion->poster)}}" class="card-img-top" alt="Imagen del teatro"></a>
@@ -33,6 +34,9 @@
                                 </div>
                             </div>
                         @endforeach
+                    @else
+                        <h3>No hay presentaciones programadas!</h3>
+                    @endif
                     </div>
 
                 </div>
