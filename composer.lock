@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a5569a3c12e092a1325787841595cfe6",
+    "content-hash": "0dd8bdf322c6e6c2a9bad41695b92cbb",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -920,6 +920,46 @@
                 "parser"
             ],
             "time": "2019-03-17T18:48:37+00:00"
+        },
+        {
+            "name": "extended-bread-form-fields",
+            "version": "v0.2-beta",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bnku/extended-bread-form-fields.git",
+                "reference": "v0.2-beta"
+            },
+            "require": {
+                "larapack/hooks": "^1.0.5"
+            },
+            "type": "library",
+            "extra": {
+                "hook": {
+                    "providers": [
+                        "ExtendedBreadFormFields\\ExtendedBreadFormFieldsServiceProvider"
+                    ],
+                    "views": [
+                        "resources/vievs"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ExtendedBreadFormFields\\": "src/"
+                }
+            },
+            "notification-url": "https://larapack.io/downloads",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "bnku",
+                    "email": "bnku@ya.ru"
+                }
+            ],
+            "description": "Extended FormFields hook interface to Voyager BREAD",
+            "time": "2019-10-21T07:10:37+00:00"
         },
         {
             "name": "facade/flare-client-php",
@@ -6408,11 +6448,14 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "extended-bread-form-fields": 10
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.2"
+        "php": "^7.2",
+        "ext-json": "*"
     },
     "platform-dev": []
 }

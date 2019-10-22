@@ -1,4 +1,11 @@
 {
-    "last_remote_check": 1571710880,
-    "hooks": []
+    "last_remote_check": 1571712578,
+    "hooks": {
+        "extended-bread-form-fields": {
+            "name": "extended-bread-form-fields",
+            "description": "Extended FormFields hook interface to Voyager BREAD",
+            "version": "v0.2-beta",
+            "enabled": true
+        }
+    }
 }
