@@ -15,7 +15,7 @@
 @section('contenido')
 <section class="intro-section pt100 pb-4">
 		<div class="container">
-			<div class="row">
+			<div class="row mb-3">
 				<div class="col-lg-4 pt-4">
                     <img src="{{asset('storage/'.json_decode($teatro->imagenes)[0])}}" alt="">
                 </div>
