@@ -58,3 +58,29 @@
 a.linkHeader{
     text-decoration: none !important;
 }
+
+.borde{
+    border:2px solid;
+}
+
+.comentario{
+    width:100%;
+    resize:none;
+    height: 6rem;
+    font-size: 1.5rem;
+}
+.reseña{
+    font-size:1.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.calificacion{
+    width: 10px;
+    height: 1.5rem;
+}
+
+.right{
+    float:right;
+}
+.mover{
+    position: right;
+}
