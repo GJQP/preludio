@@ -48,6 +48,40 @@
             </div>
         </div>
         
+@if(true)
+<div class="funciones container">
+    <div class="mb-2 sp-title"> 
+        <h1> <span>Funciones</span></h1>
+    </div>
+    <table class="table table-striped. table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Fecha</th>
+            <th scope="col">Hora</th>
+            <th scope="col">Presentación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">04/01/2020</th>
+            <td>3:00 pm</td>
+            <td>{{$presentacion->obra->nombre}}</td>
+          </tr>
+          <tr>
+            <th scope="row">04/01/2020</th>
+            <td>4:00 pm</td>
+            <td>{{$presentacion->obra->nombre}}</td>
+          </tr>
+          <tr>
+            <th scope="row">05/01/2020</th>
+            <td>10:30 am</td>
+            <td>{{$presentacion->obra->nombre}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+@endif
+        
 @if ($presentacion->imagenes)
 <hr>
 <div class="mt-3 container">
