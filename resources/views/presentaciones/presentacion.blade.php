@@ -48,38 +48,31 @@
             </div>
         </div>
 
-    @if(!empty($funciones))
-<div class="funciones container">
-    <div class="mb-2 sp-title">
-        <h1> <span>Funciones</span></h1>
+@if(!empty($funciones))
+    <div class="funciones container">
+        <div class="mb-2 sp-title">
+            <h1> <span>Funciones</span></h1>
+        </div>
+        <table class="table table-striped. table-hover">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">Fecha</th>
+                <th scope="col">Hora</th>
+                <th scope="col">Teatro</th>
+            </tr>
+            </thead>
+            <tbody>
+        @foreach ($funciones as $funcion)
+            <tr>
+                <th scope="row">{{date('d-m-Y', strtotime($funcion->fecha_presentacion))}}</th>
+                <td>{{date('h:i A', strtotime($funcion->hora_inicio)) }}</td>
+                <td>{{$presentacion->teatro->nombre}}</td>
+            </tr>
+        @endforeach
+            </tbody>
+        </table>
     </div>
-    <table class="table table-striped. table-hover">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">Fecha</th>
-            <th scope="col">Hora</th>
-            <th scope="col">Presentación</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">04/01/2020</th>
-            <td>3:00 pm</td>
-            <td>{{$presentacion->obra->nombre}}</td>
-          </tr>
-          <tr>
-            <th scope="row">04/01/2020</th>
-            <td>4:00 pm</td>
-            <td>{{$presentacion->obra->nombre}}</td>
-          </tr>
-          <tr>
-            <th scope="row">05/01/2020</th>
-            <td>10:30 am</td>
-            <td>{{$presentacion->obra->nombre}}</td>
-          </tr>
-        </tbody>
-      </table>
-</div>
+   
 @endif
 
 @if ($presentacion->imagenes)
