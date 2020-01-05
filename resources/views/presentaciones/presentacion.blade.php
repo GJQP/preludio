@@ -47,8 +47,7 @@
                 </div>
             </div>
         </div>
-
-    @if(!empty($funciones))
+    @if($funciones->isNotEmpty())
 <div class="funciones container">
     <div class="mb-2 sp-title">
         <h1> <span>Funciones</span></h1>
@@ -62,21 +61,23 @@
           </tr>
         </thead>
         <tbody>
+        @foreach($funciones as $funcion)
           <tr>
-            <th scope="row">04/01/2020</th>
-            <td>3:00 pm</td>
+              <th scope="row">{{ $funcion->fecha_presentacion->format('d/m/Y')  }}</th>
+              <td>{{ $funcion->hora_inicio }}</td>
             <td>{{$presentacion->obra->nombre}}</td>
           </tr>
-          <tr>
-            <th scope="row">04/01/2020</th>
-            <td>4:00 pm</td>
-            <td>{{$presentacion->obra->nombre}}</td>
-          </tr>
-          <tr>
-            <th scope="row">05/01/2020</th>
-            <td>10:30 am</td>
-            <td>{{$presentacion->obra->nombre}}</td>
-          </tr>
+        @endforeach
+        {{--          <tr>--}}
+        {{--            <th scope="row">04/01/2020</th>--}}
+        {{--            <td>4:00 pm</td>--}}
+        {{--            <td>{{$presentacion->obra->nombre}}</td>--}}
+        {{--          </tr>--}}
+        {{--          <tr>--}}
+        {{--            <th scope="row">05/01/2020</th>--}}
+        {{--            <td>10:30 am</td>--}}
+        {{--            <td>{{$presentacion->obra->nombre}}</td>--}}
+        {{--          </tr>--}}
         </tbody>
       </table>
 </div>

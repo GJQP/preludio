@@ -18,7 +18,7 @@
         <div class="container">
                 <div class="row">
                     <div class="flex-cont">
-                    @if ($presentaciones->contains(1))
+                        @if ($presentaciones->isNotEmpty())
                         @foreach ($presentaciones as $presentacion)
                             <div class="card w33">
                             <a href="/presentacion/{{$presentacion->id}}"><img src="{{asset('storage/'.$presentacion->poster)}}" class="card-img-top" alt="Imagen del teatro"></a>

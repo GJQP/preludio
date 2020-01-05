@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -44,6 +45,13 @@ class Presentacion extends Model
         return $this->hasMany('App\Funcion');
     }
 
+    public function funcionesHoy()
+    {
+        return $this->funciones()
+            ->where('fecha_presentacion', '=', Carbon::today()->toDateString())
+            ->get();
+    }
+
     /**
      * Devuelve las reseñas relacionadas
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
@@ -68,9 +76,8 @@ class Presentacion extends Model
     /*Accesos BREAD*/
     public function scopePresentacionesAsociadas($query){
         if (Auth::user()->esTeatro()){
-                return $query->where('teatro_id', Auth::user()->teatro? Auth::user()->teatro->id : 0);
-        }
-        else
+            return $query->where('teatro_id', Auth::user()->teatro? Auth::user()->teatro->id : 0);
+        } else
             return $query;
     }
 

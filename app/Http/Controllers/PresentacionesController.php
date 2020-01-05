@@ -19,7 +19,13 @@ class PresentacionesController extends Controller
             {
                 return $presentacion->teatro->activo == 1;
             });
-        return view('catalogoPresentaciones', compact('presentaciones'));
+        $funcionesHoy = [];
+        foreach ($presentaciones as $presentacion)
+        {
+            $funcionesHoy[$presentacion->id] = $presentacion->funcionesHoy();
+        }
+
+        return view('catalogoPresentaciones', compact('presentaciones', 'funcionesHoy'));
     }
 
     /**
