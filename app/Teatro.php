@@ -111,6 +111,15 @@ class Teatro extends Model
     }
 
     /**
+     * Devuelve las reseñas relacionadas
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function resenas()
+    {
+        return $this->hasMany('App\Resena');
+    }
+
+    /**
      * Elimina el establecimiento y su usuario relacionado
      * de este teatro
      * @return bool|null

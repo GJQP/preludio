@@ -36,6 +36,24 @@ class Presentacion extends Model
     }
 
     /**
+     * Devuelve las funciones relacionadas
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function funciones()
+    {
+        return $this->hasMany('App\Funcion');
+    }
+
+    /**
+     * Devuelve las reseñas relacionadas
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function resenas()
+    {
+        return $this->hasMany('App\Resena');
+    }
+
+    /**
      * Devuelve un vector con las url de las imagenes del Teatro
      * @param $value
      * @return array

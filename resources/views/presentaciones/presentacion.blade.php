@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('titulo')
-    {{$presentacion->obra->nombre}} 
+    {{$presentacion->obra->nombre}}
 @endsection
 
 @section('recursos')
@@ -20,7 +20,7 @@
                     <img src="{{asset('storage/'.$presentacion->poster)}}" alt="" class="img-thumbnail">
                 </div>
                 <div class=" col-lg-8 ">
-                    <div class="mb-2 sp-title"> 
+                    <div class="mb-2 sp-title">
                         <h1> <span>{{$presentacion->obra->nombre}}</span></h1>
                     </div>
                     <div>
@@ -33,10 +33,10 @@
                         <div>
                             <blockquote>
                                 <div class="row ml-1">
-                                <p><strong> Sinopsis: </strong> {{$presentacion->obra->sinopsis}}</p> 
+                                    <p><strong> Sinopsis: </strong> {{$presentacion->obra->sinopsis}}</p>
                                 </div>
                             </blockquote>
-                            
+
                         </div>
                     @endif
                     @if($presentacion->reparto)
@@ -47,10 +47,10 @@
                 </div>
             </div>
         </div>
-        
-@if(true)
+
+    @if(!empty($funciones))
 <div class="funciones container">
-    <div class="mb-2 sp-title"> 
+    <div class="mb-2 sp-title">
         <h1> <span>Funciones</span></h1>
     </div>
     <table class="table table-striped. table-hover">
@@ -81,11 +81,11 @@
       </table>
 </div>
 @endif
-        
+
 @if ($presentacion->imagenes)
 <hr>
 <div class="mt-3 container">
-        <div> 
+    <div>
             <h3 class="sub-line">Galería</h3>
         </div>
         <div>
@@ -95,10 +95,10 @@
                     <img src="{{$url_imagen}}" alt="" class="galeria" >
                 </div>
                 @endforeach
-            </div>   
+            </div>
         </div>
-    </div>  
+</div>
 @endif
-   
-</section>
 
+</section>
+@endsection

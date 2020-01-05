@@ -58,6 +58,15 @@ class User extends \TCG\Voyager\Models\User
     }
 
     /**
+     * Devuelve todas las resenas realizadas por un usuario
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function resenas()
+    {
+        return $this->hasMany('App\Resena');
+    }
+
+    /**
      * Determina si este usuario es teatrero
      * @return boolean
      */

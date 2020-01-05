@@ -35,7 +35,7 @@
                             <blockquote>
                                 <p>{{$teatro->direccion}}</p>
                             </blockquote>
-                            <div> 
+                            <div>
                                 <form class="rating">
                                     <label>
                                         <input type="radio" name="stars" value="1" />
@@ -50,7 +50,7 @@
                                         <input type="radio" name="stars" value="3" />
                                         <span class="icon">★</span>
                                         <span class="icon">★</span>
-                                        <span class="icon">★</span>   
+                                          <span class="icon">★</span>
                                       </label>
                                       <label>
                                         <input type="radio" name="stars" value="4"  />
@@ -70,7 +70,7 @@
                                   </form>
                             </div>
                         </div>
-                    </div>    
+                    </div>
                         @if(($teatro->facebook)||($teatro->twitter)||($teatro->instagram))
                         <div class="derecha mt-5 ">
                             @if($teatro->facebook)
@@ -133,7 +133,7 @@
 @else
     <hr>
     <section class="pt-4 pb-4">
-            <div class="container"> 
+        <div class="container">
                  <div>
                         <h2 class="sub-line">Presentaciones</h2>
                 </div>
@@ -144,7 +144,7 @@
 
 <section class="pt-4 pb-5" name= "Comentar">
     <hr>
-            <div class="container pb-2"> 
+    <div class="container pb-2">
                 <h2 class="sub-line">Comentarios</h2>
                     <div class="container pt-2">
                         <div>
@@ -159,10 +159,11 @@
                     </div>
             </div>
 </section>
-<section class="pb-5" name="Lista Comentarios">
+<section class="pb-5" id="lista-comentarios">
     <div class=" pt-1 container borde">
-            <div class="row pl-3">        
-                     <h4><u>Robert Gonzalez</u></h4> <div class="pl-3 pt-1"><i> (11/4/19)</i></div>      
+        <div class="row pl-3">
+            <h4><u>Robert Gonzalez</u></h4>
+            <div class="pl-3 pt-1"><i> (11/4/19)</i></div>
                      <div class="mover pl-2 rating">
                         <span class="checked">★</span>
                         <span class="checked">★</span>
@@ -177,8 +178,9 @@
     </div>
     <div class=" pt-1 container borde">
             <div class="row pl-3">
-                
-                     <h4><u>Mariana Rodriguez</u></h4> <div class="pl-3 pt-1"><i> (11/4/19)</i></div>      
+
+                <h4><u>Mariana Rodriguez</u></h4>
+                <div class="pl-3 pt-1"><i> (11/4/19)</i></div>
                      <div class="mover pl-1">
                         <div class="mover pl-2 rating">
                             <span class="checked">★</span>
@@ -195,8 +197,9 @@
     </div>
     <div class=" pt-1 container borde">
             <div class="row pl-3">
-                
-                     <h4><u>Tomas El Fakih</u></h4> <div class="pl-3 pt-1"><i> (11/4/19)</i></div>      
+
+                <h4><u>Tomas El Fakih</u></h4>
+                <div class="pl-3 pt-1"><i> (11/4/19)</i></div>
             </div>
             <div class="pt-1 reseña">
                 Me da ladilla trabajar en el proyecto, dejemoselo a Gus.
@@ -204,8 +207,9 @@
     </div>
     <div class=" pt-1 container borde">
             <div class="row pl-3">
-                
-                     <h4><u>Gustavo Quintana</u></h4> <div class="pl-3 pt-1"><i> (11/4/19)</i></div>      
+
+                <h4><u>Gustavo Quintana</u></h4>
+                <div class="pl-3 pt-1"><i> (11/4/19)</i></div>
             </div>
             <div class="pt-1 reseña">
                 Maldita sea tomas te odio mucho, pero no tienes idea de cuanto, intenta no romper el git esta vez jaja salu2 *meme de gatico*.

@@ -48,7 +48,8 @@ class TeatrosController extends Controller
     public function show(Teatro $teatro)
     {
         abort_unless($teatro->activo,404);
-        return view('teatros.teatro', compact('teatro'));
+        $resenas = $teatro->resenas;
+        return view('teatros.teatro', compact('teatro', 'resenas'));
     }
 
     /**

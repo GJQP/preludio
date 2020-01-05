@@ -52,7 +52,9 @@ class PresentacionesController extends Controller
     public function show(Presentacion $presentacion)
     {
         abort_unless($presentacion->teatro->activo,404);
-        return view('presentaciones.presentacion', compact('presentacion'));
+        $resenas = $presentacion->resenas;
+        $funciones = $presentacion->funciones;
+        return view('presentaciones.presentacion', compact('presentacion', 'resenas', 'funciones'));
     }
 
     /**
