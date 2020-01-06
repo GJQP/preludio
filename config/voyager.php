@@ -147,6 +147,8 @@ return [
             'App\\Voyager\\Widgets\\TeatroDimmer',
             'App\\Voyager\\Widgets\\ObraDimmer',
             'App\\Voyager\\Widgets\\PresentacionDimmer',
+            'App\\Voyager\\Widgets\\FuncionDimmer',
+            'App\\Voyager\\Widgets\\ResenaDimmer',
         ],
 
     ],
