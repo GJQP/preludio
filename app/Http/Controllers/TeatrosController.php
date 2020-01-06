@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Teatro;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TeatrosController extends Controller
 {
@@ -49,7 +50,9 @@ class TeatrosController extends Controller
     {
         abort_unless($teatro->activo,404);
         $resenas = $teatro->resenas;
-        return view('teatros.teatro', compact('teatro', 'resenas'));
+        $presentaciones = $teatro->presentaciones;
+        $usuario = Auth::check() ? Auth::user() : null;
+        return view('teatros.teatro', compact('teatro', 'resenas', 'presentaciones', 'usuario'));
     }
 
     /**

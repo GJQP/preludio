@@ -17,14 +17,14 @@ class ResenaController extends Controller
         $data = $request->validate([
             'stars' => 'required|min:0|max:5',
             'comentario' => 'nullable|string|max:255',
-            'tipo_objeto' => 'regex:/presentacion|teatro/i',
+            'tipo_objeto' => ['regex:/presentacion|teatro/i'],
             'id_rel' => 'required|integer|min:0'
         ]);
 
         $resena = new Resena();
         $resena->calificacion = $data['stars'];
         $resena->comentario = $data['comentario'];
-        $resena->user = $request->user();
+        $resena->user_id = $request->user()->id;
         if ($data['tipo_objeto'] === 'presentacion')
         {
             $resena->presentacion_id = $data['id_rel'];

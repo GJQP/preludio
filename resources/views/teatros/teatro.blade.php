@@ -5,22 +5,22 @@
 @endsection
 
 @section('recursos')
-<link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet">
-<link href="{{ asset('css/owl.theme.default.min.css') }}" rel="stylesheet">
-<link href="{{ asset('css/rating.css') }}" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/owl.theme.default.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/rating.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<script src="{{ asset('js/owl.carousel.min.js') }}" defer></script>
-<script src="{{ asset('js/teatro.js') }}" defer></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="{{ asset('js/rating.js') }}" defer> </script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}" defer></script>
+    <script src="{{ asset('js/teatro.js') }}" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="{{ asset('js/rating.js') }}" defer></script>
 @endsection
 
 @section('contenido')
-<section class="intro-section pt100 pb-4">
-		<div class="container">
-			<div class="row mb-3">
-				<div class="col-lg-4 pt-4">
+    <section class="intro-section pt100 pb-4">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-lg-4 pt-4">
                     <img src="{{asset('storage/'.json_decode($teatro->imagenes)[0])}}" alt="">
                 </div>
                 <div class="col-lg-7 mr-3 ml-3">
@@ -37,177 +37,151 @@
                             </blockquote>
                         </div>
                     </div>
-                        @if(($teatro->facebook)||($teatro->twitter)||($teatro->instagram))
+                    @if(($teatro->facebook)||($teatro->twitter)||($teatro->instagram))
                         <div class="derecha mt-5 ">
                             @if($teatro->facebook)
-                                <a href="{{$teatro->facebook}}" class=""><i class="fab fa-facebook rs" ></i></a>
+                                <a href="{{$teatro->facebook}}" class=""><i class="fab fa-facebook rs"></i></a>
                             @endif
                             @if($teatro->twitter)
-                               <a href="{{$teatro->twitter}}"><i class="fab fa-twitter rs" style="font-size:30px"></i></a>
+                                <a href="{{$teatro->twitter}}"><i class="fab fa-twitter rs" style="font-size:30px"></i></a>
                             @endif
                             @if($teatro->instagram)
-                              <a href="{{$teatro->instagram}}"><i class="fab fa-instagram rs" style="font-size:30px"></i></a>
+                                <a href="{{$teatro->instagram}}"><i class="fab fa-instagram rs"
+                                                                    style="font-size:30px"></i></a>
                             @endif
                         </div>
                     @endif
                 </div>
-			</div>
-		</div>
-</section>
-@if($teatro->imagenes)
-<br>
-<section class="pt-3 pb-4">
-		<div class="container">
-            <div>
-                <h2 class="sub-line">Galería</h2>
-            </div>
-            <div class="row">
-                <div class="owl-carousel owl-theme">
-                    @foreach(json_decode($teatro->imagenes) as $url_imagen)
-                            <div >
-                                    <img src="{{asset('storage/'.$url_imagen)}}" alt="Foto teatro {{$teatro->nombre}}" class="galeria">
-                            </div>
-                        @endforeach
-                </div>
-
             </div>
         </div>
-</section>
-@endif
-
-@if(count($teatro->presentaciones) <> 0)
-
-    <br>
-    <section class="pt-4 pb-4">
-            <div class="container">
-                    <div>
-                            <h2 class="sub-line">Presentaciones</h2>
-                    </div>
-                    <div class="row ">
-                        <div class="owl-carousel owl-theme">
-                            @foreach($teatro->presentaciones as $presentacion)
-                                <div>
-                                    <a href="{{route('presentacionesTeatro', $teatro)}}"> <img src="{{asset('storage/'.$presentacion->poster)}}" alt="Poster de {{$presentacion->obra->nombre}}" class="galeria"></a>
-                                </div>
-                            @endforeach
-                        </div>
-
-                    </div>
-            </div>
     </section>
+    @if($teatro->imagenes)
+        <br>
+        <section class="pt-3 pb-4">
+            <div class="container">
+                <div>
+                    <h2 class="sub-line">Galería</h2>
+                </div>
+                <div class="row">
+                    <div class="owl-carousel owl-theme">
+                        @foreach(json_decode($teatro->imagenes) as $url_imagen)
+                            <div>
+                                <img src="{{asset('storage/'.$url_imagen)}}" alt="Foto teatro {{$teatro->nombre}}"
+                                     class="galeria">
+                            </div>
+                        @endforeach
+                    </div>
 
-@else
-    <hr>
-    <section class="pt-4 pb-4">
-        <div class="container">
-                 <div>
-                        <h2 class="sub-line">Presentaciones</h2>
+                </div>
+            </div>
+        </section>
+    @endif
+
+    @if($presentaciones->isNotEmpty())
+
+        <br>
+        <section class="pt-4 pb-4">
+            <div class="container">
+                <div>
+                    <h2 class="sub-line">Presentaciones</h2>
+                </div>
+                <div class="row ">
+                    <div class="owl-carousel owl-theme">
+                        @foreach($presentaciones as $presentacion)
+                            <div>
+                                <a href="{{route('presentacionesTeatro', $teatro)}}"> <img
+                                        src="{{asset('storage/'.$presentacion->poster)}}"
+                                        alt="Poster de {{$presentacion->obra->nombre}}" class="galeria"></a>
+                            </div>
+                        @endforeach
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    @else
+        <hr>
+        <section class="pt-4 pb-4">
+            <div class="container">
+                <div>
+                    <h2 class="sub-line">Presentaciones</h2>
                 </div>
                 <p class="mt-1">El Teatro no posee presentaciones actualmente</p>
             </div>
-    </section>
-@endif
+        </section>
+    @endif
 
-<section class="pt-4 pb-5" name= "reseña">
-    <hr>
-    <div class="container pb-2">
-                <h2 class="sub-line">Comentarios</h2>
-                    <div class="container pt-2">
-                        <div>
-                            <h4>Robert Gonzalez</h4>
-                        </div>
-                        <form method="POST" name= reseña>
-                            <div>
-                                <textarea type ="text" name="reseña"  class="comentario" placeholder="Introduzca su reseña"></textarea>
-                            </div>
-                            <div class=" pl-3">
-                                <div class="pt-1 reseña">
-                                    <h5>Califique al Teatro: </h4>
-                                </div>
-                                    <div class="rating pl-1">
-                                        <label>
-                                            <input type="radio" name="stars" value="1" />
-                                            <span class="icon">★</span>
-                                          </label>
-                                          <label>
-                                            <input type="radio" name="stars" value="2" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                          </label>
-                                          <label>
-                                            <input type="radio" name="stars" value="3" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                          </label>
-                                          <label>
-                                            <input type="radio" name="stars" value="4"  />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                          </label>
-                                        <label>
-                                          <input type="radio" name="stars" value="5"/>
-                                          <span class="icon">★</span>
-                                          <span class="icon">★</span>
-                                          <span class="icon">★</span>
-                                          <span class="icon">★</span>
-                                          <span class="icon">★</span>
-                                        </label>
-                                </div>
-                            </div>
-                            <button type="submit" class="right">Comentar</button>
-                    </form>
-            </div>
-</section>
-
-    <section class="pb-5" name="lista-reseña">
-        @for($i = 0; $i < 4; $i++)
-        <div class=" pt-1 container borde">
-            <div class="row pl-3">
-                <h4><u>Robert Gonzalez</u></h4>
-                <div class="pl-3 pt-1"><i> (11/4/19)</i></div>
-                    <div class="mover pl-2 rating">
-                    @if($i === 1)
-                            <span class="checked">★</span>
-                            <span>★</span>
-                            <span>★</span>
-                            <span>★</span>
-                            <span>★</span>
-                    @elseif($i === 2)
-                            <span class="checked">★</span>
-                            <span class="checked">★</span>
-                            <span>★</span>
-                            <span>★</span>
-                            <span>★</span>
-                    @elseif($i === 3)
-                            <span class="checked">★</span>
-                            <span class="checked">★</span>
-                            <span class="checked">★</span>
-                            <span>★</span>
-                            <span>★</span>
-                    @elseif($i === 4)
-                            <span class="checked">★</span>
-                            <span class="checked">★</span>
-                            <span class="checked">★</span>
-                            <span class="checked">★</span>
-                            <span>★</span>
-                    @else
-                            <span class="checked">★</span>
-                            <span class="checked">★</span>
-                            <span class="checked">★</span>
-                            <span class="checked">★</span>
-                            <span class="checked">★</span>
-
-                    @endif
+    <section class="pt-4 pb-5" id="reseña">
+        <hr>
+        <div class="container pb-2">
+            <h2 class="sub-line">Comentarios</h2>
+            <div class="container pt-2">
+                @auth
+                    <div>
+                        <h4>Publicando como <span class="font-itallic">{{ $usuario->name }}</span></h4>
                     </div>
-                </div>
-                <div class="pt-1 reseña">
-                    El mejor teatro del mundo, tiene las mejores salas que he visto en todo Caracas.
-                </div>
+                    <form method="post" name="reseña" action="{{ route('post-resena') }}">
+                        @csrf
+                        <input type="hidden" name="tipo_objeto" value="teatro">
+                        <input type="hidden" name="id_rel" value="{{$teatro->id}}">
+                        <div class="row pl-3">
+                            <div class="pt-1 reseña">
+                                <h5 class="pr-2">Califique al Teatro: </h5>
+                            </div>
+                            <div class="rating">
+                                @for($i = 1; $i <= 5; $i++)
+                                    <label>
+                                        <input type="radio" name="stars" value="{{ $i }}"/>
+                                        @for($j = 0; $j < $i; $j++)
+                                            <span class="icon">★</span>
+                                        @endfor
+                                    </label>
+                                @endfor
+                            </div>
+                        </div>
+                        <div>
+                        <textarea type="text" name="comentario" class="comentario form-control"
+                                  placeholder="Introduzca su reseña (opcional)"></textarea>
+                        </div>
+                        <button type="submit" class="right btn btn-primary">Comentar</button>
+                    </form>
+                @endauth
+                @guest
+                    <h6>No estas autenticado. <a href="{{ action('HomeController@register') }}">Haz click aquí para
+                            iniciar sesión</a></h6>
+                @endguest
+            </div>
         </div>
-        @endfor
+    </section>
+
+    <section class="pb-5" id="resenãs">
+        @if($resenas->isNotEmpty())
+            @foreach($resenas as $resena)
+                <div class=" pt-1 container borde">
+                    <div class="row pl-3">
+                        <h4 class="text-underlined">{{ $resena->user->name }}</h4>
+                        <div class="pl-3 pt-1"><i> ({{ $resena->created_at->format('d/m/Y')  }})</i></div>
+                        <div class="mover pl-2 rating">
+                            @for($i = 1; $i <= 5; $i++)
+                                @if($i <= $resena->calificacion)
+                                    <span class="checked">★</span>
+                                @else
+                                    <span>★</span>
+                                @endif
+                            @endfor
+                        </div>
+                    </div>
+                    @if($resena->comentario)
+                        <div class="pt-1 reseña">
+                            {{ $resena->comentario }}
+                        </div>
+                    @endif
+                </div>
+            @endforeach
+        @else
+            <h5>No hay reseñas sobre este Teatro.</h5>
+        @endif
     </section>
 
 @endsection
