@@ -42,7 +42,7 @@ class Presentacion extends Model
      */
     public function funciones()
     {
-        return $this->hasMany('App\Funcion');
+        return $this->hasMany('App\Funcion')->orderBy('fecha_presentacion', 'asc');
     }
 
     public function funcionesHoy()

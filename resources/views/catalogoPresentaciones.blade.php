@@ -21,13 +21,18 @@
                         @if ($presentaciones->isNotEmpty())
                         @foreach ($presentaciones as $presentacion)
                             <div class="card w33">
-                            <a href="/presentacion/{{$presentacion->id}}"><img src="{{asset('storage/'.$presentacion->poster)}}" class="card-img-top" alt="Imagen del teatro"></a>
+                                <a href="/presentacion/{{$presentacion->id}}"><img src="{{asset('storage/'.$presentacion->poster)}}" class="card-img-top" alt="Imagen del teatro"></a>
                                 <div class="card-body">
                                     <h6 class="card-title"> {{$presentacion->obra->nombre}} </h6>
                                     <h6 class="card-subtitle mb-2 text-muted">Hasta {{ date('d-M-y', strtotime($presentacion->fecha_fin))}}</h6>
                                     <h6 class="card-subtitle mb-2 text-muted">{{$presentacion->teatro->nombre}}</h6>
+                                    <div class="funciones">
+                                        @foreach ($presentacion->funcionesHoy() as $fun_hoy)
+                                            <span class="badge badge-pill badge-dark">{{date('h:i A', strtotime($fun_hoy->hora_inicio))}}</span> 
+                                        @endforeach
+                                    </div>
                                     <div class="text-center">
-                                    <a href="/presentacion/{{$presentacion->id}}" class="card-link stretched-link">Ver</a>
+                                        <a href="/presentacion/{{$presentacion->id}}" class="card-link stretched-link">Ver</a>
                                     </div>
 
                                 </div>

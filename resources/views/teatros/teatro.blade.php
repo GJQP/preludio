@@ -35,43 +35,6 @@
                             <blockquote>
                                 <p>{{$teatro->direccion}}</p>
                             </blockquote>
-                            <div>
-                                <form class="rating" method="POST" action="{{ route('post-resena')  }}">
-                                    {{ csrf_field()  }}
-                                    <input type="hidden" name="tipo_objeto" value="teatro"/>
-                                    <input type="hidden" name="id_rel" value="{{ $teatro->id  }}"/>
-                                    <label>
-                                        <input type="radio" name="stars" value="1" />
-                                        <span class="icon">★</span>
-                                      </label>
-                                      <label>
-                                        <input type="radio" name="stars" value="2" />
-                                        <span class="icon">★</span>
-                                        <span class="icon">★</span>
-                                      </label>
-                                      <label>
-                                        <input type="radio" name="stars" value="3" />
-                                        <span class="icon">★</span>
-                                        <span class="icon">★</span>
-                                          <span class="icon">★</span>
-                                      </label>
-                                      <label>
-                                        <input type="radio" name="stars" value="4"  />
-                                        <span class="icon">★</span>
-                                        <span class="icon">★</span>
-                                        <span class="icon">★</span>
-                                        <span class="icon">★</span>
-                                      </label>
-                                    <label>
-                                      <input type="radio" name="stars" value="5"/>
-                                      <span class="icon marcado">★</span>
-                                      <span class="icon">★</span>
-                                      <span class="icon">★</span>
-                                      <span class="icon">★</span>
-                                      <span class="icon">★</span>
-                                    </label>
-                                  </form>
-                            </div>
                         </div>
                     </div>
                         @if(($teatro->facebook)||($teatro->twitter)||($teatro->instagram))
@@ -145,7 +108,7 @@
     </section>
 @endif
 
-<section class="pt-4 pb-5" name= "Comentar">
+<section class="pt-4 pb-5" name= "reseña">
     <hr>
     <div class="container pb-2">
                 <h2 class="sub-line">Comentarios</h2>
@@ -153,71 +116,98 @@
                         <div>
                             <h4>Robert Gonzalez</h4>
                         </div>
-                        <form method="POST">
+                        <form method="POST" name= reseña>
                             <div>
                                 <textarea type ="text" name="reseña"  class="comentario" placeholder="Introduzca su reseña"></textarea>
                             </div>
+                            <div class=" pl-3">
+                                <div class="pt-1 reseña">
+                                    <h5>Califique al Teatro: </h4>
+                                </div>
+                                    <div class="rating pl-1">
+                                        <label>
+                                            <input type="radio" name="stars" value="1" />
+                                            <span class="icon">★</span>
+                                          </label>
+                                          <label>
+                                            <input type="radio" name="stars" value="2" />
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                          </label>
+                                          <label>
+                                            <input type="radio" name="stars" value="3" />
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                          </label>
+                                          <label>
+                                            <input type="radio" name="stars" value="4"  />
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                          </label>
+                                        <label>
+                                          <input type="radio" name="stars" value="5"/>
+                                          <span class="icon">★</span>
+                                          <span class="icon">★</span>
+                                          <span class="icon">★</span>
+                                          <span class="icon">★</span>
+                                          <span class="icon">★</span>
+                                        </label>
+                                </div>
+                            </div>
                             <button type="submit" class="right">Comentar</button>
-                        </form>
+                    </form>
+            </div>
+</section>
+
+    <section class="pb-5" name="lista-reseña">
+        @for($i = 0; $i < 4; $i++)
+        <div class=" pt-1 container borde">
+            <div class="row pl-3">
+                <h4><u>Robert Gonzalez</u></h4>
+                <div class="pl-3 pt-1"><i> (11/4/19)</i></div>
+                    <div class="mover pl-2 rating">
+                    @if($i === 1)
+                            <span class="checked">★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                    @elseif($i === 2)
+                            <span class="checked">★</span>
+                            <span class="checked">★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                    @elseif($i === 3)
+                            <span class="checked">★</span>
+                            <span class="checked">★</span>
+                            <span class="checked">★</span>
+                            <span>★</span>
+                            <span>★</span>
+                    @elseif($i === 4)
+                            <span class="checked">★</span>
+                            <span class="checked">★</span>
+                            <span class="checked">★</span>
+                            <span class="checked">★</span>
+                            <span>★</span>
+                    @else
+                            <span class="checked">★</span>
+                            <span class="checked">★</span>
+                            <span class="checked">★</span>
+                            <span class="checked">★</span>
+                            <span class="checked">★</span>
+
+                    @endif
                     </div>
-            </div>
-</section>
-<section class="pb-5" id="lista-comentarios">
-    <div class=" pt-1 container borde">
-        <div class="row pl-3">
-            <h4><u>Robert Gonzalez</u></h4>
-            <div class="pl-3 pt-1"><i> (11/4/19)</i></div>
-                     <div class="mover pl-2 rating">
-                        <span class="checked">★</span>
-                        <span class="checked">★</span>
-                        <span class="checked">★</span>
-                        <span class="">★</span>
-                        <span class="">★</span>
-                     </div >
-            </div>
-            <div class="pt-1 reseña">
-                El mejor teatro del mundo, tiene las mejores salas que he visto en todo Caracas.
-            </div>
-    </div>
-    <div class=" pt-1 container borde">
-            <div class="row pl-3">
-
-                <h4><u>Mariana Rodriguez</u></h4>
-                <div class="pl-3 pt-1"><i> (11/4/19)</i></div>
-                     <div class="mover pl-1">
-                        <div class="mover pl-2 rating">
-                            <span class="checked">★</span>
-                            <span class="checked">★</span>
-                            <span class="checked">★</span>
-                            <span class="checked">★</span>
-                            <span class="checked">★</span>
-                         </div >
-                        </div >
-            </div>
-            <div class="pt-1 reseña">
-                Quiero terminar esto ya :D.
-            </div>
-    </div>
-    <div class=" pt-1 container borde">
-            <div class="row pl-3">
-
-                <h4><u>Tomas El Fakih</u></h4>
-                <div class="pl-3 pt-1"><i> (11/4/19)</i></div>
-            </div>
-            <div class="pt-1 reseña">
-                Me da ladilla trabajar en el proyecto, dejemoselo a Gus.
-            </div>
-    </div>
-    <div class=" pt-1 container borde">
-            <div class="row pl-3">
-
-                <h4><u>Gustavo Quintana</u></h4>
-                <div class="pl-3 pt-1"><i> (11/4/19)</i></div>
-            </div>
-            <div class="pt-1 reseña">
-                Maldita sea tomas te odio mucho, pero no tienes idea de cuanto, intenta no romper el git esta vez jaja salu2 *meme de gatico*.
-            </div>
+                </div>
+                <div class="pt-1 reseña">
+                    El mejor teatro del mundo, tiene las mejores salas que he visto en todo Caracas.
+                </div>
         </div>
-    </div>
-</section>
+        @endfor
+    </section>
+
 @endsection
