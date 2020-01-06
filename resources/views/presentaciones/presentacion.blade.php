@@ -64,7 +64,7 @@
         @foreach($funciones as $funcion)
           <tr>
               <th scope="row">{{ $funcion->fecha_presentacion->format('d/m/Y')  }}</th>
-              <td>{{ $funcion->hora_inicio }}</td>
+              <td>{{date('h:i A', strtotime($funcion->hora_inicio)) }}</td>
             <td>{{$presentacion->obra->nombre}}</td>
           </tr>
         @endforeach
