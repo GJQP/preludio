@@ -7,6 +7,8 @@
 @section('recursos')
     <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/owl.theme.default.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/rating.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="{{ asset('js/owl.carousel.min.js') }}" defer></script>
     <script src="{{ asset('js/teatro.js') }}" defer></script>
@@ -108,7 +110,7 @@
                     <form method="post" name="reseña" action="{{ route('post-resena') }}">
                         @csrf
                         <input type="hidden" name="tipo_objeto" value="teatro">
-                        <input type="hidden" name="id_rel" value="{{$teatro->id}}">
+                        <input type="hidden" name="id_rel" value="{{$presentacion->id}}">
                         <div class="row pl-3">
                             <div class="pt-1 reseña">
                                 <h5 class="pr-2">Califique al Teatro: </h5>
