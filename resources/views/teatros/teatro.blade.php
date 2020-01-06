@@ -27,6 +27,7 @@
                     <div class="sp-title mb-2">
                         <h2><span>{{$teatro->nombre}}</span></h2>
                     </div>
+                    <span><i class="fa fa-star text-warning"></i> {{ $promedio }}</span>
                     <div class="Body">
                         <div>
                             <p><strong>Teléfono: </strong>{{$teatro->telefono}}</p>
@@ -148,7 +149,8 @@
                     </form>
                 @endauth
                 @guest
-                    <h6>No estas autenticado. <a href="{{ action('HomeController@register') }}">Haz click aquí para
+                    <h6>Debes estar autenticado para poder realizar una reseña. <a
+                            href="{{ action('HomeController@register') }}">Haz click aquí para
                             iniciar sesión</a></h6>
                 @endguest
             </div>

@@ -28,7 +28,8 @@
                                     <h6 class="card-subtitle mb-2 text-muted">{{$presentacion->teatro->nombre}}</h6>
                                     <div class="funciones">
                                         @foreach ($presentacion->funcionesHoy() as $fun_hoy)
-                                            <span class="badge badge-pill badge-dark">{{date('h:i A', strtotime($fun_hoy->hora_inicio))}}</span> 
+                                            <span
+                                                class="badge badge-pill badge-dark">{{date('h:i A', strtotime($fun_hoy->hora_inicio))}}</span>
                                         @endforeach
                                     </div>
                                     <div class="text-center">

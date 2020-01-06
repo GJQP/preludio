@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Presentacion;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PresentacionesController extends Controller
 {
@@ -60,7 +61,9 @@ class PresentacionesController extends Controller
         abort_unless($presentacion->teatro->activo,404);
         $resenas = $presentacion->resenas;
         $funciones = $presentacion->funciones;
-        return view('presentaciones.presentacion', compact('presentacion', 'resenas', 'funciones'));
+        $usuario = Auth::check() ? Auth::user() : null;
+        $promedio = $resenas->average('calificacion');
+        return view('presentaciones.presentacion', compact('presentacion', 'resenas', 'funciones', 'usuario', 'promedio'));
     }
 
     /**

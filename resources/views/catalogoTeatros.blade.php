@@ -15,8 +15,8 @@
         <div class="container">
                 <div class="row">
                     <div class="flex-cont">
-                        
-                    @if ($teatros->contains(1))
+
+                        @if ($teatros->isNotEmpty())
                         @foreach($teatros as $teatro)
                             <div class="card text-center w33">
                                 <a href="/teatro/{{$teatro->id}}">

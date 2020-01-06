@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Teatro;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -49,10 +50,12 @@ class TeatrosController extends Controller
     public function show(Teatro $teatro)
     {
         abort_unless($teatro->activo,404);
+        /** @var Collection $resenas */
         $resenas = $teatro->resenas;
         $presentaciones = $teatro->presentaciones;
         $usuario = Auth::check() ? Auth::user() : null;
-        return view('teatros.teatro', compact('teatro', 'resenas', 'presentaciones', 'usuario'));
+        $promedio = $resenas->average('calificacion');
+        return view('teatros.teatro', compact('teatro', 'resenas', 'presentaciones', 'usuario', 'promedio'));
     }
 
     /**
