@@ -176,7 +176,10 @@
 
     </footer>
     <!-- Footer section end -->
-
+        <script type="application/javascript"
+                src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="application/javascript" src="{{ asset('js/owl.carousel.min.js') }}" defer></script>
+        @yield('scripts')
     </div>
 </body>
 </html>

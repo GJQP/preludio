@@ -43,13 +43,7 @@ class Resena extends Model
      */
     public function reportar()
     {
-        $this->reportes++;
-        if ($this->reportes >= 5)
-        {
-            $this->delete();
-        } else
-        {
-            $this->save();
-        }
+        $this->numero_reportes++;
+        $this->save();
     }
 }

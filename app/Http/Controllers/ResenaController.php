@@ -37,4 +37,19 @@ class ResenaController extends Controller
 
         return Redirect::to($request->headers->get('referer'));
     }
+
+    public function reportar(Resena $resena)
+    {
+        try
+        {
+            $resena->reportar();
+            $res = "La reseña ha sido reportada con éxito";
+        } catch (\Exception $exc)
+        {
+            $res = "Hubo un error procesando el reporte: " . $exc->getMessage();
+        }
+
+        return response()->json($res);
+
+    }
 }

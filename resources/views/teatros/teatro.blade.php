@@ -10,10 +10,8 @@
     <link href="{{ asset('css/rating.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script src="{{ asset('js/owl.carousel.min.js') }}" defer></script>
-    <script src="{{ asset('js/teatro.js') }}" defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="{{ asset('js/rating.js') }}" defer></script>
+    <script>var csrf_token = '{{ csrf_token() }}'</script>
+
 @endsection
 
 @section('contenido')
@@ -151,7 +149,7 @@
                 @guest
                     <h6>Debes estar autenticado para poder realizar una reseña. <a
                             href="{{ action('HomeController@register') }}">Haz click aquí para
-                            iniciar sesión</a></h6>
+                            registrarte</a></h6>
                 @endguest
             </div>
         </div>
@@ -160,7 +158,7 @@
     <section class="pb-5" id="resenãs">
         @if($resenas->isNotEmpty())
             @foreach($resenas as $resena)
-                <div class=" pt-1 container borde">
+                <div class=" pt-1 container borde js-comentario">
                     <div class="row pl-3">
                         <h4 class="text-underlined">{{ $resena->user->name }}</h4>
                         <div class="pl-3 pt-1"><i> ({{ $resena->created_at->format('d/m/Y')  }})</i></div>
@@ -173,6 +171,13 @@
                                 @endif
                             @endfor
                         </div>
+                        @if($resena->comentario)
+                            <div class="float-right">
+                                <a href="{{ route('reportar', $resena->id) }}" class="report-link text-danger">
+                                    <i class="fa fa-flag"></i> Reportar
+                                </a>
+                            </div>
+                        @endif
                     </div>
                     @if($resena->comentario)
                         <div class="pt-1 reseña">
@@ -185,5 +190,11 @@
             <h5>No hay reseñas sobre este Teatro.</h5>
         @endif
     </section>
-
 @endsection
+
+@section('scripts')
+    <script type="application/javascript" src="{{ asset('js/teatro.js') }}" defer></script>
+    <script type="application/javascript" src="{{ asset('js/rating.js') }}" defer></script>
+    <script type="application/javascript" src="{{ asset('js/comentarios.js') }}"></script>
+@endsection
+
