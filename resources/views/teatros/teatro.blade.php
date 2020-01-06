@@ -187,7 +187,7 @@
                 </div>
             @endforeach
         @else
-            <h5>No hay reseñas sobre este Teatro.</h5>
+            <h5 class="container">No hay reseñas sobre este Teatro.</h5>
         @endif
     </section>
 @endsection
