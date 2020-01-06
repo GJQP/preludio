@@ -34,41 +34,7 @@
                         <div>
                             <blockquote>
                                 <p>{{$teatro->direccion}}</p>
-                            </blockquote>
-                            <div>
-                                <form class="rating">
-                                    <label>
-                                        <input type="radio" name="stars" value="1" />
-                                        <span class="icon">★</span>
-                                      </label>
-                                      <label>
-                                        <input type="radio" name="stars" value="2" />
-                                        <span class="icon">★</span>
-                                        <span class="icon">★</span>
-                                      </label>
-                                      <label>
-                                        <input type="radio" name="stars" value="3" />
-                                        <span class="icon">★</span>
-                                        <span class="icon">★</span>
-                                          <span class="icon">★</span>
-                                      </label>
-                                      <label>
-                                        <input type="radio" name="stars" value="4"  />
-                                        <span class="icon">★</span>
-                                        <span class="icon">★</span>
-                                        <span class="icon">★</span>
-                                        <span class="icon">★</span>
-                                      </label>
-                                    <label>
-                                      <input type="radio" name="stars" value="5"/>
-                                      <span class="icon marcado">★</span>
-                                      <span class="icon">★</span>
-                                      <span class="icon">★</span>
-                                      <span class="icon">★</span>
-                                      <span class="icon">★</span>
-                                    </label>
-                                  </form>
-                            </div>
+                            </blockquote>                        
                         </div>
                     </div>
                         @if(($teatro->facebook)||($teatro->twitter)||($teatro->instagram))
@@ -142,7 +108,7 @@
     </section>
 @endif
 
-<section class="pt-4 pb-5" name= "Comentar">
+<section class="pt-4 pb-5" name= "reseña">
     <hr>
     <div class="container pb-2">
                 <h2 class="sub-line">Comentarios</h2>
@@ -150,17 +116,53 @@
                         <div>
                             <h4>Robert Gonzalez</h4>
                         </div>
-                        <form method="POST">
+                        <form method="POST" name= reseña>
                             <div>
                                 <textarea type ="text" name="reseña"  class="comentario" placeholder="Introduzca su reseña"></textarea>
                             </div>
-                            <button type="submit" class="right">Comentar</button>
-                        </form>
-                    </div>
+                            <div class=" pl-3">
+                                <div class="pt-1 reseña">
+                                    <h5>Califique al Teatro: </h4>
+                                </div>
+                                    <div class="rating pl-1">
+                                        <label>
+                                            <input type="radio" name="stars" value="1" />
+                                            <span class="icon">★</span>
+                                          </label>
+                                          <label>
+                                            <input type="radio" name="stars" value="2" />
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                          </label>
+                                          <label>
+                                            <input type="radio" name="stars" value="3" />
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                          </label>
+                                          <label>
+                                            <input type="radio" name="stars" value="4"  />
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                          </label>
+                                        <label>
+                                          <input type="radio" name="stars" value="5"/>
+                                          <span class="icon">★</span>
+                                          <span class="icon">★</span>
+                                          <span class="icon">★</span>
+                                          <span class="icon">★</span>
+                                          <span class="icon">★</span>
+                                        </label>
+                                </div> 
+                            </div>
+                            <button type="submit" class="right">Comentar</button>   
+                    </form>
             </div>
 </section>
 
-    <section class="pb-5" id="lista-comentarios">
+    <section class="pb-5" name="lista-reseña">
         @for($i = 0; $i < 4; $i++)
         <div class=" pt-1 container borde">
             <div class="row pl-3">
