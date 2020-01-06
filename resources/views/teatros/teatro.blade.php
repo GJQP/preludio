@@ -159,62 +159,53 @@
                     </div>
             </div>
 </section>
-<section class="pb-5" id="lista-comentarios">
-    <div class=" pt-1 container borde">
-        <div class="row pl-3">
-            <h4><u>Robert Gonzalez</u></h4>
-            <div class="pl-3 pt-1"><i> (11/4/19)</i></div>
-                     <div class="mover pl-2 rating">
-                        <span class="checked">★</span>
-                        <span class="checked">★</span>
-                        <span class="checked">★</span>
-                        <span class="">★</span>
-                        <span class="">★</span>
-                     </div >
-            </div>
-            <div class="pt-1 reseña">
-                El mejor teatro del mundo, tiene las mejores salas que he visto en todo Caracas.
-            </div>
-    </div>
-    <div class=" pt-1 container borde">
-            <div class="row pl-3">
 
-                <h4><u>Mariana Rodriguez</u></h4>
-                <div class="pl-3 pt-1"><i> (11/4/19)</i></div>
-                     <div class="mover pl-1">
-                        <div class="mover pl-2 rating">
-                            <span class="checked">★</span>
-                            <span class="checked">★</span>
-                            <span class="checked">★</span>
-                            <span class="checked">★</span>
-                            <span class="checked">★</span>
-                         </div >
-                        </div >
-            </div>
-            <div class="pt-1 reseña">
-                Quiero terminar esto ya :D.
-            </div>
-    </div>
-    <div class=" pt-1 container borde">
+    <section class="pb-5" id="lista-comentarios">
+        @for($i = 0; $i < 4; $i++)
+        <div class=" pt-1 container borde">
             <div class="row pl-3">
-
-                <h4><u>Tomas El Fakih</u></h4>
+                <h4><u>Robert Gonzalez</u></h4>
                 <div class="pl-3 pt-1"><i> (11/4/19)</i></div>
-            </div>
-            <div class="pt-1 reseña">
-                Me da ladilla trabajar en el proyecto, dejemoselo a Gus.
-            </div>
-    </div>
-    <div class=" pt-1 container borde">
-            <div class="row pl-3">
-
-                <h4><u>Gustavo Quintana</u></h4>
-                <div class="pl-3 pt-1"><i> (11/4/19)</i></div>
-            </div>
-            <div class="pt-1 reseña">
-                Maldita sea tomas te odio mucho, pero no tienes idea de cuanto, intenta no romper el git esta vez jaja salu2 *meme de gatico*.
-            </div>
+                    <div class="mover pl-2 rating">
+                    @if($i === 1)
+                            <span class="checked">★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>                       
+                    @elseif($i === 2)
+                            <span class="checked">★</span>
+                            <span class="checked">★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                    @elseif($i === 3)
+                            <span class="checked">★</span>
+                            <span class="checked">★</span>
+                            <span class="checked">★</span>
+                            <span>★</span>
+                            <span>★</span>
+                    @elseif($i === 4)
+                            <span class="checked">★</span>
+                            <span class="checked">★</span>
+                            <span class="checked">★</span>
+                            <span class="checked">★</span>
+                            <span>★</span>
+                    @else
+                            <span class="checked">★</span>
+                            <span class="checked">★</span>
+                            <span class="checked">★</span>
+                            <span class="checked">★</span>
+                            <span class="checked">★</span>
+                            
+                    @endif
+                    </div>
+                </div>
+                <div class="pt-1 reseña">
+                    El mejor teatro del mundo, tiene las mejores salas que he visto en todo Caracas.
+                </div>
         </div>
-    </div>
-</section>
+        @endfor
+    </section>
+
 @endsection
