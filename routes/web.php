@@ -54,3 +54,5 @@ Route::get('/presentaciones', 'PresentacionesController@index')->name('presentac
 // Presentaciones de un teatro
 Route::get('/teatro/{teatro}/presentaciones', 'TeatrosController@verPresentaciones')->name('presentacionesTeatro');
 
+Route::post('/resenas/post', 'ResenaController@store')->name('post-resena');
+

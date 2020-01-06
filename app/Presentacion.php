@@ -48,7 +48,8 @@ class Presentacion extends Model
     public function funcionesHoy()
     {
         return $this->funciones()
-            ->where('fecha_presentacion', '=', Carbon::today()->toDateString())
+            ->whereDate('fecha_presentacion', Carbon::today())
+            ->orderBy('hora_inicio', 'asc')
             ->get();
     }
 

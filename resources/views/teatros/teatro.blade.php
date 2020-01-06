@@ -36,7 +36,10 @@
                                 <p>{{$teatro->direccion}}</p>
                             </blockquote>
                             <div>
-                                <form class="rating">
+                                <form class="rating" method="POST" action="{{ route('post-resena')  }}">
+                                    {{ csrf_field()  }}
+                                    <input type="hidden" name="tipo_objeto" value="teatro"/>
+                                    <input type="hidden" name="id_rel" value="{{ $teatro->id  }}"/>
                                     <label>
                                         <input type="radio" name="stars" value="1" />
                                         <span class="icon">★</span>
