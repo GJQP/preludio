@@ -109,11 +109,11 @@
                     </div>
                     <form method="post" name="reseña" action="{{ route('post-resena') }}">
                         @csrf
-                        <input type="hidden" name="tipo_objeto" value="teatro">
+                        <input type="hidden" name="tipo_objeto" value="presentacion">
                         <input type="hidden" name="id_rel" value="{{$presentacion->id}}">
                         <div class="row pl-3">
                             <div class="pt-1 reseña">
-                                <h5 class="pr-2">Califique al Teatro: </h5>
+                                <h5 class="pr-2">Califique la Presentación: </h5>
                             </div>
                             <div class="rating">
                                 @for($i = 1; $i <= 5; $i++)
