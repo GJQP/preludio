@@ -12,12 +12,12 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('permissions')->delete();
-        
+
         \DB::table('permissions')->insert(array (
-            0 => 
+            0 =>
             array (
                 'id' => 1,
                 'key' => 'browse_admin',
@@ -25,7 +25,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:45',
                 'updated_at' => '2019-10-12 19:01:45',
             ),
-            1 => 
+            1 =>
             array (
                 'id' => 2,
                 'key' => 'browse_bread',
@@ -33,7 +33,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:45',
                 'updated_at' => '2019-10-12 19:01:45',
             ),
-            2 => 
+            2 =>
             array (
                 'id' => 3,
                 'key' => 'browse_database',
@@ -41,7 +41,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:45',
                 'updated_at' => '2019-10-12 19:01:45',
             ),
-            3 => 
+            3 =>
             array (
                 'id' => 4,
                 'key' => 'browse_media',
@@ -49,7 +49,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:45',
                 'updated_at' => '2019-10-12 19:01:45',
             ),
-            4 => 
+            4 =>
             array (
                 'id' => 5,
                 'key' => 'browse_compass',
@@ -57,7 +57,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:45',
                 'updated_at' => '2019-10-12 19:01:45',
             ),
-            5 => 
+            5 =>
             array (
                 'id' => 6,
                 'key' => 'browse_menus',
@@ -65,7 +65,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:45',
                 'updated_at' => '2019-10-12 19:01:45',
             ),
-            6 => 
+            6 =>
             array (
                 'id' => 7,
                 'key' => 'read_menus',
@@ -73,7 +73,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:45',
                 'updated_at' => '2019-10-12 19:01:45',
             ),
-            7 => 
+            7 =>
             array (
                 'id' => 8,
                 'key' => 'edit_menus',
@@ -81,7 +81,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:45',
                 'updated_at' => '2019-10-12 19:01:45',
             ),
-            8 => 
+            8 =>
             array (
                 'id' => 9,
                 'key' => 'add_menus',
@@ -89,7 +89,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:46',
                 'updated_at' => '2019-10-12 19:01:46',
             ),
-            9 => 
+            9 =>
             array (
                 'id' => 10,
                 'key' => 'delete_menus',
@@ -97,7 +97,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:46',
                 'updated_at' => '2019-10-12 19:01:46',
             ),
-            10 => 
+            10 =>
             array (
                 'id' => 11,
                 'key' => 'browse_roles',
@@ -105,7 +105,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:46',
                 'updated_at' => '2019-10-12 19:01:46',
             ),
-            11 => 
+            11 =>
             array (
                 'id' => 12,
                 'key' => 'read_roles',
@@ -113,7 +113,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:46',
                 'updated_at' => '2019-10-12 19:01:46',
             ),
-            12 => 
+            12 =>
             array (
                 'id' => 13,
                 'key' => 'edit_roles',
@@ -121,7 +121,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:46',
                 'updated_at' => '2019-10-12 19:01:46',
             ),
-            13 => 
+            13 =>
             array (
                 'id' => 14,
                 'key' => 'add_roles',
@@ -129,7 +129,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:46',
                 'updated_at' => '2019-10-12 19:01:46',
             ),
-            14 => 
+            14 =>
             array (
                 'id' => 15,
                 'key' => 'delete_roles',
@@ -137,7 +137,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:46',
                 'updated_at' => '2019-10-12 19:01:46',
             ),
-            15 => 
+            15 =>
             array (
                 'id' => 16,
                 'key' => 'browse_users',
@@ -145,7 +145,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:46',
                 'updated_at' => '2019-10-12 19:01:46',
             ),
-            16 => 
+            16 =>
             array (
                 'id' => 17,
                 'key' => 'read_users',
@@ -153,7 +153,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:46',
                 'updated_at' => '2019-10-12 19:01:46',
             ),
-            17 => 
+            17 =>
             array (
                 'id' => 18,
                 'key' => 'edit_users',
@@ -161,7 +161,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:46',
                 'updated_at' => '2019-10-12 19:01:46',
             ),
-            18 => 
+            18 =>
             array (
                 'id' => 19,
                 'key' => 'add_users',
@@ -169,7 +169,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:46',
                 'updated_at' => '2019-10-12 19:01:46',
             ),
-            19 => 
+            19 =>
             array (
                 'id' => 20,
                 'key' => 'delete_users',
@@ -177,7 +177,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:46',
                 'updated_at' => '2019-10-12 19:01:46',
             ),
-            20 => 
+            20 =>
             array (
                 'id' => 21,
                 'key' => 'browse_settings',
@@ -185,7 +185,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:46',
                 'updated_at' => '2019-10-12 19:01:46',
             ),
-            21 => 
+            21 =>
             array (
                 'id' => 22,
                 'key' => 'read_settings',
@@ -193,7 +193,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:46',
                 'updated_at' => '2019-10-12 19:01:46',
             ),
-            22 => 
+            22 =>
             array (
                 'id' => 23,
                 'key' => 'edit_settings',
@@ -201,7 +201,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:46',
                 'updated_at' => '2019-10-12 19:01:46',
             ),
-            23 => 
+            23 =>
             array (
                 'id' => 24,
                 'key' => 'add_settings',
@@ -209,7 +209,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:46',
                 'updated_at' => '2019-10-12 19:01:46',
             ),
-            24 => 
+            24 =>
             array (
                 'id' => 25,
                 'key' => 'delete_settings',
@@ -217,7 +217,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:46',
                 'updated_at' => '2019-10-12 19:01:46',
             ),
-            25 => 
+            25 =>
             array (
                 'id' => 26,
                 'key' => 'browse_hooks',
@@ -225,7 +225,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:02:03',
                 'updated_at' => '2019-10-12 19:02:03',
             ),
-            26 => 
+            26 =>
             array (
                 'id' => 27,
                 'key' => 'browse_teatros',
@@ -233,7 +233,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:22:21',
                 'updated_at' => '2019-10-12 19:22:21',
             ),
-            27 => 
+            27 =>
             array (
                 'id' => 28,
                 'key' => 'read_teatros',
@@ -241,7 +241,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:22:21',
                 'updated_at' => '2019-10-12 19:22:21',
             ),
-            28 => 
+            28 =>
             array (
                 'id' => 29,
                 'key' => 'edit_teatros',
@@ -249,7 +249,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:22:21',
                 'updated_at' => '2019-10-12 19:22:21',
             ),
-            29 => 
+            29 =>
             array (
                 'id' => 30,
                 'key' => 'add_teatros',
@@ -257,7 +257,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:22:22',
                 'updated_at' => '2019-10-12 19:22:22',
             ),
-            30 => 
+            30 =>
             array (
                 'id' => 31,
                 'key' => 'delete_teatros',
@@ -265,7 +265,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:22:22',
                 'updated_at' => '2019-10-12 19:22:22',
             ),
-            31 => 
+            31 =>
             array (
                 'id' => 32,
                 'key' => 'browse_obras',
@@ -273,7 +273,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:25:46',
                 'updated_at' => '2019-10-12 19:25:46',
             ),
-            32 => 
+            32 =>
             array (
                 'id' => 33,
                 'key' => 'read_obras',
@@ -281,7 +281,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:25:46',
                 'updated_at' => '2019-10-12 19:25:46',
             ),
-            33 => 
+            33 =>
             array (
                 'id' => 34,
                 'key' => 'edit_obras',
@@ -289,7 +289,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:25:46',
                 'updated_at' => '2019-10-12 19:25:46',
             ),
-            34 => 
+            34 =>
             array (
                 'id' => 35,
                 'key' => 'add_obras',
@@ -297,7 +297,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:25:46',
                 'updated_at' => '2019-10-12 19:25:46',
             ),
-            35 => 
+            35 =>
             array (
                 'id' => 36,
                 'key' => 'delete_obras',
@@ -305,7 +305,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:25:46',
                 'updated_at' => '2019-10-12 19:25:46',
             ),
-            36 => 
+            36 =>
             array (
                 'id' => 37,
                 'key' => 'browse_presentaciones',
@@ -313,7 +313,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:27:28',
                 'updated_at' => '2019-10-12 19:27:28',
             ),
-            37 => 
+            37 =>
             array (
                 'id' => 38,
                 'key' => 'read_presentaciones',
@@ -321,7 +321,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:27:28',
                 'updated_at' => '2019-10-12 19:27:28',
             ),
-            38 => 
+            38 =>
             array (
                 'id' => 39,
                 'key' => 'edit_presentaciones',
@@ -329,7 +329,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:27:28',
                 'updated_at' => '2019-10-12 19:27:28',
             ),
-            39 => 
+            39 =>
             array (
                 'id' => 40,
                 'key' => 'add_presentaciones',
@@ -337,7 +337,7 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:27:28',
                 'updated_at' => '2019-10-12 19:27:28',
             ),
-            40 => 
+            40 =>
             array (
                 'id' => 41,
                 'key' => 'delete_presentaciones',
@@ -345,8 +345,88 @@ class PreludioInicialPermissionsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:27:28',
                 'updated_at' => '2019-10-12 19:27:28',
             ),
+            41 =>
+                array(
+                    'id' => 42,
+                    'key' => 'browse_funciones',
+                    'table_name' => 'funciones',
+                    'created_at' => '2020-01-06 17:41:38',
+                    'updated_at' => '2020-01-06 17:41:38',
+                ),
+            42 =>
+                array(
+                    'id' => 43,
+                    'key' => 'read_funciones',
+                    'table_name' => 'funciones',
+                    'created_at' => '2020-01-06 17:41:38',
+                    'updated_at' => '2020-01-06 17:41:38',
+                ),
+            43 =>
+                array(
+                    'id' => 44,
+                    'key' => 'edit_funciones',
+                    'table_name' => 'funciones',
+                    'created_at' => '2020-01-06 17:41:38',
+                    'updated_at' => '2020-01-06 17:41:38',
+                ),
+            44 =>
+                array(
+                    'id' => 45,
+                    'key' => 'add_funciones',
+                    'table_name' => 'funciones',
+                    'created_at' => '2020-01-06 17:41:38',
+                    'updated_at' => '2020-01-06 17:41:38',
+                ),
+            45 =>
+                array(
+                    'id' => 46,
+                    'key' => 'delete_funciones',
+                    'table_name' => 'funciones',
+                    'created_at' => '2020-01-06 17:41:38',
+                    'updated_at' => '2020-01-06 17:41:38',
+                ),
+            46 =>
+                array(
+                    'id' => 47,
+                    'key' => 'browse_resenas',
+                    'table_name' => 'resenas',
+                    'created_at' => '2020-01-06 17:47:43',
+                    'updated_at' => '2020-01-06 17:47:43',
+                ),
+            47 =>
+                array(
+                    'id' => 48,
+                    'key' => 'read_resenas',
+                    'table_name' => 'resenas',
+                    'created_at' => '2020-01-06 17:47:43',
+                    'updated_at' => '2020-01-06 17:47:43',
+                ),
+            48 =>
+                array(
+                    'id' => 49,
+                    'key' => 'edit_resenas',
+                    'table_name' => 'resenas',
+                    'created_at' => '2020-01-06 17:47:43',
+                    'updated_at' => '2020-01-06 17:47:43',
+                ),
+            49 =>
+                array(
+                    'id' => 50,
+                    'key' => 'add_resenas',
+                    'table_name' => 'resenas',
+                    'created_at' => '2020-01-06 17:47:43',
+                    'updated_at' => '2020-01-06 17:47:43',
+                ),
+            50 =>
+                array(
+                    'id' => 51,
+                    'key' => 'delete_resenas',
+                    'table_name' => 'resenas',
+                    'created_at' => '2020-01-06 17:47:43',
+                    'updated_at' => '2020-01-06 17:47:43',
+                ),
         ));
-        
-        
+
+
     }
 }

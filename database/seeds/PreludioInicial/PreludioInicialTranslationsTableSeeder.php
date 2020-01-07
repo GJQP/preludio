@@ -12,12 +12,12 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('translations')->delete();
-        
+
         \DB::table('translations')->insert(array (
-            0 => 
+            0 =>
             array (
                 'id' => 1,
                 'table_name' => 'data_rows',
@@ -28,7 +28,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:35:35',
                 'updated_at' => '2019-10-12 19:35:35',
             ),
-            1 => 
+            1 =>
             array (
                 'id' => 2,
                 'table_name' => 'data_rows',
@@ -39,7 +39,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:35:35',
                 'updated_at' => '2019-10-12 19:35:35',
             ),
-            2 => 
+            2 =>
             array (
                 'id' => 3,
                 'table_name' => 'data_rows',
@@ -50,7 +50,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:35:35',
                 'updated_at' => '2019-10-12 19:35:35',
             ),
-            3 => 
+            3 =>
             array (
                 'id' => 4,
                 'table_name' => 'data_rows',
@@ -61,7 +61,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:35:35',
                 'updated_at' => '2019-10-12 19:35:35',
             ),
-            4 => 
+            4 =>
             array (
                 'id' => 5,
                 'table_name' => 'data_rows',
@@ -72,7 +72,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:35:35',
                 'updated_at' => '2019-10-12 19:35:35',
             ),
-            5 => 
+            5 =>
             array (
                 'id' => 6,
                 'table_name' => 'data_rows',
@@ -83,7 +83,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:35:35',
                 'updated_at' => '2019-10-12 19:35:35',
             ),
-            6 => 
+            6 =>
             array (
                 'id' => 7,
                 'table_name' => 'data_rows',
@@ -94,7 +94,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:35:35',
                 'updated_at' => '2019-10-12 19:35:35',
             ),
-            7 => 
+            7 =>
             array (
                 'id' => 8,
                 'table_name' => 'data_rows',
@@ -105,7 +105,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:35:35',
                 'updated_at' => '2019-10-12 19:35:35',
             ),
-            8 => 
+            8 =>
             array (
                 'id' => 9,
                 'table_name' => 'data_rows',
@@ -116,7 +116,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:35:35',
                 'updated_at' => '2019-10-12 19:35:35',
             ),
-            9 => 
+            9 =>
             array (
                 'id' => 10,
                 'table_name' => 'data_rows',
@@ -127,7 +127,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:35:35',
                 'updated_at' => '2019-10-12 19:35:35',
             ),
-            10 => 
+            10 =>
             array (
                 'id' => 11,
                 'table_name' => 'data_types',
@@ -138,7 +138,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:35:36',
                 'updated_at' => '2019-10-12 19:35:36',
             ),
-            11 => 
+            11 =>
             array (
                 'id' => 12,
                 'table_name' => 'data_types',
@@ -149,7 +149,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:35:36',
                 'updated_at' => '2019-10-12 19:35:36',
             ),
-            12 => 
+            12 =>
             array (
                 'id' => 13,
                 'table_name' => 'menu_items',
@@ -160,7 +160,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:36:29',
                 'updated_at' => '2019-10-12 19:36:29',
             ),
-            13 => 
+            13 =>
             array (
                 'id' => 14,
                 'table_name' => 'menu_items',
@@ -171,7 +171,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:37:28',
                 'updated_at' => '2019-10-12 19:37:28',
             ),
-            14 => 
+            14 =>
             array (
                 'id' => 15,
                 'table_name' => 'data_rows',
@@ -182,7 +182,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:41:11',
                 'updated_at' => '2019-10-12 19:41:11',
             ),
-            15 => 
+            15 =>
             array (
                 'id' => 16,
                 'table_name' => 'data_rows',
@@ -193,7 +193,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:43:55',
                 'updated_at' => '2019-10-12 19:43:55',
             ),
-            16 => 
+            16 =>
             array (
                 'id' => 17,
                 'table_name' => 'data_rows',
@@ -204,7 +204,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:43:55',
                 'updated_at' => '2019-10-12 19:43:55',
             ),
-            17 => 
+            17 =>
             array (
                 'id' => 18,
                 'table_name' => 'data_rows',
@@ -215,7 +215,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:43:55',
                 'updated_at' => '2019-10-12 19:43:55',
             ),
-            18 => 
+            18 =>
             array (
                 'id' => 19,
                 'table_name' => 'data_rows',
@@ -226,7 +226,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:43:55',
                 'updated_at' => '2019-10-12 19:43:55',
             ),
-            19 => 
+            19 =>
             array (
                 'id' => 20,
                 'table_name' => 'data_rows',
@@ -237,7 +237,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:43:55',
                 'updated_at' => '2019-10-12 19:43:55',
             ),
-            20 => 
+            20 =>
             array (
                 'id' => 21,
                 'table_name' => 'data_rows',
@@ -248,7 +248,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:43:55',
                 'updated_at' => '2019-10-12 19:43:55',
             ),
-            21 => 
+            21 =>
             array (
                 'id' => 22,
                 'table_name' => 'data_rows',
@@ -259,7 +259,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:43:55',
                 'updated_at' => '2019-10-12 19:43:55',
             ),
-            22 => 
+            22 =>
             array (
                 'id' => 23,
                 'table_name' => 'data_rows',
@@ -270,7 +270,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:43:56',
                 'updated_at' => '2019-10-12 19:43:56',
             ),
-            23 => 
+            23 =>
             array (
                 'id' => 24,
                 'table_name' => 'data_rows',
@@ -281,7 +281,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:43:56',
                 'updated_at' => '2019-10-12 19:43:56',
             ),
-            24 => 
+            24 =>
             array (
                 'id' => 25,
                 'table_name' => 'data_rows',
@@ -292,7 +292,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:43:56',
                 'updated_at' => '2019-10-12 19:43:56',
             ),
-            25 => 
+            25 =>
             array (
                 'id' => 26,
                 'table_name' => 'data_rows',
@@ -303,7 +303,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:43:56',
                 'updated_at' => '2019-10-12 19:43:56',
             ),
-            26 => 
+            26 =>
             array (
                 'id' => 27,
                 'table_name' => 'data_types',
@@ -314,7 +314,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:43:56',
                 'updated_at' => '2019-10-12 19:43:56',
             ),
-            27 => 
+            27 =>
             array (
                 'id' => 28,
                 'table_name' => 'data_types',
@@ -325,7 +325,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:43:56',
                 'updated_at' => '2019-10-12 19:43:56',
             ),
-            28 => 
+            28 =>
             array (
                 'id' => 29,
                 'table_name' => 'data_rows',
@@ -336,7 +336,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:46:23',
                 'updated_at' => '2019-10-12 19:46:23',
             ),
-            29 => 
+            29 =>
             array (
                 'id' => 30,
                 'table_name' => 'data_rows',
@@ -347,7 +347,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 20:07:17',
                 'updated_at' => '2019-10-12 20:07:17',
             ),
-            30 => 
+            30 =>
             array (
                 'id' => 31,
                 'table_name' => 'data_rows',
@@ -358,7 +358,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 20:07:18',
                 'updated_at' => '2019-10-12 20:07:18',
             ),
-            31 => 
+            31 =>
             array (
                 'id' => 32,
                 'table_name' => 'data_rows',
@@ -369,7 +369,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 20:07:18',
                 'updated_at' => '2019-10-12 20:07:18',
             ),
-            32 => 
+            32 =>
             array (
                 'id' => 33,
                 'table_name' => 'data_rows',
@@ -380,7 +380,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 20:07:18',
                 'updated_at' => '2019-10-12 20:07:18',
             ),
-            33 => 
+            33 =>
             array (
                 'id' => 34,
                 'table_name' => 'data_rows',
@@ -391,7 +391,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 20:07:18',
                 'updated_at' => '2019-10-12 20:07:18',
             ),
-            34 => 
+            34 =>
             array (
                 'id' => 35,
                 'table_name' => 'data_rows',
@@ -402,7 +402,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 20:07:18',
                 'updated_at' => '2019-10-12 20:07:18',
             ),
-            35 => 
+            35 =>
             array (
                 'id' => 36,
                 'table_name' => 'data_types',
@@ -413,7 +413,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 20:07:18',
                 'updated_at' => '2019-10-12 20:07:18',
             ),
-            36 => 
+            36 =>
             array (
                 'id' => 37,
                 'table_name' => 'data_types',
@@ -424,7 +424,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 20:07:18',
                 'updated_at' => '2019-10-12 20:07:18',
             ),
-            37 => 
+            37 =>
             array (
                 'id' => 38,
                 'table_name' => 'data_rows',
@@ -435,7 +435,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-12 20:17:11',
                 'updated_at' => '2019-10-12 20:17:11',
             ),
-            38 => 
+            38 =>
             array (
                 'id' => 39,
                 'table_name' => 'data_rows',
@@ -446,7 +446,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-19 23:00:41',
                 'updated_at' => '2019-10-19 23:00:41',
             ),
-            39 => 
+            39 =>
             array (
                 'id' => 40,
                 'table_name' => 'data_rows',
@@ -457,7 +457,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-19 23:00:41',
                 'updated_at' => '2019-10-19 23:00:41',
             ),
-            40 => 
+            40 =>
             array (
                 'id' => 41,
                 'table_name' => 'data_rows',
@@ -468,7 +468,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-19 23:00:41',
                 'updated_at' => '2019-10-19 23:00:41',
             ),
-            41 => 
+            41 =>
             array (
                 'id' => 42,
                 'table_name' => 'data_rows',
@@ -479,7 +479,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-19 23:39:53',
                 'updated_at' => '2019-10-19 23:39:53',
             ),
-            42 => 
+            42 =>
             array (
                 'id' => 43,
                 'table_name' => 'data_rows',
@@ -490,7 +490,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 01:21:48',
                 'updated_at' => '2019-10-20 01:21:48',
             ),
-            43 => 
+            43 =>
             array (
                 'id' => 49,
                 'table_name' => 'data_rows',
@@ -501,7 +501,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 02:19:26',
                 'updated_at' => '2019-10-20 02:19:26',
             ),
-            44 => 
+            44 =>
             array (
                 'id' => 50,
                 'table_name' => 'data_rows',
@@ -512,7 +512,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 02:19:26',
                 'updated_at' => '2019-10-20 02:19:26',
             ),
-            45 => 
+            45 =>
             array (
                 'id' => 51,
                 'table_name' => 'data_rows',
@@ -523,7 +523,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 02:19:26',
                 'updated_at' => '2019-10-20 02:19:26',
             ),
-            46 => 
+            46 =>
             array (
                 'id' => 52,
                 'table_name' => 'data_rows',
@@ -534,7 +534,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 02:19:26',
                 'updated_at' => '2019-10-20 02:19:26',
             ),
-            47 => 
+            47 =>
             array (
                 'id' => 53,
                 'table_name' => 'data_rows',
@@ -545,7 +545,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 02:19:26',
                 'updated_at' => '2019-10-20 02:19:26',
             ),
-            48 => 
+            48 =>
             array (
                 'id' => 54,
                 'table_name' => 'data_rows',
@@ -556,7 +556,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 02:19:26',
                 'updated_at' => '2019-10-20 02:19:26',
             ),
-            49 => 
+            49 =>
             array (
                 'id' => 55,
                 'table_name' => 'data_rows',
@@ -567,7 +567,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 02:19:26',
                 'updated_at' => '2019-10-20 02:19:26',
             ),
-            50 => 
+            50 =>
             array (
                 'id' => 56,
                 'table_name' => 'data_rows',
@@ -578,7 +578,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 02:19:26',
                 'updated_at' => '2019-10-20 02:19:26',
             ),
-            51 => 
+            51 =>
             array (
                 'id' => 57,
                 'table_name' => 'data_rows',
@@ -589,7 +589,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 02:19:26',
                 'updated_at' => '2019-10-20 02:19:26',
             ),
-            52 => 
+            52 =>
             array (
                 'id' => 58,
                 'table_name' => 'data_rows',
@@ -600,7 +600,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 02:19:26',
                 'updated_at' => '2019-10-20 02:19:26',
             ),
-            53 => 
+            53 =>
             array (
                 'id' => 59,
                 'table_name' => 'data_rows',
@@ -611,7 +611,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 02:19:26',
                 'updated_at' => '2019-10-20 02:19:26',
             ),
-            54 => 
+            54 =>
             array (
                 'id' => 60,
                 'table_name' => 'data_rows',
@@ -622,7 +622,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 02:19:26',
                 'updated_at' => '2019-10-20 02:19:26',
             ),
-            55 => 
+            55 =>
             array (
                 'id' => 61,
                 'table_name' => 'data_types',
@@ -633,7 +633,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 02:19:27',
                 'updated_at' => '2019-10-20 02:19:27',
             ),
-            56 => 
+            56 =>
             array (
                 'id' => 62,
                 'table_name' => 'data_types',
@@ -644,7 +644,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 02:19:27',
                 'updated_at' => '2019-10-20 02:19:27',
             ),
-            57 => 
+            57 =>
             array (
                 'id' => 63,
                 'table_name' => 'menu_items',
@@ -655,7 +655,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 02:20:14',
                 'updated_at' => '2019-10-20 02:20:14',
             ),
-            58 => 
+            58 =>
             array (
                 'id' => 64,
                 'table_name' => 'data_rows',
@@ -666,7 +666,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 02:48:27',
                 'updated_at' => '2019-10-20 02:48:27',
             ),
-            59 => 
+            59 =>
             array (
                 'id' => 65,
                 'table_name' => 'data_rows',
@@ -677,7 +677,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 02:49:15',
                 'updated_at' => '2019-10-20 02:49:15',
             ),
-            60 => 
+            60 =>
             array (
                 'id' => 66,
                 'table_name' => 'data_rows',
@@ -688,7 +688,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 02:49:15',
                 'updated_at' => '2019-10-20 02:49:15',
             ),
-            61 => 
+            61 =>
             array (
                 'id' => 67,
                 'table_name' => 'data_rows',
@@ -699,7 +699,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 02:49:15',
                 'updated_at' => '2019-10-20 02:49:15',
             ),
-            62 => 
+            62 =>
             array (
                 'id' => 68,
                 'table_name' => 'data_rows',
@@ -710,7 +710,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 02:49:15',
                 'updated_at' => '2019-10-20 02:49:15',
             ),
-            63 => 
+            63 =>
             array (
                 'id' => 69,
                 'table_name' => 'data_rows',
@@ -721,7 +721,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 02:49:15',
                 'updated_at' => '2019-10-20 02:49:15',
             ),
-            64 => 
+            64 =>
             array (
                 'id' => 70,
                 'table_name' => 'data_types',
@@ -732,7 +732,7 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 02:49:15',
                 'updated_at' => '2019-10-20 02:49:15',
             ),
-            65 => 
+            65 =>
             array (
                 'id' => 71,
                 'table_name' => 'data_types',
@@ -743,74 +743,140 @@ class PreludioInicialTranslationsTableSeeder extends Seeder
                 'created_at' => '2019-10-20 02:49:15',
                 'updated_at' => '2019-10-20 02:49:15',
             ),
-            66 => 
+            66 =>
             array (
                 'id' => 72,
-                'table_name' => 'data_rows',
-                'column_name' => 'display_name',
-                'foreign_key' => 59,
-                'locale' => 'en',
-                'value' => 'obras',
-                'created_at' => '2019-10-21 00:43:49',
-                'updated_at' => '2019-10-21 00:43:49',
-            ),
-            67 => 
-            array (
-                'id' => 73,
-                'table_name' => 'menu_items',
-                'column_name' => 'title',
-                'foreign_key' => 15,
-                'locale' => 'en',
-                'value' => 'test',
-                'created_at' => '2019-10-21 04:08:43',
-                'updated_at' => '2019-10-21 04:08:43',
-            ),
-            68 => 
-            array (
-                'id' => 74,
-                'table_name' => 'menu_items',
-                'column_name' => 'title',
-                'foreign_key' => 16,
-                'locale' => 'en',
-                'value' => 'test2',
-                'created_at' => '2019-10-21 13:15:27',
-                'updated_at' => '2019-10-21 13:15:27',
-            ),
-            69 => 
-            array (
-                'id' => 75,
                 'table_name' => 'menu_items',
                 'column_name' => 'title',
                 'foreign_key' => 17,
                 'locale' => 'en',
-                'value' => 'Presentaciones',
-                'created_at' => '2019-10-21 13:25:40',
-                'updated_at' => '2019-10-21 13:25:40',
+                'value' => 'Reseñas',
+                'created_at' => '2020-01-06 18:12:10',
+                'updated_at' => '2020-01-06 18:12:10',
             ),
-            70 => 
+            67 =>
+            array (
+                'id' => 73,
+                'table_name' => 'data_rows',
+                'column_name' => 'display_name',
+                'foreign_key' => 64,
+                'locale' => 'en',
+                'value' => 'Id',
+                'created_at' => '2020-01-06 18:13:52',
+                'updated_at' => '2020-01-06 18:13:52',
+            ),
+            68 =>
+            array (
+                'id' => 74,
+                'table_name' => 'data_rows',
+                'column_name' => 'display_name',
+                'foreign_key' => 65,
+                'locale' => 'en',
+                'value' => 'Created At',
+                'created_at' => '2020-01-06 18:13:52',
+                'updated_at' => '2020-01-06 18:13:52',
+            ),
+            69 =>
+            array (
+                'id' => 75,
+                'table_name' => 'data_rows',
+                'column_name' => 'display_name',
+                'foreign_key' => 66,
+                'locale' => 'en',
+                'value' => 'Updated At',
+                'created_at' => '2020-01-06 18:13:52',
+                'updated_at' => '2020-01-06 18:13:52',
+            ),
+            70 =>
             array (
                 'id' => 76,
-                'table_name' => 'menu_items',
-                'column_name' => 'title',
-                'foreign_key' => 19,
+                'table_name' => 'data_rows',
+                'column_name' => 'display_name',
+                'foreign_key' => 67,
                 'locale' => 'en',
-                'value' => 'Teatro',
-                'created_at' => '2019-10-21 13:27:15',
-                'updated_at' => '2019-10-21 13:27:15',
+                'value' => 'Teatro Id',
+                'created_at' => '2020-01-06 18:13:52',
+                'updated_at' => '2020-01-06 18:13:52',
             ),
-            71 => 
+            71 =>
             array (
                 'id' => 77,
-                'table_name' => 'menu_items',
-                'column_name' => 'title',
-                'foreign_key' => 18,
+                'table_name' => 'data_rows',
+                'column_name' => 'display_name',
+                'foreign_key' => 68,
                 'locale' => 'en',
-                'value' => 'Perfil',
-                'created_at' => '2019-10-21 13:38:05',
-                'updated_at' => '2019-10-21 13:38:05',
+                'value' => 'Presentacion Id',
+                'created_at' => '2020-01-06 18:13:52',
+                'updated_at' => '2020-01-06 18:13:52',
+            ),
+            72 =>
+                array(
+                    'id' => 78,
+                    'table_name' => 'data_rows',
+                    'column_name' => 'display_name',
+                    'foreign_key' => 69,
+                    'locale' => 'en',
+                    'value' => 'User Id',
+                    'created_at' => '2020-01-06 18:13:52',
+                    'updated_at' => '2020-01-06 18:13:52',
+                ),
+            73 =>
+                array(
+                    'id' => 79,
+                    'table_name' => 'data_rows',
+                    'column_name' => 'display_name',
+                    'foreign_key' => 70,
+                    'locale' => 'en',
+                    'value' => 'Calificacion',
+                    'created_at' => '2020-01-06 18:13:52',
+                    'updated_at' => '2020-01-06 18:13:52',
+                ),
+            74 =>
+                array(
+                    'id' => 80,
+                    'table_name' => 'data_rows',
+                    'column_name' => 'display_name',
+                    'foreign_key' => 71,
+                    'locale' => 'en',
+                    'value' => 'Comentario',
+                    'created_at' => '2020-01-06 18:13:52',
+                    'updated_at' => '2020-01-06 18:13:52',
+                ),
+            75 =>
+                array(
+                    'id' => 81,
+                    'table_name' => 'data_rows',
+                    'column_name' => 'display_name',
+                    'foreign_key' => 72,
+                    'locale' => 'en',
+                    'value' => 'Numero Reportes',
+                    'created_at' => '2020-01-06 18:13:52',
+                    'updated_at' => '2020-01-06 18:13:52',
+                ),
+            76 =>
+                array(
+                    'id' => 82,
+                    'table_name' => 'data_types',
+                    'column_name' => 'display_name_singular',
+                    'foreign_key' => 10,
+                    'locale' => 'en',
+                    'value' => 'Reseña',
+                    'created_at' => '2020-01-06 18:13:52',
+                    'updated_at' => '2020-01-06 18:13:52',
+                ),
+            77 =>
+                array(
+                    'id' => 83,
+                    'table_name' => 'data_types',
+                    'column_name' => 'display_name_plural',
+                    'foreign_key' => 10,
+                'locale' => 'en',
+                    'value' => 'Reseñas',
+                    'created_at' => '2020-01-06 18:13:52',
+                    'updated_at' => '2020-01-06 18:13:52',
             ),
         ));
-        
-        
+
+
     }
 }

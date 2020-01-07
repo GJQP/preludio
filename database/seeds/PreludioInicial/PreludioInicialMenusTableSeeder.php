@@ -24,13 +24,6 @@ class PreludioInicialMenusTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:44',
                 'updated_at' => '2019-10-12 19:01:44',
             ),
-            1 => 
-            array (
-                'id' => 2,
-                'name' => 'teatro',
-                'created_at' => '2019-10-21 01:07:41',
-                'updated_at' => '2019-10-21 01:07:41',
-            ),
         ));
         
         

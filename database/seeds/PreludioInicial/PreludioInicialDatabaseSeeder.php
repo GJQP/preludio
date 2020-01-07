@@ -11,16 +11,22 @@ class PreludioInicialDatabaseSeeder extends Seeder
      */
     public function run()
     {
-        //
-        $this->call(PreludioInicialDataTypesTableSeeder::class);
+        \DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         $this->call(PreludioInicialDataRowsTableSeeder::class);
-        $this->call(PreludioInicialMenusTableSeeder::class);
+        $this->call(PreludioInicialDataTypesTableSeeder::class);
+        $this->call(PreludioInicialFuncionesTableSeeder::class);
         $this->call(PreludioInicialMenuItemsTableSeeder::class);
-        $this->call(PreludioInicialRolesTableSeeder::class);
-        $this->call(PreludioInicialPermissionsTableSeeder::class);
+        $this->call(PreludioInicialMenusTableSeeder::class);
+        $this->call(PreludioInicialObrasTableSeeder::class);
         $this->call(PreludioInicialPermissionRoleTableSeeder::class);
+        $this->call(PreludioInicialPermissionsTableSeeder::class);
+        $this->call(PreludioInicialPresentacionesTableSeeder::class);
+        $this->call(PreludioInicialResenasTableSeeder::class);
+        $this->call(PreludioInicialRolesTableSeeder::class);
         $this->call(PreludioInicialSettingsTableSeeder::class);
+        $this->call(PreludioInicialTeatrosTableSeeder::class);
         $this->call(PreludioInicialTranslationsTableSeeder::class);
         $this->call(PreludioInicialUsersTableSeeder::class);
+        \DB::statement('SET FOREIGN_KEY_CHECKS=1;');
     }
 }

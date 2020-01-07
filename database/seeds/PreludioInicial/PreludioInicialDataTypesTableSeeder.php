@@ -12,12 +12,12 @@ class PreludioInicialDataTypesTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('data_types')->delete();
-        
+
         \DB::table('data_types')->insert(array (
-            0 => 
+            0 =>
             array (
                 'id' => 1,
                 'name' => 'users',
@@ -33,9 +33,9 @@ class PreludioInicialDataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"desc","default_search_key":null,"scope":null}',
                 'created_at' => '2019-10-12 19:01:42',
-                'updated_at' => '2019-10-21 00:21:49',
+                'updated_at' => '2019-10-20 02:48:27',
             ),
-            1 => 
+            1 =>
             array (
                 'id' => 2,
                 'name' => 'menus',
@@ -53,7 +53,7 @@ class PreludioInicialDataTypesTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:43',
                 'updated_at' => '2019-10-12 19:01:43',
             ),
-            2 => 
+            2 =>
             array (
                 'id' => 3,
                 'name' => 'roles',
@@ -71,7 +71,7 @@ class PreludioInicialDataTypesTableSeeder extends Seeder
                 'created_at' => '2019-10-12 19:01:43',
                 'updated_at' => '2019-10-20 02:49:15',
             ),
-            3 => 
+            3 =>
             array (
                 'id' => 6,
                 'name' => 'teatros',
@@ -85,11 +85,11 @@ class PreludioInicialDataTypesTableSeeder extends Seeder
                 'description' => NULL,
                 'generate_permissions' => 1,
                 'server_side' => 0,
-                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":"teatrosAsociados"}',
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2019-10-12 19:22:21',
-                'updated_at' => '2019-10-22 00:33:32',
+                'updated_at' => '2019-10-22 03:50:24',
             ),
-            4 => 
+            4 =>
             array (
                 'id' => 7,
                 'name' => 'obras',
@@ -105,9 +105,9 @@ class PreludioInicialDataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2019-10-12 19:25:46',
-                'updated_at' => '2019-10-21 00:29:45',
+                'updated_at' => '2019-10-20 02:46:02',
             ),
-            5 => 
+            5 =>
             array (
                 'id' => 8,
                 'name' => 'presentaciones',
@@ -121,12 +121,48 @@ class PreludioInicialDataTypesTableSeeder extends Seeder
                 'description' => NULL,
                 'generate_permissions' => 1,
                 'server_side' => 0,
-                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":"presentacionesAsociadas"}',
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2019-10-12 19:27:28',
-                'updated_at' => '2019-10-21 00:52:33',
+                'updated_at' => '2019-10-20 02:17:51',
+            ),
+            6 =>
+                array(
+                    'id' => 9,
+                    'name' => 'funciones',
+                    'slug' => 'funciones',
+                    'display_name_singular' => 'Funcion',
+                    'display_name_plural' => 'Funciones',
+                    'icon' => 'voyager-lightbulb',
+                    'model_name' => 'App\\Funcion',
+                    'policy_name' => NULL,
+                    'controller' => NULL,
+                    'description' => 'Una función es la instancia de una presentación en un momento en el tiempo determinado',
+                    'generate_permissions' => 1,
+                    'server_side' => 0,
+                    'details' => '{"order_column":"fecha_presentacion","order_display_column":null,"order_direction":"asc","default_search_key":"id"}',
+                    'created_at' => '2020-01-06 17:41:38',
+                    'updated_at' => '2020-01-06 17:41:38',
+                ),
+            7 =>
+                array(
+                    'id' => 10,
+                    'name' => 'resenas',
+                    'slug' => 'resenas',
+                    'display_name_singular' => 'Reseña',
+                    'display_name_plural' => 'Reseñas',
+                    'icon' => 'voyager-file-text',
+                    'model_name' => 'App\\Resena',
+                    'policy_name' => NULL,
+                    'controller' => NULL,
+                    'description' => NULL,
+                    'generate_permissions' => 1,
+                    'server_side' => 1,
+                    'details' => '{"order_column":"id","order_display_column":null,"order_direction":"asc","default_search_key":"user_id","scope":null}',
+                    'created_at' => '2020-01-06 17:47:43',
+                    'updated_at' => '2020-01-06 18:13:52',
             ),
         ));
-        
-        
+
+
     }
 }
