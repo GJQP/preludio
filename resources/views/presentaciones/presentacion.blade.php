@@ -128,8 +128,10 @@
                         </div>
                         <div>
                         <textarea type="text" name="comentario" class="comentario form-control"
-                                  placeholder="Introduzca su reseña (opcional)"></textarea>
+                                  placeholder="Introduzca su reseña (opcional)" id="comentario"
+                                  maxlength="255"></textarea>
                         </div>
+                        <p class="small float-left">(<span id="char-count">0</span>/255)</p>
                         <button type="submit" class="right btn btn-primary">Comentar</button>
                     </form>
                 @endauth

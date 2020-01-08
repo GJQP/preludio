@@ -159,6 +159,7 @@
             return alert;
         };
 
+        var MAX_CHARS = 255;
         document.addEventListener('readystatechange', function (e) {
             if ('complete' === document.readyState) {
                 var comentarios = document.querySelectorAll('.js-comentario');
@@ -181,6 +182,18 @@
                                 });
                             });
                         }
+                    });
+                }
+
+                var cuenta = document.getElementById('char-count');
+                /** @var HTMLTextAreaElement comentario */
+
+                var comentario = document.getElementById('comentario');
+
+                if (cuenta && comentario) {
+                    comentario.addEventListener('input', function (e) {
+                        cuenta.innerHTML = comentario.textLength;
+                        if (comentario.textLength === MAX_CHARS) cuenta.parentElement.classList.add('text-danger'); else cuenta.parentElement.classList.remove('text-danger');
                     });
                 }
             }

@@ -9,6 +9,7 @@ const crearAlerta = (context, message) => {
 
     return alert;
 };
+const MAX_CHARS = 255;
 document.addEventListener('readystatechange', e => {
     if ('complete' === document.readyState) {
         const comentarios = document.querySelectorAll('.js-comentario');
@@ -32,6 +33,18 @@ document.addEventListener('readystatechange', e => {
                     });
                 }
 
+            });
+        }
+        const cuenta = document.getElementById('char-count');
+        /** @var HTMLTextAreaElement comentario */
+        const comentario = document.getElementById('comentario');
+        if (cuenta && comentario) {
+            comentario.addEventListener('input', e => {
+                cuenta.innerHTML = comentario.textLength;
+                if (comentario.textLength === MAX_CHARS)
+                    cuenta.parentElement.classList.add('text-danger');
+                else
+                    cuenta.parentElement.classList.remove('text-danger');
             });
         }
     }
