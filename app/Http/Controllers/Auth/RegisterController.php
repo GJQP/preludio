@@ -55,10 +55,10 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255','regex:/^[a-zA-Zñ]+(([\',. -][a-zA-Z\ ñ])?[a-zA-Zñ]*)*$/'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'nombre' => ['required', 'string', 'max:255','regex:/^[a-zA-Zñ]+(([\',. -][a-zA-Z\ ñ])?[a-zA-Zñ]*)*$/'],
-            'telefono' => ['required','regex:/^0?(424|414|412|416|212)[0-9]{7}/'],
-            'rif' => ['required','unique:teatros'],
-            'direccion' => ['required','min:10']
+            'nombre' => ['sometimes','required', 'string', 'max:255','regex:/^[a-zA-Zñ]+(([\',. -][a-zA-Z\ ñ])?[a-zA-Zñ]*)*$/'],
+            'telefono' => ['sometimes','required','regex:/^0?(424|414|412|416|212)[0-9]{7}/'],
+            'rif' => ['sometimes','required','unique:teatros'],
+            'direccion' => ['sometimes','required','min:10']
         ],
             $this->messages()
         )
@@ -94,23 +94,24 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $rol = \Arr::has($data,['nombre'])? User::ROL_TEATRO : NULL;
 
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'role_id' => User::ROL_TEATRO
+            'role_id' => $rol
         ]);
 
-        $teatro = new Teatro([
-            'nombre' => $data['nombre'],
-            'telefono' => $data['telefono'],
-            'rif' => $data['rif'],
-            'direccion'=> $data['direccion']
-        ]);
-
-
-        $user->teatro()->save($teatro);
+        if ($rol == User::ROL_TEATRO) {
+            $teatro = new Teatro([
+                'nombre' => $data['nombre'],
+                'telefono' => $data['telefono'],
+                'rif' => $data['rif'],
+                'direccion' => $data['direccion']
+            ]);
+            $user->teatro()->save($teatro);
+        }
 
 
         return $user;

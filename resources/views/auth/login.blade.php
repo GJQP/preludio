@@ -37,15 +37,22 @@
                     </button>
 
                     <div class="col-md-4">
-                        <a href="{{action("Auth\RegisterController@register")}}" class="btn btn-primary btn-block login-button">
+                        <a href="{{url('/registrar')}}" class="btn btn-primary btn-block login-button">
                             {{ __('Registrarse') }}
                         </a>
                     </div>
 
+                    <div class="col-sm-12">
+                        <a href="{{action("Auth\RegisterController@register")}}" class="btn btn-primary btn-block login-button">
+                            {{ __('Registra tu teatro') }}
+                        </a>
+                    </div>
 
+                    <div class="col-sm-12">
                         <a class="btn btn-link" href="{{ action('HomeController@restaurarClave') }}">
                             {{ __('¿Olvidó su contraseña?') }}
                         </a>
+                    </div>
 
 
                 </div>
