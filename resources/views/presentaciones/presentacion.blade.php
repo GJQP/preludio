@@ -10,8 +10,8 @@
     <link href="{{ asset('css/rating.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script src="{{ asset('js/owl.carousel.min.js') }}" defer></script>
-    <script src="{{ asset('js/teatro.js') }}" defer></script>
+    <script>var csrf_token = '{{ csrf_token() }}'</script>
+
 @endsection
 
 @section('contenido')
@@ -185,4 +185,5 @@
     <script type="application/javascript" src="{{ asset('js/teatro.js') }}" defer></script>
     <script type="application/javascript" src="{{ asset('js/rating.js') }}" defer></script>
     <script type="application/javascript" src="{{ asset('js/comentarios.js') }}"></script>
+    <script type="application/javascript" src="{{ asset('js/owl.carousel.min.js') }}" defer></script>
 @endsection
