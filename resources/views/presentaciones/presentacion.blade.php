@@ -160,7 +160,7 @@
                                 @endif
                             @endfor
                         </div>
-                        @if($resena->comentario)
+                        @if($resena->comentario && $resena->user->id != auth()->id())
                             <div class="float-right">
                                 <a href="{{ route('reportar', $resena->id) }}" class="report-link text-danger">
                                     <i class="fa fa-flag"></i> Reportar
