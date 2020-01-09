@@ -37,6 +37,10 @@ Route::get('/miTeatro', function (){
 
 });
 
+Route::get('/registrar',function () {
+    return view('auth.register_user');
+});
+
 //Registrar
 Route::get('/register', 'HomeController@register')->middleware('guest');
 Route::get('/password/reset', 'HomeController@restaurarClave')->middleware('guest');
