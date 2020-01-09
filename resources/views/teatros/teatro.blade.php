@@ -162,24 +162,31 @@
             @foreach($resenas as $resena)
                 <div class=" pt-1 container borde js-comentario">
                     <div class="row pl-3">
-                        <h4 class="text-underlined">{{ $resena->user->name }}</h4>
-                        <div class="pl-3 pt-1"><i> ({{ $resena->created_at->format('d/m/Y')  }})</i></div>
-                        <div class="mover pl-2 rating">
-                            @for($i = 1; $i <= 5; $i++)
-                                @if($i <= $resena->calificacion)
-                                    <span class="checked">★</span>
-                                @else
-                                    <span>★</span>
-                                @endif
-                            @endfor
+                        <div class="col-10">
+                            <h4 class="text-underlined d-inline">{{ $resena->user->name }}</h4>
+                            <div class="pl-3 pt-1 d-inline-block"><i> ({{ $resena->created_at->format('d/m/Y')  }})</i>
+                            </div>
+                            <div class="mover pl-2 rating d-inline-block">
+                                @for($i = 1; $i <= 5; $i++)
+                                    @if($i <= $resena->calificacion)
+                                        <span class="checked">★</span>
+                                    @else
+                                        <span>★</span>
+                                    @endif
+                                @endfor
+                            </div>
                         </div>
-                        @if($resena->comentario)
-                            <div class="float-right">
+                        <div class="col-2 float-right">
+                            @if($resena->user == Auth::user())
+                                <a href="{{ route('eliminar-resena', $resena->id) }}" class="delete-link text-danger">
+                                    <i class="fa fa-times"></i> Eliminar
+                                </a>
+                            @elseif($resena->comentario)
                                 <a href="{{ route('reportar', $resena->id) }}" class="report-link text-danger">
                                     <i class="fa fa-flag"></i> Reportar
                                 </a>
-                            </div>
-                        @endif
+                            @endif
+                        </div>
                     </div>
                     @if($resena->comentario)
                         <div class="pt-1 reseña">

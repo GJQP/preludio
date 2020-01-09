@@ -52,4 +52,21 @@ class ResenaController extends Controller
         return response()->json($res);
 
     }
+
+    public function destroy(Resena $resena)
+    {
+        $res = [];
+        try
+        {
+            $resena->delete();
+            $res['status'] = 'success';
+            $res['message'] = "La reseña ha sido eliminada con éxito";
+        } catch (\Exception $ex)
+        {
+            $res['status'] = 'danger';
+            $res['message'] = "No se pudo eliminar la reseña. Intente más tarde.";
+        }
+
+        return response()->json($res);
+    }
 }

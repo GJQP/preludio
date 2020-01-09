@@ -57,4 +57,4 @@ Route::get('/teatro/{teatro}/presentaciones', 'TeatrosController@verPresentacion
 Route::post('/resenas/post', 'ResenaController@store')->name('post-resena');
 
 Route::post('/resenas/report/{resena}', 'ResenaController@reportar')->name('reportar');
-
+Route::delete('/resenas/delete/{resena}', 'ResenaController@destroy')->name('eliminar-resena');

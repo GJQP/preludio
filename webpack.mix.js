@@ -15,4 +15,3 @@ mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css');
 
 mix.js('resources/js/adminMenu.js','public/js/adminMenu.js');
-mix.js('resources/js/comentarios.js', 'public/js/comentarios.js');
